@@ -55,6 +55,69 @@ body {
     width: auto;
 }
 
+/* Navigation */
+.navbar {
+    background-color: #fefefe;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+/* Hamburger Menu Icon */
+.navbar-toggler {
+    border: none; /* Remove default border if not needed */
+}
+
+.navbar-toggler-icon {
+    background-image: none; /* Remove Bootstrap's default icon */
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Create custom hamburger lines */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon span {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000000; /* Black color for hamburger lines */
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: 8px;
+}
+
+.navbar-toggler-icon span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-toggler-icon::after {
+    bottom: 8px;
+}
+
+/* Optional: Rotate lines to form an "X" when the menu is open */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 50%;
+    margin-top: -1.5px; 
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span {
+    opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    bottom: 50%;
+    margin-bottom: -1.5px; 
+}
 .btn-cta {
     background-color: #00B7EB ;
     color: #1C2526;
@@ -66,8 +129,8 @@ body {
 }
 
 .btn-cta:hover {
-    background-color: #B0B0B0;
-    color: #F5F5F5;
+    background-color: #000000;
+    color: #000000;
     transform: scale(1.05);
 }
 
