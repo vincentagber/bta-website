@@ -1,54 +1,39 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "info@yourcompanydomain.com"; // 🔁 Replace with your real email
-    $subject = "New Mentorship Application from " . $_POST['fullName'];
+    $to = "info@africabroadcastingacademy.com, Samson.a@africabroadcastingacademy.com, Rokan.o@africabroadcastingacademy.com";
+    $subject = "New Mentorship Application from " . htmlspecialchars($_POST['fullName']);
 
-    // Sanitize and collect form data
-    $fields = [
-        'Full Name' => $_POST['fullName'] ?? '',
-        'Date of Birth' => $_POST['dob'] ?? '',
-        'Gender' => $_POST['gender'] ?? '',
-        'Nationality' => $_POST['nationality'] ?? '',
-        'Phone' => $_POST['phone'] ?? '',
-        'Email' => $_POST['email'] ?? '',
-        'Address' => $_POST['address'] ?? '',
-        'Courses' => isset($_POST['courses']) ? implode(", ", $_POST['courses']) : '',
-        'About You' => $_POST['aboutYou'] ?? '',
-        'Media Experience' => $_POST['mediaExp'] ?? '',
-        'Education Level' => $_POST['educationLevel'] ?? '',
-        'Field of Study' => $_POST['fieldOfStudy'] ?? '',
-        'Institution' => $_POST['institution'] ?? '',
-        'Graduation Year' => $_POST['graduationYear'] ?? '',
-        'Expectations' => $_POST['expectations'] ?? '',
-        'Additional Info' => $_POST['additional'] ?? '',
-    ];
+    $body = "You have received a new mentorship application:\n\n";
+    $body .= "Full Name: " . $_POST['fullName'] . "\n";
+    $body .= "Date of Birth: " . $_POST['dob'] . "\n";
+    $body .= "Gender: " . $_POST['gender'] . "\n";
+    $body .= "Nationality: " . $_POST['nationality'] . "\n";
+    $body .= "Phone: " . $_POST['phone'] . "\n";
+    $body .= "Email: " . $_POST['email'] . "\n";
+    $body .= "Address: " . $_POST['address'] . "\n\n";
 
-    // Construct the message body
-    $body = "New Mentorship Application:\n\n";
-    foreach ($fields as $label => $value) {
-        $body .= "$label: $value\n";
-    }
+    $body .= "Selected Courses: " . implode(", ", $_POST['courses'] ?? []) . "\n\n";
 
-    // Headers
-    $headers = "From: BTA Website <no-reply@yourdomain.com>\r\n";
+    $body .= "About Applicant:\n" . $_POST['aboutYou'] . "\n\n";
+    $body .= "Media Experience:\n" . $_POST['mediaExp'] . "\n\n";
+
+    $body .= "Education:\n";
+    $body .= "- Level: " . $_POST['educationLevel'] . "\n";
+    $body .= "- Field: " . $_POST['fieldOfStudy'] . "\n";
+    $body .= "- Institution: " . $_POST['institution'] . "\n";
+    $body .= "- Graduation Year: " . $_POST['graduationYear'] . "\n\n";
+
+    $body .= "Expectations:\n" . $_POST['expectations'] . "\n\n";
+    $body .= "Additional Info:\n" . $_POST['additional'] . "\n";
+
+    $headers = "From: noreply@africabroadcastingacademy.com\r\n";
     $headers .= "Reply-To: " . $_POST['email'] . "\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // Send email
     if (mail($to, $subject, $body, $headers)) {
-        echo "<script>
-            alert('Your application has been submitted successfully!');
-            window.location.href = 'application.html';
-        </script>";
+        echo "<script>alert('Application submitted successfully!'); window.location.href='index.html';</script>";
     } else {
-        echo "<script>
-            alert('Something went wrong. Please try again.');
-            window.history.back();
-        </script>";
+        echo "<script>alert('Sorry, there was a problem submitting your application.'); window.history.back();</script>";
     }
-} else {
-    // Prevent direct access
-    header("Location: application.html");
-    exit();
 }
 ?>

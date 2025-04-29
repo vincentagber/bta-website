@@ -1222,3 +1222,57 @@ body.modal-open {
         max-height: 250px;
     }
 }
+
+
+  body {
+      background-color: #c5c5c5;
+      color: #F5F5F5;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .thank-you-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .thank-you-box {
+      background-color: #2A2F30;
+      border: 1px solid #26C6DA;
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(212, 160, 23, 0.1);
+    }
+
+    .thank-you-box h1 {
+      color: #26C6DA;
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+    }
+
+    .thank-you-box p {
+      font-size: 1.1rem;
+      color: #E0E0E0;
+    }
+
+    .btn-home {
+      margin-top: 2rem;
+      background-color: #D4A017;
+      color: #1C2526;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-home:hover {
+      background-color: #8B1E3F;
+      color: #fff;
+    }
