@@ -674,87 +674,30 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* Live Chat Widget */
-.chat-widget {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    max-width: calc(100% - 40px);
+
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25d366;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-.chat-toggle {
-    background-color: var(--primary-color);
-    color: var(--white); /* Improved contrast */
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
 
-.chat-toggle:hover {
-    background-color: var(--gray);
-    color: var(--white);
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
 }
 
-.chat-toggle:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(38, 198, 218, 0.3);
-}
-
-.chat-box {
-    display: none;
-    background-color: var(--secondary-color);
-    color: var(--background-color);
-    width: clamp(250px, 90vw, 300px);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: absolute;
-    bottom: 70px;
-    right: 0;
-    max-width: 100%; 
-}
-.chat-header {
-    background-color: #00B7EB;
-    color: #1C2526;
-    padding: 0.5rem;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    text-align: center;
-}
-
-.chat-body {
-    padding: 1rem;
-    max-height: 200px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-.chat-footer {
-    display: flex;
-    padding: 0.5rem;
-    border-top: 1px solid #00B7EB;
-}
-
-.chat-footer input {
-    flex: 1;
-    border: none;
-    background-color: #F5F5F5;
-    padding: 0.5rem;
-    border-radius: 5px 0 0 5px;
-}
-
-.chat-footer button {
-    background-color: #00B7EB;
-    color: #1C2526;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 0 5px 5px 0;
-}
 
 /* Footer Enhancements */
 .footer {
