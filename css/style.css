@@ -978,3 +978,187 @@ p, h1, h2, h3, h4, h5, h6 {
 body.modal-open {
     overflow: hidden; 
 }
+
+/* Portfolio Section Styles */
+.portfolio-section {
+    background: linear-gradient(135deg, #F5F7FA 0%, #E3F2FD 100%);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 400;
+    color: #666666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.divider-accent {
+    width: 100px;
+    height: 4px;
+    background: #26C6DA;
+    border-radius: 2px;
+}
+
+/* Tabs Styling */
+.nav-tabs {
+    border-bottom: 2px solid #E0E0E0;
+}
+
+.nav-tabs .nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 600;
+    color: #666666;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link.active {
+    color: #26C6DA;
+    border-bottom: 3px solid #26C6DA;
+    background: transparent;
+}
+
+/* Portfolio Cards */
+.portfolio-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 1rem;
+}
+
+.card-title i {
+    color: #26C6DA;
+}
+
+.card-text {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.btn-portfolio {
+    background-color: #26C6DA;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-portfolio:hover {
+    background-color: #0288D1;
+    transform: translateY(-2px);
+}
+
+.btn-portfolio:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 198, 218, 0.3);
+}
+
+/* Carousel Styles */
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+.carousel {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .portfolio-card {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .section-subtitle {
+        font-size: clamp(0.9rem, 1.5vw, 1rem);
+    }
+
+    .nav-tabs .nav-link {
+        font-size: clamp(0.9rem, 1.2vw, 1rem);
+        padding: 0.5rem 1rem;
+    }
+
+    .carousel-item img {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-card {
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    }
+
+    .section-subtitle {
+        font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    }
+
+    .card-title {
+        font-size: clamp(1rem, 1.8vw, 1.2rem);
+    }
+
+    .card-text {
+        font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    }
+
+    .btn-portfolio {
+        font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+        padding: 0.4rem 1rem;
+    }
+
+    .carousel-item img {
+        max-height: 250px;
+    }
+}
