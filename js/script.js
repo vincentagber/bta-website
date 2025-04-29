@@ -126,9 +126,9 @@ function sendMessage() {
 
 // Google Maps Initialization
 function initMap() {
-    const location = { lat: -1.286389, lng: 36.817223 }; // Example: Nairobi, Kenya
+    const location = { lat: 6.5244, lng: 3.3792 }; // Lagos State, Nigeria
     const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
+        zoom: 12,
         center: location,
     });
     new google.maps.Marker({
@@ -137,6 +137,7 @@ function initMap() {
         title: 'BTA Headquarters',
     });
 }
+
 
 // Initialize AOS
 AOS.init({
@@ -174,7 +175,7 @@ if (contactForm) {
 
 // Google Maps Initialization
 function initMap() {
-    const location = { lat: -1.286389, lng: 36.817223 }; // Example: Nairobi, Kenya
+    const location = { lat: 6.5244, lng: 3.3792 }; // Lagos State, Nigeria
     const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
         center: location,
@@ -194,7 +195,7 @@ function initMap() {
             {
                 "elementType": "labels.text.stroke",
                 "stylers": [
-                    { "color": "#00B7EB " }
+                    { "color": "#00B7EB" } 
                 ]
             },
             {
@@ -218,10 +219,11 @@ function initMap() {
         map: map,
         title: 'BTA Headquarters',
         icon: {
-            url: 'https://maps.google.com/mapfiles/ms/icons/gold.png', // Custom gold marker
+            url: 'https://maps.google.com/mapfiles/ms/icons/gold.png' 
         }
     });
 }
+
 
 // Initialize AOS
 AOS.init({
