@@ -128,7 +128,7 @@ function initMap() {
   new google.maps.Marker({
     position: location,
     map: map,
-    title: 'BTA Headquarters',
+    title: 'ABAHeadquarters',
     icon: { url: 'https://maps.google.com/mapfiles/ms/icons/gold.png' }
   });
 }
