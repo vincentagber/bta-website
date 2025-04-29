@@ -834,7 +834,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* African Pattern Background */
 #about, #stories, #events, #contact, .mission, .contact-form-map {
-    background-image: linear-gradient(rgba(245, 245, 245, 0.9), rgba(245, 245, 245, 0.9)), url('https://www.transparenttextures.com/patterns/kente-cloth.png');
+    background-image: linear-gradient(rgba(245, 245, 245, 0.9), rgba(245, 245, 245, 0.9)), url('/assets/images/hero2.JPG');
     background-size: cover;
     width: 100%;
     overflow: hidden; 
@@ -842,7 +842,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Contact Page Styles */
 .contact-hero, .about-hero {
-    background: linear-gradient(rgba(28, 37, 38, 0.7), rgba(28, 37, 38, 0.7)), url('https://www.transparenttextures.com/patterns/kente-cloth.png');
+    background: linear-gradient(rgba(28, 37, 38, 0.7), rgba(28, 37, 38, 0.7)), url('/assets/images/hero2.JPG');
     background-size: cover;
     padding: 5rem 1rem;
     position: relative;
