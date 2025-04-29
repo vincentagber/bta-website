@@ -1,38 +1,70 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "info@africabroadcastingacademy.com, Samson.a@africabroadcastingacademy.com, Rokan.o@africabroadcastingacademy.com";
-    $subject = "New Mentorship Application from " . htmlspecialchars($_POST['fullName']);
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Clean and assign values
+    $fullName = htmlspecialchars(trim($_POST['fullName']));
+    $dob = htmlspecialchars(trim($_POST['dob']));
+    $gender = htmlspecialchars(trim($_POST['gender']));
+    $nationality = htmlspecialchars(trim($_POST['nationality']));
+    $phone = htmlspecialchars(trim($_POST['phone']));
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $address = htmlspecialchars(trim($_POST['address']));
 
-    $body = "You have received a new mentorship application:\n\n";
-    $body .= "Full Name: " . $_POST['fullName'] . "\n";
-    $body .= "Date of Birth: " . $_POST['dob'] . "\n";
-    $body .= "Gender: " . $_POST['gender'] . "\n";
-    $body .= "Nationality: " . $_POST['nationality'] . "\n";
-    $body .= "Phone: " . $_POST['phone'] . "\n";
-    $body .= "Email: " . $_POST['email'] . "\n";
-    $body .= "Address: " . $_POST['address'] . "\n\n";
+    $aboutYou = htmlspecialchars(trim($_POST['aboutYou']));
+    $mediaExp = htmlspecialchars(trim($_POST['mediaExp']));
+    $educationLevel = htmlspecialchars(trim($_POST['educationLevel']));
+    $fieldOfStudy = htmlspecialchars(trim($_POST['fieldOfStudy']));
+    $institution = htmlspecialchars(trim($_POST['institution']));
+    $graduationYear = htmlspecialchars(trim($_POST['graduationYear']));
+    $expectations = htmlspecialchars(trim($_POST['expectations']));
+    $additional = htmlspecialchars(trim($_POST['additional'] ?? ''));
 
-    $body .= "Selected Courses: " . implode(", ", $_POST['courses'] ?? []) . "\n\n";
+    // Handle checkboxes
+    $courses = isset($_POST['courses']) ? implode(", ", $_POST['courses']) : 'None selected';
 
-    $body .= "About Applicant:\n" . $_POST['aboutYou'] . "\n\n";
-    $body .= "Media Experience:\n" . $_POST['mediaExp'] . "\n\n";
+    // Email setup
+    $to = "info@africabroadcastingacademy.com,Samson.a@africabroadcastingacademy.com,Rokan.o@africabroadcastingacademy.com";
+    $subject = "New Mentorship Application from $fullName";
 
-    $body .= "Education:\n";
-    $body .= "- Level: " . $_POST['educationLevel'] . "\n";
-    $body .= "- Field: " . $_POST['fieldOfStudy'] . "\n";
-    $body .= "- Institution: " . $_POST['institution'] . "\n";
-    $body .= "- Graduation Year: " . $_POST['graduationYear'] . "\n\n";
+    $body = <<<EOD
+You have received a new mentorship application:
 
-    $body .= "Expectations:\n" . $_POST['expectations'] . "\n\n";
-    $body .= "Additional Info:\n" . $_POST['additional'] . "\n";
+Full Name: $fullName
+Date of Birth: $dob
+Gender: $gender
+Nationality: $nationality
+Phone: $phone
+Email: $email
+Address: $address
+
+Selected Courses: $courses
+
+About Applicant:
+$aboutYou
+
+Media Experience:
+$mediaExp
+
+Education:
+- Level: $educationLevel
+- Field: $fieldOfStudy
+- Institution: $institution
+- Graduation Year: $graduationYear
+
+Expectations:
+$expectations
+
+Additional Info:
+$additional
+EOD;
 
     $headers = "From: noreply@africabroadcastingacademy.com\r\n";
-    $headers .= "Reply-To: " . $_POST['email'] . "\r\n";
+    $headers .= "Reply-To: $email\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "<script>alert('Application submitted successfully!'); window.location.href='index.html';</script>";
+        echo "<script>alert('Application submitted successfully!'); window.location.href='thank-you.html';</script>";
     } else {
+        error_log("Mail failed for: $email");
         echo "<script>alert('Sorry, there was a problem submitting your application.'); window.history.back();</script>";
     }
 }
