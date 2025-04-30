@@ -93,23 +93,37 @@
     </nav>
     
 <!-- Hero Section -->
-<section id="home" class="hero-section position-relative">
-    <!-- Three.js Canvas for Particle System -->
-    <canvas id="hero-particles" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: -1;"></canvas>
-    <div class="hero-image" style="background-image: url('assets/images/hero.JPG');">
-        <div class="hero-overlay">
-            <div class="container text-center">
-                <h1 class="hero-title" data-aos="fade-up">
-                    Reframing Africa, Empowering Storytellers
-                </h1>
-                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    A cultural revolution in broadcast training
-                </p>
-                <a href="#stories" class="btn btn-cta mt-4" data-aos="fade-up" data-aos-delay="200">
-                    Discover Our Stories
-                </a>
-            </div>
-        </div>
+<section id="home" class="hero-section position-relative d-flex align-items-center justify-content-center text-white"
+    aria-labelledby="hero-title">
+    <!-- Hero Background Image -->
+    <div class="hero-background position-absolute top-0 start-0 w-100 h-100"
+        style="background-image: url('/assets/images/hero.JPG');" aria-hidden="true"></div>
+
+    <!-- Hero Overlay -->
+    <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"
+        style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45));"></div>
+
+    <!-- Hero Content -->
+    <div class="container position-relative text-center py-5 px-3">
+        <h1 id="hero-title" class="hero-title mb-3 mb-md-4" data-aos="fade-down" data-aos-duration="800">
+            Reframing Africa, Empowering Storytellers
+        </h1>
+        <p class="hero-subtitle mb-4 mb-md-5" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+            Unleashing Authentic Narratives Through Broadcast Excellence
+        </p>
+        <a href="#stories" class="btn btn-cta px-4 py-2 py-md-3 px-md-5 text-uppercase" data-aos="zoom-in"
+            data-aos-delay="200" data-aos-duration="800" role="button" aria-label="Discover Our Stories">
+            Discover Our Stories
+        </a>
+    </div>
+
+    <!-- Cultural Element (Hidden on Mobile) -->
+    <div class="cultural-icon position-absolute bottom-0 start-50 translate-middle-x pb-4 d-none d-md-block"
+        data-aos="fade-up" data-aos-delay="300" aria-hidden="true">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path
+                d="M12 2a10 10 0 1 1-7.071 17.071A10 10 0 0 1 12 2zm0 2a8 8 0 1 0 5.657 13.657A8 8 0 0 0 12 4zm0 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
+        </svg>
     </div>
 </section>
 
@@ -145,7 +159,7 @@
         <h2 class="section-title mb-5" data-aos="fade-up">
             What’s Your Story?
         </h2>
-        <p data-aos="fade-up" data-aos-delay="100">
+        <p data-aos="fade-up text-black" data-aos-delay="100">
             Discover your storytelling path with our interactive quiz.
         </p>
         <div class="quiz-container" data-aos="fade-up" data-aos-delay="200">
@@ -384,7 +398,7 @@
                 <p class="quote-text">
                     “Forging enduring global alliances, I take pride in collaborating
                     with the world’s most influential brands.”
-                </p>
+                </p></br>
                 <footer class="blockquote-footer">OlorunRokan Ojomo</footer>
             </blockquote>
             <p class="text-center mb-4 text-black" data-aos="fade-up" data-aos-delay="200">
@@ -403,6 +417,9 @@
                 <img src="assets/images/clients/eu.jpeg" alt="European Union logo" class="client-logo" />
                 <img src="assets/images/clients/iom.png" alt="IOM logo" class="client-logo" />
                 <img src="assets/images/clients/giz.jpeg" alt="GIZ logo" class="client-logo" />
+                 <img src="assets/images/clients/unhcr.png" alt="GIZ logo" class="client-logo" />
+                 <img src="assets/images/clients/voa.png" alt="GIZ logo" class="client-logo" />
+                 <img src="assets/images/clients/cgtnafrica.png" alt="GIZ logo" class="client-logo" />
             </div>
         </div>
     </div>
@@ -514,7 +531,7 @@
                 <div class="program-card card h-100">
                     <div class="card-body text-center">
                         <h5 class="card-title">Documentary Filmmaking</h5>
-                        <p class="card-text">
+                        <p class="card-text text-black">
                             Learn to create impactful documentaries that tell authentic
                             African stories.
                         </p>
@@ -532,7 +549,7 @@
                 <div class="program-card card h-100">
                     <div class="card-body text-center">
                         <h5 class="card-title">Podcasting</h5>
-                        <p class="card-text">
+                        <p class="card-text text-black">
                             Master the art of audio storytelling with hands-on podcast
                             training.
                         </p>
@@ -550,7 +567,7 @@
                 <div class="program-card card h-100">
                     <div class="card-body text-center">
                         <h5 class="card-title">Broadcast Journalism</h5>
-                        <p class="card-text">
+                        <p class="card-text text-black">
                             Develop skills to report and present news with integrity and
                             impact.
                         </p>
@@ -573,7 +590,7 @@
 <!-- Stories Section -->
 <section id="stories" class="py-5">
     <div class="container">
-        <h2 class="section-title text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title text-white text-center mb-5" data-aos="fade-up">
             Our Stories
         </h2>
     
@@ -596,7 +613,7 @@
                 <div class="story-card card">
                     <img src="/assets/images/story1.jpg" class="card-img-top" alt="Story 1" />
                     <div class="card-body">
-                        <h5 class="card-title">The Resilience of a Village</h5>
+                        <h5 class="card-title text-white">The Resilience of a Village</h5>
                         <p class="card-text">
                             A documentary on rural innovation in Kenya.
                         </p>
@@ -609,7 +626,7 @@
                 <div class="story-card card">
                     <img src="/assets/images/story2.jpg" class="card-img-top" alt="Story 2" />
                     <div class="card-body">
-                        <h5 class="card-title">Voices of Lagos</h5>
+                        <h5 class="card-title text-white">Voices of Lagos</h5>
                         <p class="card-text">A podcast episode exploring urban life.</p>
                         <a href="#" class="btn btn-primary">Listen Now</a>
                     </div>
@@ -619,7 +636,7 @@
                 <div class="story-card card">
                     <img src="assets/images/story3.jpg" class="card-img-top" alt="Story 3" />
                     <div class="card-body">
-                        <h5 class="card-title">Women in Leadership</h5>
+                        <h5 class="card-title text-white">Women in Leadership</h5>
                         <p class="card-text">
                             An article on female trailblazers in Africa.
                         </p>

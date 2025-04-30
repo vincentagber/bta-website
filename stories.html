@@ -86,189 +86,228 @@
             </div>
         </div>
     </nav>
+<!-- Stories Hero Banner -->
+<section id="stories-hero" class="position-relative text-white">
+    <canvas id="stories-globe" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 0;"></canvas>
+    <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7));"></div>
+    <div class="container position-relative text-center py-5">
+        <h1 class="hero-title animate__animated animate__fadeInDown" data-aos="fade-down">
+            Voices of Africa
+        </h1>
+        <p class="hero-subtitle animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="100">
+            Unfiltered narratives that resonate across the globe.
+        </p>
+    </div>
+</section>
 
-    <!-- Stories Hero Banner -->
-    <section id="stories-hero" class="position-relative text-white">
-        <canvas id="stories-globe" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 0;"></canvas>
-        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-        <div class="container position-relative text-center py-5">
-            <h1 class="hero-title animate__animated animate__fadeInDown" data-aos="fade-down">
-                Voices of Africa
-            </h1>
-            <p class="hero-subtitle animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="100">
-                Unfiltered narratives that resonate across the globe.
-            </p>
-        </div>
-    </section>
-
-    <!-- Featured Story Carousel -->
-    <section id="featured-stories" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up">
-                Featured Stories
-            </h2>
-            <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <img src="/assets/images/story1.jpg" class="d-block w-100 rounded"
-                                    alt="Samson Gbenga Adeleke surviving in Ghana's jungle">
-                            </div>
-                            <div class="col-md-6 text-center text-md-start">
-                                <h3 class="carousel-title">Surviving Ghana’s Jungle: Samson’s Journey</h3>
-                                <p class="carousel-text">
-                                    Follow Samson Gbenga Adeleke as he navigates the challenges of Ghana’s dense jungle,
-                                    testing his resilience and survival skills in this gripping documentary.
-                                </p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal1"
-                                    aria-label="Watch Surviving Ghana’s Jungle: Samson’s Journey">
-                                    Watch Now
-                                </a>
-                            </div>
+<!-- Featured Story Carousel -->
+<section id="featured-stories" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-up">
+            Featured Stories
+        </h2>
+        <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="/assets/images/IMG_8796.JPG" class="d-block w-100 rounded" alt="Samson Gbenga Adeleke surviving in Ghana's jungle" loading="lazy">
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <img src="/assets/images/story4.jpg" class="d-block w-100 rounded"
-                                    alt="Fulani herders traveling with their cattle">
-                            </div>
-                            <div class="col-md-6 text-center text-md-start">
-                                <h3 class="carousel-title">Journey with Fulani Herders</h3>
-                                <p class="carousel-text">
-                                    Experience the nomadic life of Fulani herders as they traverse vast landscapes,
-                                    preserving their traditions amidst modern challenges.
-                                </p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal4"
-                                    aria-label="Watch Journey with Fulani Herders">
-                                    Watch Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-   <!-- Stories Section -->
-    <section id="stories" class="py-5 position-relative">
-        <div class="section-overlay"></div>
-        <div class="container position-relative">
-            <h2 class="section-title text-center mb-3" data-aos="zoom-in">
-                Our Stories
-            </h2>
-            <p class="text-center mb-5 lead" data-aos="fade-up" data-aos-delay="100">
-                Immerse yourself in authentic African narratives, meticulously crafted by our visionary storytellers.
-            </p>
-            <div class="filter-buttons text-center mb-5" data-aos="fade-up" data-aos-delay="200">
-                <button class="btn btn-filter active" onclick="filterStories('all', event)" aria-label="Show all stories">
-                    All
-                </button>
-                <button class="btn btn-filter" onclick="filterStories('documentary', event)" aria-label="Show documentary stories">
-                    Documentary
-                </button>
-            </div>
-            <div class="row stories-grid">
-                <!-- Story 1 -->
-                <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="100">
-                    <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
-                    <div class="story-card card position-relative">
-                        <img src="assets/images/story1.jpg" class="card-img-top" alt="Samson Gbenga Adeleke surviving in Ghana's jungle" loading="lazy">
-                        <span class="category-badge">Documentary</span>
-                        <div class="card-body">
-                            <h5 class="card-title">Surviving Ghana’s Jungle: Samson’s Journey</h5>
-                            <p class="card-text">
-                                Follow Samson Gbenga Adeleke as he navigates the challenges of Ghana’s dense jungle, testing his resilience and survival skills in this gripping documentary.
+                        <div class="col-md-6 text-center text-md-start">
+                            <h3 class="carousel-title">Surviving Ghana’s Jungle: Samson’s Journey</h3>
+                            <p class="carousel-text">
+                                Follow Samson Gbenga Adeleke as he navigates the challenges of Ghana’s dense jungle,
+                                testing his resilience and survival skills in this gripping documentary.
                             </p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal1" aria-label="Watch Surviving Ghana’s Jungle: Samson’s Journey">
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal1"
+                                aria-label="Watch Surviving Ghana’s Jungle: Samson’s Journey">
                                 Watch Now
                             </a>
                         </div>
                     </div>
                 </div>
-                <!-- Story 2 -->
-                <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="200">
-                    <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
-                    <div class="story-card card position-relative">
-                        <img src="assets/images/story2.jpg" class="card-img-top" alt="Traditional Benin talking drums in a cultural setting" loading="lazy">
-                        <span class="category-badge">Documentary</span>
-                        <div class="card-body">
-                            <h5 class="card-title">The Talking Drums of Benin</h5>
-                            <p class="card-text">
-                                Discover the ancient art of Benin’s talking drums, where rhythm becomes language, in this cultural exploration of music and tradition.
-                            </p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal2" aria-label="Watch The Talking Drums of Benin">
-                                Watch Now
-                            </a>
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="/assets/images/IMG_8798.JPG" class="d-block w-100 rounded" alt="Fulani herders traveling with their cattle" loading="lazy">
                         </div>
-                    </div>
-                </div>
-                <!-- Story 3 -->
-                <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="300">
-                    <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
-                    <div class="story-card card position-relative">
-                        <img src="assets/images/story3.jpg" class="card-img-top" alt="Ghanaian fisherman working on the water" loading="lazy">
-                        <span class="category-badge">Documentary</span>
-                        <div class="card-body">
-                            <h5 class="card-title">Life on the Water: A Ghanaian Fisherman’s Story</h5>
-                            <p class="card-text">
-                                Join a Ghanaian fisherman as he shares his daily struggles and triumphs on the water, highlighting the vital role of fishing in coastal communities.
+                        <div class="col-md-6 text-center text-md-start">
+                            <h3 class="carousel-title">Journey with Fulani Herders</h3>
+                            <p class="carousel-text">
+                                Experience the nomadic life of Fulani herders as they traverse vast landscapes,
+                                preserving their traditions amidst modern challenges.
                             </p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal3" aria-label="Watch Life on the Water: A Ghanaian Fisherman’s Story">
-                                Watch Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Story 4 -->
-                <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="400">
-                    <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
-                    <div class="story-card card position-relative">
-                        <img src="assets/images/story4.jpg" class="card-img-top" alt="Fulani herders traveling with their cattle" loading="lazy">
-                        <span class="category-badge">Documentary</span>
-                        <div class="card-body">
-                            <h5 class="card-title">Journey with Fulani Herders</h5>
-                            <p class="card-text">
-                                Experience the nomadic life of Fulani herders as they traverse vast landscapes, preserving their traditions amidst modern challenges.
-                            </p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal4" aria-label="Watch Journey with Fulani Herders">
-                                Watch Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Story 5 -->
-                <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="500">
-                    <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
-                    <div class="story-card card position-relative">
-                        <img src="assets/images/story5.jpg" class="card-img-top" alt="Lagos Area Boys hustling on the streets" loading="lazy">
-                        <span class="category-badge">Documentary</span>
-                        <div class="card-body">
-                            <h5 class="card-title">The Hustle of Lagos’ Area Boys</h5>
-                            <p class="card-text">
-                                Dive into the chaotic world of Lagos’ “Area Boys,” exploring their street hustle and the socio-economic forces shaping their lives.
-                            </p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal5" aria-label="Watch The Hustle of Lagos’ Area Boys">
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal4"
+                                aria-label="Watch Journey with Fulani Herders">
                                 Watch Now
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Stories Section -->
+<section id="stories" class="py-5 position-relative">
+    <div class="section-overlay" style="background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
+    <div class="container position-relative">
+        <h2 class="section-title text-center text-white mb-3" data-aos="zoom-in">
+            Our Stories
+        </h2>
+        <p class="text-center mb-4 lead" data-aos="fade-up" data-aos-delay="100">
+            Immerse yourself in authentic African narratives, meticulously crafted by our visionary storytellers.
+        </p>
+        <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="150">
+            <a href="/stories" class="btn btn-primary btn-explore animate__animated" role="button" aria-label="Explore all stories">
+                Explore All Stories
+            </a>
+        </div>
+        <div class="filter-buttons text-center mb-5" data-aos="fade-up" data-aos-delay="200">
+            <button class="btn btn-filter active" onclick="filterStories('all', event)" aria-label="Show all stories" aria-pressed="true">
+                All
+            </button>
+            <button class="btn btn-filter" onclick="filterStories('documentary', event)" aria-label="Show documentary stories" aria-pressed="false">
+                Documentary
+            </button>
+        </div>
+        <div class="row stories-grid">
+            <!-- Story 1 -->
+            <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="100">
+                <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
+                <div class="story-card card position-relative">
+                    <img src="/assets/images/hero2.JPG" class="card-img-top" alt="Samson Gbenga Adeleke surviving in Ghana's jungle" loading="lazy">
+                    <span class="category-badge documentary">Documentary</span>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Surviving Ghana’s Jungle: Samson’s Journey</h5>
+                        <p class="card-text">
+                            Follow Samson Gbenga Adeleke as he navigates the challenges of Ghana’s dense jungle, testing his resilience and survival skills in this gripping documentary.
+                        </p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal1" aria-label="Watch Surviving Ghana’s Jungle: Samson’s Journey">
+                            Watch Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Story 2 -->
+            <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="200">
+                <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
+                <div class="story-card card position-relative">
+                    <img src="/assets/images/IMG_8788.JPG" class="card-img-top" alt="Traditional Benin talking drums in a cultural setting" loading="lazy">
+                    <span class="category-badge documentary">Documentary</span>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">The Talking Drums of Benin</h5>
+                        <p class="card-text">
+                            Discover the ancient art of Benin’s talking drums, where rhythm becomes language, in this cultural exploration of music and tradition.
+                        </p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal2" aria-label="Watch The Talking Drums of Benin">
+                            Watch Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Story 3 -->
+            <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="300">
+                <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
+                <div class="story-card card position-relative">
+                    <img src="/assets/images/IMG_8790.JPG" class="card-img-top" alt="Ghanaian fisherman working on the water" loading="lazy">
+                    <span class="category-badge documentary">Documentary</span>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Life on the Water: A Ghanaian Fisherman’s Story</h5>
+                        <p class="card-text">
+                            Join a Ghanaian fisherman as he shares his daily struggles and triumphs on the water, highlighting the vital role of fishing in coastal communities.
+                        </p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal3" aria-label="Watch Life on the Water: A Ghanaian Fisherman’s Story">
+                            Watch Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Story 4 -->
+            <div class="col-md-4 mb-4  story documentary position-relative" data-aos="slide-up" data-aos-delay="400">
+                <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
+                <div class="story-card card position-relative">
+                    <img src="/assets/images/IMG_8794.JPG" class="card-img-top" alt="Fulani herders traveling with their cattle" loading="lazy">
+                    <span class="category-badge documentary">Documentary</span>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Journey with Fulani Herders</h5>
+                        <p class="card-text">
+                            Experience the nomadic life of Fulani herders as they traverse vast landscapes, preserving their traditions amidst modern challenges.
+                        </p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal4" aria-label="Watch Journey with Fulani Herders">
+                            Watch Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Story 5 -->
+            <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="100">
+                <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100"
+                    style="z-index: 0; pointer-events: none;"></canvas>
+                <div class="story-card card position-relative">
+                    <img src="/assets/images/IMG_8799.JPG" class="card-img-top" alt="Samson Gbenga Adeleke surviving in Ghana's jungle"
+                        loading="lazy">
+                    <span class="category-badge documentary">Documentary</span>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Surviving Ghana’s Jungle: Samson’s Journey</h5>
+                        <p class="card-text">
+                            Follow Samson Gbenga Adeleke as he navigates the challenges of Ghana’s dense jungle, testing his
+                            resilience and survival skills in this gripping documentary.
+                        </p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal1"
+                            aria-label="Watch Surviving Ghana’s Jungle: Samson’s Journey">
+                            Watch Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Story 6 -->
+            <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="500">
+                <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
+                <div class="story-card card position-relative">
+                    <img src="/assets/images/IMG_8809.JPG" class="card-img-top" alt="Lagos Area Boys hustling on the streets" loading="lazy">
+                    <span class="category-badge documentary">Documentary</span>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">The Hustle of Lagos’ Area Boys</h5>
+                        <p class="card-text ">
+                            Dive into the chaotic world of Lagos’ “Area Boys,” exploring their street hustle and the socio-economic forces shaping their lives.
+                        </p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal5" aria-label="Watch The Hustle of Lagos’ Area Boys">
+                            Watch Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Structure for Stories (Example for Story 1) -->
+<div class="modal fade" id="storyModal1" tabindex="-1" aria-labelledby="storyModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="storyModal1Label">Surviving Ghana’s Jungle: Samson’s Journey</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/sample-video" title="Surviving Ghana’s Jungle" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Add similar modals for storyModal2, storyModal3, etc., with appropriate video sources -->
 
 
 <!-- Footer -->

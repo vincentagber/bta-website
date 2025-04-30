@@ -172,3 +172,89 @@ if (document.getElementById('narrative-globe')) {
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
 }
+// Filter Stories Function
+function filterStories(category, event) {
+    // Update active filter button
+    const buttons = document.querySelectorAll('.btn-filter');
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
+    });
+    event.target.classList.add('active');
+    event.target.setAttribute('aria-pressed', 'true');
+
+    // Filter stories
+    const stories = document.querySelectorAll('.story');
+    stories.forEach(story => {
+        if (category === 'all' || story.classList.contains(category)) {
+            story.style.display = 'block';
+            story.classList.add('animate__animated', 'animate__fadeIn');
+        } else {
+            story.style.display = 'none';
+            story.classList.remove('animate__animated', 'animate__fadeIn');
+        }
+    });
+}
+
+// Initialize Particle Effects (Assuming particles.js or similar library)
+document.addEventListener('DOMContentLoaded', () => {
+    // Example: Initialize particles for each story card
+    document.querySelectorAll('.story-particles').forEach(canvas => {
+        // Replace with actual particle library initialization, e.g., particles.js
+        console.log('Initializing particles for:', canvas);
+    });
+
+    // Add animation to Explore button on scroll
+    const exploreBtn = document.querySelector('.btn-explore');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            exploreBtn.classList.add('animate__pulse');
+        } else {
+            exploreBtn.classList.remove('animate__pulse');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize AOS with mobile-friendly settings
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 30,
+        disable: window.innerWidth < 576 ? 'mobile' : false, // Disable AOS on small mobiles for performance
+    });
+
+    // Subtle Parallax Effect (Disabled on Mobile for Performance)
+    const heroBackground = document.querySelector('.hero-background');
+    if (window.innerWidth >= 768) {
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            heroBackground.style.transform = `scale(${1.05 + scrollPosition / 6000})`;
+        });
+    }
+
+    // Smooth Scroll for CTA
+    document.querySelector('.btn-cta').addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(e.target.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Touch Feedback for CTA
+    const ctaButton = document.querySelector('.btn-cta');
+    ctaButton.addEventListener('touchstart', () => {
+        ctaButton.classList.add('active');
+    });
+    ctaButton.addEventListener('touchend', () => {
+        ctaButton.classList.remove('active');
+    });
+
+    // Optimize Image Loading
+    const heroImage = document.querySelector('.hero-background');
+    heroImage.style.backgroundImage = `url('/assets/images/hero.JPG')`; // Low-res initially
+    const highResImage = new Image();
+    highResImage.src = '/assets/images/hero.JPG';
+    highResImage.onload = () => {
+        heroImage.style.backgroundImage = `url('/assets/images/hero.JPG')`;
+    };
+});

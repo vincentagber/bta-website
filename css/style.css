@@ -240,54 +240,128 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero-section {
+    min-height: 100vh;
+    background: #000;
     position: relative;
-    height: 100vh;
-    width: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero-image {
+.hero-background {
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    background-repeat: no-repeat;
+    transform: scale(1.05);
+    transition: transform 8s ease;
+    will-change: transform;
+}
+
+/* Parallax effect only on desktop */
+@media (min-width: 768px) {
+    .hero-section:hover .hero-background {
+        transform: scale(1.1);
+    }
 }
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--overlay-dark);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-    overflow: hidden;
+    z-index: 1;
 }
 
 .hero-title {
-    font-family: 'Playfair Display', serif;
-    color: var(--background-color);
-    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 8vw, 4rem);
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 1rem;
-    overflow-wrap: break-word;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
 }
 
 .hero-subtitle {
-    color: var(--primary-color);
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    margin-bottom: 2rem;
-    overflow-wrap: break-word;
+    font-family: 'Lora', serif;
+    font-size: clamp(0.9rem, 3vw, 1.4rem);
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-cta {
+    background: linear-gradient(90deg, #d4a017, #f4c430);
+    border: none;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 12px rgba(212, 160, 23, 0.4);
+    touch-action: manipulation; /* Improves touch responsiveness */
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 160, 23, 0.6);
+    color: #1a1a1a;
+}
+
+.btn-cta:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.3);
+}
+
+.btn-cta:active {
+    transform: scale(0.95); /* Feedback for touch */
+}
+
+.cultural-icon svg {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.cultural-icon:hover svg {
+    opacity: 1;
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 80vh; /* Shorter height for mobile */
+    }
+    .hero-title {
+        font-size: clamp(1.6rem, 7vw, 2.5rem);
+        letter-spacing: 1.5px;
+    }
+    .hero-subtitle {
+        font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+        max-width: 95%;
+    }
+    .btn-cta {
+        padding: 10px 20px;
+        font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+    }
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 577px) and (max-width: 768px) {
+    .hero-title {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+    .hero-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+    .btn-cta {
+        padding: 12px 30px;
+    }
 }
 
 /* Impact Stats */
@@ -446,14 +520,12 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .client-logo {
     height: 50px;
-    filter: grayscale(100%) opacity(0.8);
-    transition: filter 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease;
     border-radius: 5px;
     max-width: 100%;
 }
 
 .client-logo:hover {
-    filter: grayscale(0%) opacity(1);
     transform: scale(1.1);
 }
 
@@ -1219,3 +1291,134 @@ body.modal-open {
       background-color: #8B1E3F;
       color: #fff;
     }
+    /* Stories Section Styling */
+#stories {
+    background: #1a1a1a;
+    color: #fff;
+    overflow: hidden;
+}
+
+.section-overlay {
+    opacity: 0.3;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #ccc;
+}
+
+/* Explore Button */
+.btn-explore {
+    background: linear-gradient(45deg, #26C6DA, #ff8e53);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-explore:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-explore:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.3);
+}
+
+/* Filter Buttons */
+.filter-buttons .btn-filter {
+    background: transparent;
+    border: 2px solid #26C6DA;
+    color: #26C6DA;
+    margin: 0 10px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-buttons .btn-filter.active,
+.filter-buttons .btn-filter:hover {
+    background: #26C6DA;
+    color: #fff;
+}
+
+.filter-buttons .btn-filter:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.3);
+}
+
+/* Story Cards */
+.story-card {
+    background: #2a2a2a;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.story-card img {
+    object-fit: cover;
+    height: 200px;
+}
+
+.category-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #26C6DA;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background: #26C6DA;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #ff8e53;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .btn-explore {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .story-card img {
+        height: 150px;
+    }
+}
