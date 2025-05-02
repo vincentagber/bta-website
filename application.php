@@ -21,6 +21,45 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Handle checkboxes
     $courses = isset($_POST['courses']) ? implode(", ", $_POST['courses']) : 'None selected';
 
+    // Handle video upload
+    $videoPath = "No video uploaded.";
+    if (isset($_FILES['introVideo']) && $_FILES['introVideo']['error'] === UPLOAD_ERR_OK) {
+        $fileTmpPath = $_FILES['introVideo']['tmp_name'];
+        $fileName = preg_replace("/[^a-zA-Z0-9\._-]/", "_", $_FILES['introVideo']['name']);
+        $fileSize = $_FILES['introVideo']['size'];
+        $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+        $allowedExtensions = ['mp4', 'mov', 'avi', 'mkv'];
+        $maxFileSize = 50 * 1024 * 1024; // 50MB
+
+        // Validate MIME type
+        $mime = mime_content_type($fileTmpPath);
+        $allowedMimes = ['video/mp4', 'video/quicktime', 'video/x-msvideo', 'video/x-matroska'];
+
+        if (in_array($fileExt, $allowedExtensions) && in_array($mime, $allowedMimes)) {
+            if ($fileSize <= $maxFileSize) {
+                $newFileName = uniqid("intro_", true) . "." . $fileExt;
+                $uploadDir = 'uploads/';
+                if (!is_dir($uploadDir)) {
+                    mkdir($uploadDir, 0755, true);
+                }
+                $destPath = $uploadDir . $newFileName;
+
+                if (move_uploaded_file($fileTmpPath, $destPath)) {
+                    $videoPath = $destPath;
+                } else {
+                    $videoPath = "Error moving the uploaded file.";
+                    error_log("Failed to move file for $email");
+                }
+            } else {
+                $videoPath = "Video exceeds 50MB limit.";
+                error_log("File too large from $email");
+            }
+        } else {
+            $videoPath = "Invalid video format.";
+            error_log("Invalid video format: $fileName from $email");
+        }
+    }
+
     // Email setup
     $to = "info@africabroadcastingacademy.com,Samson.a@africabroadcastingacademy.com,Rokan.o@africabroadcastingacademy.com";
     $subject = "New Mentorship Application from $fullName";
@@ -55,6 +94,8 @@ $expectations
 
 Additional Info:
 $additional
+
+Video Introduction: $videoPath
 EOD;
 
     $headers = "From: noreply@africabroadcastingacademy.com\r\n";

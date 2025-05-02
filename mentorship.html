@@ -105,7 +105,7 @@
         <h1 class="section-title text-center mb-4">Mentorship Application Form</h1>
         <p class="text-center mb-5">Please complete all required fields below to apply.</p>
         <div class="form-section mx-auto" style="max-width: 800px;">
-            <form action="application.php" method="POST">
+            <form action="application.php" method="POST" enctype="multipart/form-data">
                 <!-- 1. Personal Information -->
                 <h3 class="h5 fw-semibold mb-3">1. Personal Information</h3>
                 <div class="row g-3 mb-4">
@@ -238,7 +238,22 @@
                     <textarea id="additional" name="additional" class="form-control" rows="2"></textarea>
                 </div>
 
-                <!-- 8. Declaration -->
+                <!-- 8. Video Introduction -->
+                <h3 class="h5 fw-semibold mb-3">8. Video Introduction</h3>
+                <div class="mb-4">
+                    <label class="form-label" for="introVideo">Upload Intro Video (Max: 50MB)</label>
+                    <input type="file" id="introVideo" name="introVideo" class="form-control"
+                        accept="video/mp4, video/quicktime, video/x-msvideo" required>
+                    <small class="text-muted d-block mt-2">
+                        Please upload a short video (max 2 minutes) introducing yourself.
+                        Tell us why you chose media, what you’ve done before, and what you believe you can contribute to
+                        the media space.
+                        <br>
+                        Accepted formats: MP4, MOV, AVI. Max size: 50MB.
+                    </small>
+                </div>
+
+                <!-- 9. Declaration -->
                 <div class="form-check mb-4">
                     <input class="form-check-input" type="checkbox" id="declaration" name="declaration" required>
                     <label class="form-check-label" for="declaration">
@@ -254,6 +269,7 @@
         </div>
     </div>
 </section>
+
 
     <!-- Footer -->
     <footer class="footer mt-5 py-5">
