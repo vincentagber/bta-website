@@ -857,7 +857,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Contact Page Styles */
 .contact-hero, .about-hero {
-    background: linear-gradient(rgba(28, 37, 38, 0.7), rgba(28, 37, 38, 0.7)), url('/assets/images/hero2.JPG');
+    background: linear-gradient(rgba(28, 37, 38, 0.7), rgba(28, 37, 38, 0.7)), url('/assets/images/Academy.webp');
     background-size: cover;
     padding: 5rem 1rem;
     position: relative;
