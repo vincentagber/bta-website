@@ -258,3 +258,4 @@ document.addEventListener('DOMContentLoaded', () => {
         heroImage.style.backgroundImage = `url('/assets/images/hero.JPG')`;
     };
 });
+

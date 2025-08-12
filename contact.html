@@ -3,29 +3,29 @@
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Broadcast Training Academy empowers young African storytellers through hands-on broadcast training, mentorship, and media literacy. Join our cultural revolution to reclaim Africa’s narrative and share authentic stories with the world." name="description">
-        <meta content="Broadcast Training Academy, African storytelling, media training, broadcast journalism, documentary filmmaking, podcasting, African narrative, media literacy, mentorship, cultural revolution" name="keywords">
-        <meta content="Broadcast Training Academy" name="author">
+        <meta content="Africa broadcasting Academy empowers young African storytellers through hands-on broadcast training, mentorship, and media literacy. Join our cultural revolution to reclaim Africa’s narrative and share authentic stories with the world." name="description">
+        <meta content="Africa broadcasting Academy, African storytelling, media training, broadcast journalism, documentary filmmaking, podcasting, African narrative, media literacy, mentorship, cultural revolution" name="keywords">
+        <meta content="Africa broadcasting Academy" name="author">
         <meta content="index, follow" name="robots">
         <!-- Favicon -->
         <link href="assets/images/logo.png" rel="icon" type="image/png">
         <!-- Open Graph Tags for Social Media -->
-        <meta content="Broadcast Training Academy - Reclaiming Africa’s Narrative" property="og:title">
+        <meta content="Africa broadcasting Academy - Reclaiming Africa’s Narrative" property="og:title">
         <meta content="Empowering young African storytellers to share authentic narratives through broadcast training, mentorship, and media literacy. Join the movement!" property="og:description">
         <meta content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg" property="og:image">
         <!-- Replace with actual image URL -->
         <meta content="https://www.africabroadcastingacademy.com" property="og:url">
         <meta content="website" property="og:type">
-        <meta content="Broadcast Training Academy" property="og:site_name">
+        <meta content="Africa broadcasting Academy" property="og:site_name">
         <!-- Twitter Card Tags -->
         <meta content="summary_large_image" name="twitter:card">
-        <meta content="Broadcast Training Academy - Reclaiming Africa’s Narrative" name="twitter:title">
+        <meta content="Africa broadcasting Academy - Reclaiming Africa’s Narrative" name="twitter:title">
         <meta content="Empowering young African storytellers to share authentic narratives through broadcast training, mentorship, and media literacy. Join the movement!" name="twitter:description">
         <meta content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg" name="twitter:image">
         <!-- Replace with actual image URL -->
         <meta content="@ABAfrica" name="twitter:site">
         <!-- Replace with actual Twitter handle -->
-        <title>Contact Us- Broadcast Training Academy - Empowering African Storytellers</title>
+        <title>Contact Us- Africa broadcasting Academy - Empowering African Storytellers</title>
         <!-- Bootstrap CSS -->
         <link
             crossorigin="anonymous"
@@ -157,13 +157,16 @@
         <section class="contact-hero text-center text-white">
             <div class="container">
                 <h1 class="hero-title" data-aos="fade-up">Get in Touch</h1>
-                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">We’d love to hear from you! Reach out to join our movement of African storytellers.</p>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    We’d love to hear from you! Reach out to join our movement of African storytellers.
+                </p>
             </div>
         </section>
         <!-- Contact Info Section -->
         <section class="contact-info py-5">
             <div class="container">
                 <div class="row text-center">
+                    <!-- Email Section -->
                     <div class="col-md-4 mb-4" data-aos="fade-up">
                         <i class="fas fa-envelope contact-icon"></i>
                         <h4>Email Us</h4>
@@ -174,24 +177,42 @@
                             <a href="mailto:samson.a@africabroadcastingacademy.com">samson.a@africabroadcastingacademy.com</a>
                         </p>
                     </div>
+                    <!-- Phone Section -->
                     <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                         <i class="fas fa-phone contact-icon"></i>
                         <h4>Call or WhatsApp</h4>
                         <p>
+                            🇳🇬
                             <a href="tel:+2348128422499">+234 812 842 2499</a>
                         </p>
                         <p>
+                            🇳🇬
                             <a href="tel:+2348064207821">+234 806 420 7821</a>
                         </p>
                         <p>
-                            <a href="https://wa.me/2348128422499" target="_blank">Chat on WhatsApp</a>
+                            🇧🇯
+                            <a href="tel:+22940173901">+229 40 173 901</a>
+                        </p>
+                        <p>
+                            🇬🇭
+                            <a href="tel:+233556346029">+233 55 634 6029</a>
+                        </p>
+                        <p>
+                            🇰🇪
+                            <a href="tel:+254781846670">+254 781 846 670</a>
+                        </p>
+                        <p>
+                            <a href="https://wa.me/2348128422499" target="_blank">💬 Chat on WhatsApp</a>
                         </p>
                     </div>
+                    <!-- Website Section -->
                     <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                         <i class="fas fa-globe contact-icon"></i>
                         <h4>Visit Our Website</h4>
                         <p>
-                            <a href="http://www.africabroadcastingacademy.com" target="_blank">www.africabroadcastingacademy.com</a>
+                            <a href="http://www.africabroadcastingacademy.com" target="_blank">
+                                www.africabroadcastingacademy.com
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -201,16 +222,18 @@
         <section class="contact-form-map py-5 bg-light">
             <div class="container">
                 <div class="row">
+                    <!-- Contact Form -->
                     <div class="col-md-6 mb-4" data-aos="fade-right">
                         <h2 class="section-title mb-4">Send Us a Message</h2>
-                        <form id="contact-form">
+                        <form id="contact-form" method="POST" action="send-mail.php">
                             <div class="mb-3">
                                 <label class="form-label text-black" for="contact-name">Name</label>
                                 <input
                                     class="form-control"
                                     id="contact-name"
-                                    required=""
+                                    name="name"
                                     type="text"
+                                    required
                                 >
                             </div>
                             <div class="mb-3">
@@ -218,26 +241,34 @@
                                 <input
                                     class="form-control"
                                     id="contact-email"
-                                    required=""
+                                    name="email"
                                     type="email"
+                                    required
                                 >
                             </div>
                             <div class="mb-3">
                                 <label class="form-label text-black" for="contact-phone">Phone Number</label>
-                                <input class="form-control" id="contact-phone" type="tel">
+                                <input
+                                    class="form-control"
+                                    id="contact-phone"
+                                    name="phone"
+                                    type="tel"
+                                >
                             </div>
                             <div class="mb-3">
                                 <label class="form-label text-black" for="message">Message</label>
                                 <textarea
                                     class="form-control"
                                     id="message"
-                                    required=""
+                                    name="message"
                                     rows="5"
+                                    required
                                 ></textarea>
                             </div>
                             <button class="btn btn-cta" type="submit">Send Message</button>
                         </form>
                     </div>
+                    <!-- Map -->
                     <div class="col-md-6 mb-4" data-aos="fade-left">
                         <h2 class="section-title mb-4">Our Location</h2>
                         <div id="map" style="height: 400px;"></div>

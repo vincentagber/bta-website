@@ -1,112 +1,119 @@
 <?php
+// application.php
+
+// Enable error reporting for debugging (remove in production)
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Clean and assign values
-    $fullName = htmlspecialchars(trim($_POST['fullName']));
-    $dob = htmlspecialchars(trim($_POST['dob']));
-    $gender = htmlspecialchars(trim($_POST['gender']));
-    $nationality = htmlspecialchars(trim($_POST['nationality']));
-    $phone = htmlspecialchars(trim($_POST['phone']));
-    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
-    $address = htmlspecialchars(trim($_POST['address']));
 
-    $aboutYou = htmlspecialchars(trim($_POST['aboutYou']));
-    $mediaExp = htmlspecialchars(trim($_POST['mediaExp']));
-    $educationLevel = htmlspecialchars(trim($_POST['educationLevel']));
-    $fieldOfStudy = htmlspecialchars(trim($_POST['fieldOfStudy']));
-    $institution = htmlspecialchars(trim($_POST['institution']));
-    $graduationYear = htmlspecialchars(trim($_POST['graduationYear']));
-    $expectations = htmlspecialchars(trim($_POST['expectations']));
-    $additional = htmlspecialchars(trim($_POST['additional'] ?? ''));
+    function clean_input($data) {
+        return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
+    }
 
-    // Handle checkboxes
-    $courses = isset($_POST['courses']) ? implode(", ", $_POST['courses']) : 'None selected';
+    // Required fields
+    $requiredFields = [
+        'fullName', 'dob', 'gender', 'nationality', 'phone', 'email',
+        'address', 'aboutYou', 'mediaExp', 'educationLevel', 'fieldOfStudy',
+        'institution', 'graduationYear', 'expectations', 'declaration'
+    ];
 
-    // Handle video upload
-    $videoPath = "No video uploaded.";
-    if (isset($_FILES['introVideo']) && $_FILES['introVideo']['error'] === UPLOAD_ERR_OK) {
-        $fileTmpPath = $_FILES['introVideo']['tmp_name'];
-        $fileName = preg_replace("/[^a-zA-Z0-9\._-]/", "_", $_FILES['introVideo']['name']);
-        $fileSize = $_FILES['introVideo']['size'];
-        $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-        $allowedExtensions = ['mp4', 'mov', 'avi', 'mkv'];
-        $maxFileSize = 50 * 1024 * 1024; // 50MB
-
-        // Validate MIME type
-        $mime = mime_content_type($fileTmpPath);
-        $allowedMimes = ['video/mp4', 'video/quicktime', 'video/x-msvideo', 'video/x-matroska'];
-
-        if (in_array($fileExt, $allowedExtensions) && in_array($mime, $allowedMimes)) {
-            if ($fileSize <= $maxFileSize) {
-                $newFileName = uniqid("intro_", true) . "." . $fileExt;
-                $uploadDir = 'uploads/';
-                if (!is_dir($uploadDir)) {
-                    mkdir($uploadDir, 0755, true);
-                }
-                $destPath = $uploadDir . $newFileName;
-
-                if (move_uploaded_file($fileTmpPath, $destPath)) {
-                    $videoPath = $destPath;
-                } else {
-                    $videoPath = "Error moving the uploaded file.";
-                    error_log("Failed to move file for $email");
-                }
-            } else {
-                $videoPath = "Video exceeds 50MB limit.";
-                error_log("File too large from $email");
-            }
-        } else {
-            $videoPath = "Invalid video format.";
-            error_log("Invalid video format: $fileName from $email");
+    foreach ($requiredFields as $field) {
+        if (empty($_POST[$field])) {
+            die("Error: Missing required field - " . $field);
         }
     }
 
-    // Email setup
-    $to = "info@africabroadcastingacademy.com,Samson.a@africabroadcastingacademy.com";
-    $subject = "New Mentorship Application from $fullName";
+    // Sanitize
+    $fullName       = clean_input($_POST['fullName']);
+    $dob            = clean_input($_POST['dob']);
+    $gender         = clean_input($_POST['gender']);
+    $nationality    = clean_input($_POST['nationality']);
+    $phone          = clean_input($_POST['phone']);
+    $email          = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    if (!$email) die("Error: Invalid email address.");
+    $address        = clean_input($_POST['address']);
+    $courses        = isset($_POST['courses']) ? array_map('clean_input', $_POST['courses']) : [];
+    $aboutYou       = clean_input($_POST['aboutYou']);
+    $mediaExp       = clean_input($_POST['mediaExp']);
+    $educationLevel = clean_input($_POST['educationLevel']);
+    $fieldOfStudy   = clean_input($_POST['fieldOfStudy']);
+    $institution    = clean_input($_POST['institution']);
+    $graduationYear = intval($_POST['graduationYear']);
+    $expectations   = clean_input($_POST['expectations']);
+    $additional     = clean_input($_POST['additional'] ?? '');
 
-    $body = <<<EOD
-You have received a new Application Form application:
-
-Full Name: $fullName
-Date of Birth: $dob
-Gender: $gender
-Nationality: $nationality
-Phone: $phone
-Email: $email
-Address: $address
-
-Selected Courses: $courses
-
-About Applicant:
-$aboutYou
-
-Media Experience:
-$mediaExp
-
-Education:
-- Level: $educationLevel
-- Field: $fieldOfStudy
-- Institution: $institution
-- Graduation Year: $graduationYear
-
-Expectations:
-$expectations
-
-Additional Info:
-$additional
-
-Video Introduction: $videoPath
-EOD;
-
-    $headers = "From: noreply@africabroadcastingacademy.com\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-    if (mail($to, $subject, $body, $headers)) {
-        echo "<script>alert('Application submitted successfully!'); window.location.href='thank-you.html';</script>";
-    } else {
-        error_log("Mail failed for: $email");
-        echo "<script>alert('Sorry, there was a problem submitting your application.'); window.history.back();</script>";
+    // Handle video upload
+    if (!isset($_FILES['introVideo']) || $_FILES['introVideo']['error'] !== UPLOAD_ERR_OK) {
+        die("Error: Video upload failed.");
     }
+
+    $video = $_FILES['introVideo'];
+    $allowedTypes = ['video/mp4', 'video/quicktime', 'video/x-msvideo'];
+    $maxSize = 50 * 1024 * 1024; // 50 MB
+
+    if (!in_array($video['type'], $allowedTypes)) {
+        die("Error: Invalid video format.");
+    }
+    if ($video['size'] > $maxSize) {
+        die("Error: Video exceeds 50MB size limit.");
+    }
+
+    $uploadDir = __DIR__ . '/uploads/';
+    if (!is_dir($uploadDir)) {
+        mkdir($uploadDir, 0777, true);
+    }
+
+    $videoPath = $uploadDir . time() . "_" . basename($video['name']);
+    if (!move_uploaded_file($video['tmp_name'], $videoPath)) {
+        die("Error: Failed to save uploaded video.");
+    }
+
+    // Save to CSV
+    $file = __DIR__ . '/applications.csv';
+    $fp = fopen($file, 'a');
+    if ($fp) {
+        fputcsv($fp, [
+            $fullName, $dob, $gender, $nationality, $phone, $email, $address,
+            implode(", ", $courses), $aboutYou, $mediaExp, $educationLevel,
+            $fieldOfStudy, $institution, $graduationYear, $expectations,
+            $additional, $videoPath
+        ]);
+        fclose($fp);
+    }
+
+    // Send Email
+    $to = "info@africabroadcastingacademy.com, samson.a@africabroadcastingacademy.com";
+    $subject = "New Application from " . $fullName;
+
+    $message = "
+    A new application has been submitted:\n\n
+    Full Name: $fullName
+    Date of Birth: $dob
+    Gender: $gender
+    Nationality: $nationality
+    Phone: $phone
+    Email: $email
+    Address: $address
+    Courses: " . implode(", ", $courses) . "
+    About You: $aboutYou
+    Media Experience: $mediaExp
+    Education Level: $educationLevel
+    Field of Study: $fieldOfStudy
+    Institution: $institution
+    Graduation Year: $graduationYear
+    Expectations: $expectations
+    Additional: $additional
+    Video Path: $videoPath
+    ";
+
+    $headers = "From: no-reply@africabroadcastingacademy.com\r\n";
+    $headers .= "Reply-To: $email\r\n";
+
+    mail($to, $subject, $message, $headers);
+
+    echo "<h2>Application Submitted Successfully!</h2>";
+    echo "<p>Thank you, $fullName. We have received your application and will contact you soon.</p>";
+} else {
+    echo "Invalid request.";
 }
-?>

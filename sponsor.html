@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Africa broadcasting Academy empowers young African storytellers through hands-on broadcast training, mentorship, and media literacy. Join our cultural revolution to reclaim Africa’s narrative and share authentic stories with the world." name="description">
+        <meta content="Africa broadcasting Academy, African storytelling, media training, broadcast journalism, documentary filmmaking, podcasting, African narrative, media literacy, mentorship, cultural revolution" name="keywords">
+        <meta content="Africa broadcasting Academy" name="author">
+        <meta content="index, follow" name="robots">
+        <!-- Favicon -->
+        <link href="assets/images/logo.png" rel="icon" type="image/png">
+        <!-- Open Graph Tags for Social Media -->
+        <meta content="Africa broadcasting Academy - Reclaiming Africa’s Narrative" property="og:title">
+        <meta content="Empowering young African storytellers to share authentic narratives through broadcast training, mentorship, and media literacy. Join the movement!" property="og:description">
+        <meta content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg" property="og:image">
+        <meta content="https://www.africabroadcastingacademy.com" property="og:url">
+        <meta content="website" property="og:type">
+        <meta content="Africa broadcasting Academy" property="og:site_name">
+        <!-- Twitter Card Tags -->
+        <meta content="summary_large_image" name="twitter:card">
+        <meta content="Africa broadcasting Academy - Reclaiming Africa’s Narrative" name="twitter:title">
+        <meta content="Empowering young African storytellers to share authentic narratives through broadcast training, mentorship, and media literacy. Join the movement!" name="twitter:description">
+        <meta content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg" name="twitter:image">
+        <meta content="@ABAfrica" name="twitter:site">
+        <title>Sponsor- Africa broadcasting Academy - Empowering African Storytellers</title>
+        <!-- Bootstrap CSS -->
+        <link
+            crossorigin="anonymous"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            rel="stylesheet"
+        >
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Three.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <!-- Font Awesome -->
+        <link
+            crossorigin="anonymous"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            referrerpolicy="no-referrer"
+            rel="stylesheet"
+        >
+        <style>
+    /* Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background: linear-gradient(135deg, #1A2A44 0%, #0D1B2A 100%);
+        color: #E0E7F0;
+        line-height: 1.6;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px 10px; /* Reduced padding */
+    }
+
+    /* WebGL Background */
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Moved behind content to avoid overlap */
+        opacity: 0.2;
+    }
+
+    /* Variables (to match the other stylesheet's approach) */
+    :root {
+        --primary-color: #000000; /* Black text */
+        --navbar-bg: #FFFFFF; /* White background */
+        --text-color: #333333; /* Hover/active text color */
+        --white: #FFFFFF;
+        --gray: #F8F9FA; /* Light gray for hover states */
+        --background-color: #FFFFFF;
+        --secondary-color: #000000;
+    }
+
+
+    /* Navbar main container */
+.navbar {
+    background-color: var(--navbar-bg);
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    overflow: visible; /* Make sure dropdowns can overflow */
+}
+
+/* Only allow scroll inside navbar-collapse on small screens */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 993px) {
+    .navbar-collapse {
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+/* Dropdown menu fix */
+.dropdown-menu {
+    position: absolute; /* Forces it outside flow */
+    z-index: 2000; /* Keeps it above everything */
+}
+
+
+    /* Constrain collapsed navbar menu */
+    .navbar-collapse {
+        max-height: 80vh; /* Reduced max height */
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: var(--navbar-bg);
+        padding: 0.5rem; /* Reduced padding */
+    }
+
+    .navbar-brand .logo-text {
+        font-family: "Playfair Display", serif;
+        color: var(--primary-color);
+        font-size: clamp(1.4rem, 3vw, 1.8rem);
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .navbar-brand img {
+        height: 50px; /* Reduced height for compactness */
+        width: auto;
+        max-width: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-brand img:hover {
+        transform: scale(1.1);
+    }
+
+    .nav-link {
+        color: var(--primary-color) !important;
+        font-weight: 400;
+        margin: 0 0.3rem; /* Reduced margin */
+        transition: color 0.3s ease;
+        font-size: clamp(0.85rem, 2vw, 1rem); /* Slightly smaller base size */
+        white-space: nowrap;
+        padding: 0.2rem 0.4rem; /* Reduced padding */
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--text-color) !important;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+    }
+
+    /* Hamburger Menu Icon */
+    .navbar-toggler {
+        border: none;
+        padding: 0.2rem; /* Reduced padding */
+    }
+
+    .navbar-toggler-icon {
+        background-image: none;
+        width: 25px; /* Reduced size */
+        height: 25px; /* Reduced size */
+        position: relative;
+        display: inline-block;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after,
+    .navbar-toggler-icon span {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px; /* Reduced thickness */
+        background-color: var(--primary-color);
+        left: 0;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-toggler-icon::before {
+        top: 6px; /* Adjusted for smaller size */
+    }
+
+    .navbar-toggler-icon span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .navbar-toggler-icon::after {
+        bottom: 6px; /* Adjusted for smaller size */
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+        transform: rotate(45deg);
+        top: 50%;
+        margin-top: -1px; /* Adjusted */
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span {
+        opacity: 0;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+        transform: rotate(-45deg);
+        bottom: 50%;
+        margin-bottom: -1px; /* Adjusted */
+    }
+
+    /* Button Styles */
+    .btn-cta {
+        background-color: var(--primary-color) !important;
+        color: var(--white) !important;
+        border: none;
+        padding: 0.3rem 0.8rem; /* Reduced padding */
+        font-weight: 600;
+        font-size: clamp(0.85rem, 2vw, 1rem); /* Slightly smaller */
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 0.5rem; /* Ensure spacing from other nav items */
+        display: inline-flex; /* Ensure visibility */
+        align-items: center;
+    }
+
+    .btn-cta:hover {
+        background-color: var(--gray) !important;
+        color: var(--white) !important;
+        transform: scale(1.05);
+    }
+
+    .btn-cta:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(38, 198, 218, 0.3);
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: 100vh;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-background {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: scale(1.05);
+        transition: transform 8s ease;
+        will-change: transform;
+    }
+
+    /* Parallax effect only on desktop */
+    @media (min-width: 768px) {
+        .hero-section:hover .hero-background {
+            transform: scale(1.1);
+        }
+    }
+
+    .hero-overlay {
+        z-index: 1;
+    }
+
+    .btn-cta {
+        background: linear-gradient(90deg, #d4a017, #f4c430);
+        border: none;
+        border-radius: 25px;
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        font-weight: 600;
+        color: #1a1a1a;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 3px 12px rgba(212, 160, 23, 0.4);
+        touch-action: manipulation;
+    }
+
+    .btn-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(212, 160, 23, 0.6);
+        color: #1a1a1a;
+    }
+
+    .btn-cta:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.3);
+    }
+
+    .btn-cta:active {
+        transform: scale(0.95);
+    }
+
+    .cultural-icon svg {
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+
+    .cultural-icon:hover svg {
+        opacity: 1;
+    }
+
+    /* Mobile-Specific Adjustments */
+    @media (max-width: 576px) {
+        .hero-section {
+            min-height: 80vh;
+        }
+        .hero-title {
+            font-size: clamp(1.6rem, 7vw, 2.5rem);
+            letter-spacing: 1.5px;
+        }
+        .hero-subtitle {
+            font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+            max-width: 95%;
+        }
+        .btn-cta {
+            padding: 10px 20px;
+            font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+        }
+        .container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    /* Sponsor Section */
+    .sponsor-page {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 40px 20px; /* Reduced padding */
+        margin: 20px 0; /* Reduced margin */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Lighter shadow */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem;
+        color: #FFD700;
+        text-align: center;
+        margin-bottom: 20px; /* Reduced margin */
+        text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5);
+        animation: fadeInDown 1.5s ease;
+    }
+
+    p {
+        font-size: 1.1rem; /* Slightly smaller */
+        color: #D1D9E6;
+        margin-bottom: 15px; /* Reduced margin */
+        text-align: justify;
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 15px; /* Reduced margin */
+    }
+
+    ul li {
+        position: relative;
+        font-size: 1rem; /* Slightly smaller */
+        color: #B0C4DE;
+        margin-bottom: 10px; /* Reduced margin */
+        padding-left: 15px; /* Reduced padding */
+    }
+
+    ul li:before {
+        content: "•";
+        color: #FFD700;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem; /* Slightly smaller */
+        color: #E0E7F0;
+        margin-top: 30px; /* Reduced margin */
+        margin-bottom: 15px; /* Reduced margin */
+        border-bottom: 2px solid #FFD700;
+        display: inline-block;
+    }
+
+    .cta-btn {
+        display: inline-block;
+        background: linear-gradient(45deg, #FFD700, #FFA500);
+        color: #1A2A44;
+        padding: 10px 30px; /* Reduced padding */
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem; /* Slightly smaller */
+        border-radius: 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all 0.4s ease;
+        box-shadow: 0 6px 15px rgba(255, 215, 0, 0.3); /* Lighter shadow */
+    }
+
+    .cta-btn:hover {
+        background: linear-gradient(45deg, #FFA500, #FFD700);
+        transform: scale(1.05) translateY(-3px); /* Reduced lift */
+        box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4); /* Lighter shadow */
+    }
+
+    strong {
+        color: #FFD700;
+        font-weight: 600;
+    }
+
+    /* Footer */
+    .footer {
+        background: #0D1B2A;
+        color: #E0E7F0;
+        padding: 30px 0; /* Reduced padding */
+    }
+
+    .footer-logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem; /* Slightly smaller */
+        color: #FFD700;
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    .footer-description {
+        font-size: 0.85rem; /* Slightly smaller */
+        color: #B0C4DE;
+    }
+
+    .social-links a {
+        color: #E0E7F0;
+        font-size: 1rem; /* Slightly smaller */
+        margin-right: 10px; /* Reduced margin */
+        transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+        color: #FFD700;
+    }
+
+    .footer-title {
+        font-size: 1rem; /* Slightly smaller */
+        color: #FFD700;
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    .footer-newsletter .btn-cta {
+        background: #FFD700;
+        color: #1A2A44;
+        padding: 0.3rem 0.8rem; /* Reduced padding */
+    }
+
+    .footer-newsletter .btn-cta:hover {
+        background: #FFA500;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(224, 231, 240, 0.1);
+        padding-top: 15px; /* Reduced padding */
+        color: #B0C4DE;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        .section-title {
+            font-size: 2rem; /* Further reduced */
+        }
+
+        h2 {
+            font-size: 1.3rem; /* Further reduced */
+        }
+
+        .cta-btn {
+            padding: 8px 20px; /* Further reduced */
+            font-size: 1rem; /* Further reduced */
+        }
+
+        .navbar-nav {
+            text-align: center;
+            margin-top: 5px; /* Reduced margin */
+        }
+
+        .navbar-brand img {
+            height: 30px; /* Further reduced */
+        }
+
+        .nav-link {
+            font-size: 0.8rem; /* Further reduced */
+            margin: 0 5px; /* Further reduced */
+            padding: 2px 4px; /* Further reduced */
+        }
+
+        .btn-cta {
+            padding: 4px 10px; /* Further reduced */
+            font-size: 0.8rem; /* Further reduced */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .navbar-collapse {
+            padding: 5px 0; /* Further reduced */
+        }
+
+        .nav-item {
+            margin: 3px 0; /* Further reduced */
+        }
+
+        .sponsor-page {
+            padding: 20px 15px; /* Further reduced */
+        }
+    }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img alt="ABA Logo" class="logo-image" src="assets/images/logo.png">
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">Stories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="applicationform.html">Application Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="programs.html">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="students.html">Students’ Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <!-- Country Selector (Flags Only) -->
+                        <li class="nav-item dropdown ms-lg-2">
+                            <a
+                                class="nav-link dropdown-toggle d-flex align-items-center"
+                                href="#"
+                                id="countryDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <img src="https://flagcdn.com/w20/bj.png" alt="Benin" style="width:18px; height:12px;">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="countryDropdown">
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/bj.png" style="width:18px; height:12px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/gh.png" style="width:18px; height:12px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/ci.png" style="width:18px; height:12px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/tg.png" style="width:18px; height:12px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/ng.png" style="width:18px; height:12px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/ke.png" style="width:18px; height:12px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/ug.png" style="width:18px; height:12px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/sn.png" style="width:18px; height:12px;">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-cta ms-2" href="applicationform.html">Apply Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="sponsor-page">
+            <div class="container">
+                <h1 class="section-title">Sponsor a Storyteller – Change a Life</h1>
+                <p>At Africa Broadcasting Academy, we believe that one voice can inspire many—and that every young African deserves the skills to tell their story to the world.</p>
+                <p>Your sponsorship directly empowers young people, especially in underserved communities, with hands-on training in:</p>
+                <ul>
+                    <li>Mobile journalism</li>
+                    <li>Digital video production</li>
+                    <li>Storytelling for social impact</li>
+                    <li>Content creation for the modern media space</li>
+                </ul>
+                <p>With your support, we provide training, mentorship, and access to tools—turning mobile phones into powerful broadcasting devices.</p>
+                <h2>How Sponsorship Works</h2>
+                <p>You can sponsor anywhere from 1 to 1,000 students for our courses. Each sponsorship covers:</p>
+                <ul>
+                    <li>Tuition for the selected course</li>
+                    <li>Access to learning resources</li>
+                    <li>Mentorship from experienced media professionals</li>
+                    <li>Certification upon completion</li>
+                </ul>
+                <h2>Why Partner With Us?</h2>
+                <ul>
+                    <li>Real impact – measurable skills gained, lives changed</li>
+                    <li>Visibility – your name/brand acknowledged in our training materials and media coverage</li>
+                    <li>Sustainability – skills that last a lifetime and ripple through communities</li>
+                </ul>
+                <p>
+                    <strong>📧 Official Sponsorship Email:</strong>
+                    sponsor@AfricaBroadcastingAcademy.com
+                </p>
+                <a href="#" class="cta-btn">Sponsor Now</a>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer mt-5 py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo and brief intro -->
+                    <div class="col-md-4 mb-4">
+                        <h2 class="footer-logo">ABA</h2>
+                        <p class="footer-description">Empowering Africa's future through innovation, leadership, and education.</p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.facebook.com/share/1Hg4nrcmje/?mibextid=wwXIfr">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-md-2 mb-4">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#about">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#programs">Programs</a>
+                            </li>
+                            <li>
+                                <a href="#stories">Success Stories</a>
+                            </li>
+                            <li>
+                                <a href="#events">Events</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Resources -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="footer-title">Resources</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">Podcast</a>
+                            </li>
+                            <li>
+                                <a href="#">VR Experience</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Newsletter -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="footer-title">Subscribe</h5>
+                        <form class="footer-newsletter">
+                            <input class="form-control mb-2" placeholder="Your email address" type="email">
+                            <button class="btn btn-cta w-100" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Bottom Footer -->
+                <div class="text-center mt-4 footer-bottom">
+                    <small>© 2025 ABA. All rights reserved. | Designed with ❤️</small>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap JS and Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- Custom JS -->
+        <script>
+        // Three.js Background
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        camera.position.z = 5;
+
+        const particlesGeometry = new THREE.BufferGeometry();
+        const particlesCount = 500;
+        const positions = new Float32Array(particlesCount * 3);
+        for (let i = 0; i < particlesCount * 3; i++) {
+            positions[i] = (Math.random() - 0.5) * 20;
+        }
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        const particlesMaterial = new THREE.PointsMaterial({ color: 0xFFD700, size: 0.1, transparent: true });
+        const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+        scene.add(particles);
+
+        function animate() {
+            requestAnimationFrame(animate);
+            particles.rotation.y += 0.001;
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // AOS Initialization
+        AOS.init({
+            duration: 1200,
+            once: true,
+            easing: 'ease-in-out'
+        });
+
+        // Error Handling
+        window.addEventListener('load', () => {
+            if (!document.querySelector('.navbar') || !AOS) {
+                console.error('Critical resources failed to load. Check console for details.');
+            }
+        });
+        </script>
+    </body>
+</html>
