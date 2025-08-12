@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Broadcast Training Academy empowers young African storytellers through hands-on broadcast training, Application Form, and media literacy. Join our cultural revolution to reclaim Africa’s narrative and share authentic stories with the world." name="description">
+        <meta content="Broadcast Training Academy, African storytelling, media training, broadcast journalism, documentary filmmaking, podcasting, African narrative, media literacy, Application Form, cultural revolution" name="keywords">
+        <meta content="Broadcast Training Academy" name="author">
+        <meta content="index, follow" name="robots">
+        <!-- Open Graph Tags for Social Media -->
+        <meta content="Broadcast Training Academy - Reclaiming Africa’s Narrative" property="og:title">
+        <meta content="Empowering young African storytellers to share authentic narratives through broadcast training, Application Form, and media literacy. Join the movement!" property="og:description">
+        <meta content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg" property="og:image">
+        <!-- Replace with actual image URL -->
+        <meta content="https://www.africabroadcastingacademy.com" property="og:url">
+        <meta content="website" property="og:type">
+        <meta content="Broadcast Training Academy" property="og:site_name">
+        <!-- Google Fonts (Inter and Poppins) -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
+        <!-- Twitter Card Tags -->
+        <meta content="summary_large_image" name="twitter:card">
+        <meta content="Broadcast Training Academy - Reclaiming Africa’s Narrative" name="twitter:title">
+        <meta content="Empowering young African storytellers to share authentic narratives through broadcast training, Application Form, and media literacy. Join the movement!" name="twitter:description">
+        <meta content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg" name="twitter:image">
+        <!-- Replace with actual image URL -->
+        <meta content="@ABAfrica" name="twitter:site">
+        <!-- Favicon -->
+        <link href="assets/images/logo.png" rel="icon" type="image/png">
+        <title>Application Form - Broadcast Training Academy - Empowering African Storytellers</title>
+        <!-- Bootstrap CSS -->
+        <link
+            crossorigin="anonymous"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            rel="stylesheet"
+        >
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Montserrat:wght@300;400;600&amp;display=swap" rel="stylesheet">
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Three.js for WebGL Background -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <!-- Favicon -->
+        <link href="assets/images/logo.png" rel="icon" type="image/png">
+        <!-- Font Awesome -->
+        <link
+            crossorigin="anonymous"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            referrerpolicy="no-referrer"
+            rel="stylesheet"
+        >
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet"></link>
+        </link>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img alt="ABA Logo" class="logo-image" src="assets/images/logo.png">
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">Stories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="applicationform.html">Application Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="programs.html">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="students.html">Students’ Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <!-- Country Selector (Flags Only) -->
+                        <li class="nav-item dropdown ms-lg-3">
+                            <a
+                                class="nav-link dropdown-toggle d-flex align-items-center"
+                                href="#"
+                                id="countryDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <img src="https://flagcdn.com/w20/bj.png" alt="Benin" style="width:20px; height:14px;">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="countryDropdown">
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/bj.png" style="width:20px; height:14px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/gh.png" style="width:20px; height:14px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/ci.png" style="width:20px; height:14px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/tg.png" style="width:20px; height:14px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/ng.png" style="width:20px; height:14px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/ke.png" style="width:20px; height:14px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/ug.png" style="width:20px; height:14px;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="#">
+                                        <img src="https://flagcdn.com/w20/sn.png" style="width:20px; height:14px;">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-cta ms-3" href="applicationform.html">Apply Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <style>
+    body { font-family: 'Montserrat', sans-serif; background-color: #F5F5F5; color: #1C2526; }
+    h1, h2, h3, .section-title { font-family: 'Playfair Display', serif; color: #00B7EB; }
+    .btn-cta { background-color: #00B7EB; color: #1C2526; }
+    .btn-cta:hover { background-color: #8B1E3F; color: #fff; }
+    .form-section { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .form-control, .form-select { border-color: #00B7EB; }
+    .form-control:focus, .form-select:focus { box-shadow: 0 0 0 0.2rem rgba(212, 160, 23, 0.25); }
+        </style>
+        <body>
+            <section class="py-5">
+                <div class="container" data-aos="fade-up">
+                    <h1 class="section-title text-center mb-4">Application Form</h1>
+                    <p class="text-center mb-5">Please complete all required fields below to apply.</p>
+                    <div class="form-section mx-auto" style="max-width: 800px;">
+                        <form action="application.php" enctype="multipart/form-data" method="POST">
+                            <!-- 1. Personal Information -->
+                            <h3 class="h5 fw-semibold mb-3">1. Personal Information</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="fullName">Full Name</label>
+                                    <input
+                                        class="form-control"
+                                        id="fullName"
+                                        name="fullName"
+                                        required=""
+                                        type="text"
+                                    >
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="dob">Date of Birth</label>
+                                    <input
+                                        class="form-control"
+                                        id="dob"
+                                        name="dob"
+                                        required=""
+                                        type="date"
+                                    >
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="gender">Gender</label>
+                                    <select
+                                        class="form-select"
+                                        id="gender"
+                                        name="gender"
+                                        required=""
+                                    >
+                                        <option value="">Select</option>
+                                        <option>Female</option>
+                                        <option>Male</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="nationality">Nationality</label>
+                                    <input
+                                        class="form-control"
+                                        id="nationality"
+                                        name="nationality"
+                                        required=""
+                                        type="text"
+                                    >
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="phone">Phone Number</label>
+                                    <input
+                                        class="form-control"
+                                        id="phone"
+                                        name="phone"
+                                        required=""
+                                        type="tel"
+                                    >
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="email">Email Address</label>
+                                    <input
+                                        class="form-control"
+                                        id="email"
+                                        name="email"
+                                        required=""
+                                        type="email"
+                                    >
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="address">Residential Address</label>
+                                    <input
+                                        class="form-control"
+                                        id="address"
+                                        name="address"
+                                        required=""
+                                        type="text"
+                                    >
+                                </div>
+                            </div>
+                            <!-- 2. Course Selection -->
+                            <h3 class="h5 fw-semibold mb-3">2. Course Selection</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            id="course1"
+                                            name="courses[]"
+                                            type="checkbox"
+                                            value="Digital Video Editing"
+                                        >
+                                        <label class="form-check-label" for="course1">Digital Video Editing</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            id="course2"
+                                            name="courses[]"
+                                            type="checkbox"
+                                            value="Visual Storytelling"
+                                        >
+                                        <label class="form-check-label" for="course2">Visual Storytelling</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            id="course3"
+                                            name="courses[]"
+                                            type="checkbox"
+                                            value="Video Journalism"
+                                        >
+                                        <label class="form-check-label" for="course3">Video Journalism</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            id="course4"
+                                            name="courses[]"
+                                            type="checkbox"
+                                            value="Cinematography"
+                                        >
+                                        <label class="form-check-label" for="course4">Cinematography</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            id="course5"
+                                            name="courses[]"
+                                            type="checkbox"
+                                            value="Presenting"
+                                        >
+                                        <label class="form-check-label" for="course5">Presenting</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            id="course6"
+                                            name="courses[]"
+                                            type="checkbox"
+                                            value="Script Writing"
+                                        >
+                                        <label class="form-check-label" for="course6">Script Writing</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            id="course7"
+                                            name="courses[]"
+                                            type="checkbox"
+                                            value="Documentary Filmmaking"
+                                        >
+                                        <label class="form-check-label" for="course7">Documentary Filmmaking</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            id="course8"
+                                            name="courses[]"
+                                            type="checkbox"
+                                            value="Digital Video Content Creation"
+                                        >
+                                        <label class="form-check-label" for="course8">Digital Video Content Creation</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3. About You -->
+                            <h3 class="h5 fw-semibold mb-3">3. About You</h3>
+                            <div class="mb-4">
+                                <label class="form-label" for="aboutYou">Tell us about yourself (150 words)</label>
+                                <textarea
+                                    class="form-control"
+                                    id="aboutYou"
+                                    name="aboutYou"
+                                    required=""
+                                    rows="4"
+                                ></textarea>
+                            </div>
+                            <!-- 4. Media Experience -->
+                            <h3 class="h5 fw-semibold mb-3">4. Media Experience</h3>
+                            <div class="mb-4">
+                                <label class="form-label" for="mediaExp">Describe any experience in media (100 words)</label>
+                                <textarea
+                                    class="form-control"
+                                    id="mediaExp"
+                                    name="mediaExp"
+                                    required=""
+                                    rows="3"
+                                ></textarea>
+                            </div>
+                            <!-- 5. Educational Background -->
+                            <h3 class="h5 fw-semibold mb-3">5. Educational Background</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <input
+                                        class="form-control"
+                                        name="educationLevel"
+                                        placeholder="Highest Level of Education"
+                                        required=""
+                                    >
+                                </div>
+                                <div class="col-md-4">
+                                    <input
+                                        class="form-control"
+                                        name="fieldOfStudy"
+                                        placeholder="Field of Study"
+                                        required=""
+                                    >
+                                </div>
+                                <div class="col-md-4">
+                                    <input
+                                        class="form-control"
+                                        name="institution"
+                                        placeholder="Institution Name"
+                                        required=""
+                                    >
+                                </div>
+                                <div class="col-md-4">
+                                    <input
+                                        class="form-control"
+                                        name="graduationYear"
+                                        placeholder="Year of Graduation"
+                                        required=""
+                                        type="number"
+                                    >
+                                </div>
+                            </div>
+                            <!-- 6. Expectations -->
+                            <h3 class="h5 fw-semibold mb-3">6. Expectations</h3>
+                            <div class="mb-4">
+                                <label class="form-label" for="expectations">What do you hope to achieve?</label>
+                                <textarea
+                                    class="form-control"
+                                    id="expectations"
+                                    name="expectations"
+                                    required=""
+                                    rows="3"
+                                ></textarea>
+                            </div>
+                            <!-- 7. Additional Information -->
+                            <h3 class="h5 fw-semibold mb-3">7. Additional Information (Optional)</h3>
+                            <div class="mb-4">
+                                <label class="form-label" for="additional">Anything else you'd like us to know?</label>
+                                <textarea
+                                    class="form-control"
+                                    id="additional"
+                                    name="additional"
+                                    rows="2"
+                                ></textarea>
+                            </div>
+                            <!-- 8. Video Introduction -->
+                            <h3 class="h5 fw-semibold mb-3">8. Video Introduction</h3>
+                            <div class="mb-4">
+                                <label class="form-label" for="introVideo">Upload Intro Video (Max: 50MB)</label>
+                                <input
+                                    accept="video/mp4, video/quicktime, video/x-msvideo"
+                                    class="form-control"
+                                    id="introVideo"
+                                    name="introVideo"
+                                    required=""
+                                    type="file"
+                                >
+                                <small class="text-muted d-block mt-2">
+                                    Please upload a short video (max 2 minutes) introducing yourself.
+                        Tell us why you chose media, what you’ve done before, and what you believe you can contribute to
+                        the media space.
+                                    <br>
+                                    Accepted formats: MP4, MOV, AVI. Max size: 50MB.
+                                </small>
+                            </div>
+                            <!-- 9. Declaration -->
+                            <div class="form-check mb-4">
+                                <input
+                                    class="form-check-input"
+                                    id="declaration"
+                                    name="declaration"
+                                    required=""
+                                    type="checkbox"
+                                >
+                                <label class="form-check-label" for="declaration">
+                                    I hereby declare that the information provided is true and correct.
+                                </label>
+                            </div>
+                            <!-- Submit -->
+                            <div class="text-center">
+                                <button class="btn btn-cta btn-lg" type="submit">Submit Application</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- Footer -->
+            <footer class="footer mt-5 py-5">
+                <div class="container">
+                    <div class="row">
+                        <!-- Logo and brief intro -->
+                        <div class="col-md-4 mb-4">
+                            <h2 class="footer-logo">ABA</h2>
+                            <p class="footer-description">
+                                Empowering Africa's future through innovation, leadership, and education.
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="https://www.facebook.com/share/1Hg4nrcmje/?mibextid=wwXIfr">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Quick Links -->
+                        <div class="col-md-2 mb-4">
+                            <h5 class="footer-title">Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#about">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#programs">Programs</a>
+                                </li>
+                                <li>
+                                    <a href="#stories">Success Stories</a>
+                                </li>
+                                <li>
+                                    <a href="#events">Events</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Resources -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="footer-title">Resources</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Podcast</a>
+                                </li>
+                                <li>
+                                    <a href="#">VR Experience</a>
+                                </li>
+                                <li>
+                                    <a href="#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Newsletter -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="footer-title">Subscribe</h5>
+                            <form class="footer-newsletter">
+                                <input class="form-control mb-2" placeholder="Your email address" type="email">
+                                <button class="btn btn-cta w-100" type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Bottom Footer -->
+                    <div class="text-center mt-4 footer-bottom">
+                        <small>© 2025 ABA. All rights reserved. | Designed with ❤️</small>
+                    </div>
+                </div>
+            </footer>
+            <!-- Bootstrap 5 JS and Popper.js -->
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+            <!-- Animate.css for animations -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+            <!-- Bootstrap Icons for content type icons -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+            <!-- AOS JS -->
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <!-- Custom JS -->
+            <script src="js/script.js"></script>
+            </link>
+        </body>
+    </body>
+</html>

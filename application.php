@@ -61,11 +61,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Email setup
-    $to = "info@africabroadcastingacademy.com,Samson.a@africabroadcastingacademy.com,Rokan.o@africabroadcastingacademy.com";
+    $to = "info@africabroadcastingacademy.com,Samson.a@africabroadcastingacademy.com";
     $subject = "New Mentorship Application from $fullName";
 
     $body = <<<EOD
-You have received a new mentorship application:
+You have received a new Application Form application:
 
 Full Name: $fullName
 Date of Birth: $dob
