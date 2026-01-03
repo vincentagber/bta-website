@@ -1,842 +1,1397 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Africa broadcasting Academy empowers young African storytellers through hands-on broadcast training, Application Form, and media literacy. Join our cultural revolution to reclaim Africa’s narrative and share authentic stories with the world." name="description">
-        <meta content="Africa broadcasting Academy, African storytelling, media training, broadcast journalism, documentary filmmaking, podcasting, African narrative, media literacy, Application Form, cultural revolution" name="keywords">
-        <meta content="Africa broadcasting Academy" name="author">
-        <meta content="index, follow" name="robots">
-        <!-- Open Graph -->
-        <meta property="og:title" content="Africa broadcasting Academy - Reclaiming Africa’s Narrative">
-        <meta property="og:description" content="Empowering young African storytellers to share authentic narratives through broadcast training, Application Form, and media literacy. Join the movement!">
-        <meta property="og:image" content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg">
-        <meta property="og:url" content="https://www.africabroadcastingacademy.com">
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Africa broadcasting Academy">
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Africa broadcasting Academy - Reclaiming Africa’s Narrative">
-        <meta name="twitter:description" content="Empowering young African storytellers to share authentic narratives through broadcast training, Application Form, and media literacy. Join the movement!">
-        <meta name="twitter:image" content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg">
-        <meta name="twitter:site" content="@ABAfrica">
-        <title>Home - Africa broadcasting Academy - Empowering African Storytellers</title>
-        <!-- Bootstrap CSS -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            crossorigin="anonymous"
-            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-        >
-        <!-- Additional Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-        <!-- AOS CSS -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <!-- Three.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="assets/images/logo.png">
-        <!-- Font Awesome -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        >
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img alt="ABA Logo" class="logo-image" src="assets/images/logo.png">
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto align-items-lg-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="stories.html">Stories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="applicationform.html">Application Form</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="programs.html">Programs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="students.html">Students’ Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <!-- Country Selector (Flags Only) -->
-                        <li class="nav-item dropdown ms-lg-3">
-                            <a
-                                class="nav-link dropdown-toggle d-flex align-items-center"
-                                href="#"
-                                id="countryDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                <img src="https://flagcdn.com/w20/bj.png" alt="Benin" style="width:20px; height:14px;">
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="countryDropdown">
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/bj.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/gh.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ci.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/tg.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ng.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ke.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ug.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/sn.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-cta ms-3" href="applicationform.html">Apply Now</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Hero Section -->
-        <section aria-labelledby="hero-title" class="hero-section position-relative d-flex align-items-center justify-content-center text-white" id="home">
-            <!-- Hero Background Image -->
-            <div aria-hidden="true" class="hero-background position-absolute top-0 start-0 w-100 h-100" style="background-image: url('/assets/images/heronew.jpg');"></div>
-            <!-- Hero Content -->
-            <div class="container position-relative text-center py-5 px-3">
-                <h1
-                    class="hero-title mb-3 mb-md-4"
-                    data-aos="fade-down"
-                    data-aos-duration="800"
-                    id="hero-title"
-                >
-                    Reframing Africa, Empowering Storytellers
-                </h1>
-                <p
-                    class="hero-subtitle mb-4 mb-md-5"
-                    data-aos="fade-up"
-                    data-aos-delay="100"
-                    data-aos-duration="800"
-                >
-                    Unleashing Authentic Narratives Through Broadcast Excellence
-                </p>
-                <a
-                    aria-label="Discover Our Stories"
-                    class="btn btn-cta px-4 py-2 py-md-3 px-md-5 text-uppercase"
-                    data-aos="zoom-in"
-                    data-aos-delay="200"
-                    data-aos-duration="800"
-                    href="#stories"
-                    role="button"
-                >
-                    Discover Our Stories
-                </a>
-            </div>
-            <!-- Cultural Element (Hidden on Mobile) -->
-            <div
-                aria-hidden="true"
-                class="cultural-icon position-absolute bottom-0 start-50 translate-middle-x pb-4 d-none d-md-block"
-                data-aos="fade-up"
-                data-aos-delay="300"
-            >
-                <svg
-                    fill="none"
-                    height="50"
-                    stroke="#fff"
-                    stroke-width="1.5"
-                    viewbox="0 0 24 24"
-                    width="50"
-                >
-                    <path d="M12 2a10 10 0 1 1-7.071 17.071A10 10 0 0 1 12 2zm0 2a8 8 0 1 0 5.657 13.657A8 8 0 0 0 12 4zm0 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"></path>
-                </svg>
-            </div>
-        </section>
-        <section class="hero-split">
-            <div class="hero-left">
-                <div class="hero-left">
-                    <img
-                        src="assets/images/newp.JPG"
-                        alt="Young African journalists in action"
-                        class="background-image"
-                        aria-hidden="true"
-                        tabindex="-1"
-                    >
-                    <div class="overlay"></div>
-                </div>
-                <div class="overlay"></div>
-            </div>
-            <div class="hero-right">
-                <div class="content-wrapper">
-                    <h1 class="hero-main-message">
-                        “When Africa tells her story,
-                        <br>
-                        the world listens.
-                        <br>
-                        <span class="highlight">Let’s make sure our storytellers are ready.</span>
-                    </h1>
-                    <div class="cta-buttons">
-                        <a href="/sponsor.html" class="btn btn-primary">Sponsor a Student</a>
-                        <a href="/contact.html" class="btn btn-secondary">Partner with Us</a>
-                    </div>
-                    <p class="hero-subtext">
-                        Africa is more than the headlines you read — it is innovation, beauty, resilience, and limitless potential. Yet, too often, our stories are told by others. At Africa Broadcasting Academy, we train the next generation of African journalists and filmmakers.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="why-partnership">
-            <div class="container">
-                <h2>Why Your Partnership Matters</h2>
-                <p>
-                    Behind every great story is someone who believed enough to give it a voice. Your support directly sponsors students who cannot afford professional media training but have the talent and passion to change the African narrative.
-                </p>
-                <ul class="benefits-list">
-                    <li>
-                        <strong>Visibility:</strong>
-                        Feature your brand in our training programs, media projects, and events.
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta
+        content="Africa broadcasting Academy empowers young African storytellers through hands-on broadcast training, Application Form, and media literacy. Join our cultural revolution to reclaim Africa’s narrative and share authentic stories with the world."
+        name="description">
+    <meta
+        content="Africa broadcasting Academy, African storytelling, media training, broadcast journalism, documentary filmmaking, podcasting, African narrative, media literacy, Application Form, cultural revolution"
+        name="keywords">
+    <meta content="Africa broadcasting Academy" name="author">
+    <meta content="index, follow" name="robots">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Africa broadcasting Academy - Reclaiming Africa’s Narrative">
+    <meta property="og:description"
+        content="Empowering young African storytellers to share authentic narratives through broadcast training, Application Form, and media literacy. Join the movement!">
+    <meta property="og:image" content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://www.africabroadcastingacademy.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Africa broadcasting Academy">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Africa broadcasting Academy - Reclaiming Africa’s Narrative">
+    <meta name="twitter:description"
+        content="Empowering young African storytellers to share authentic narratives through broadcast training, Application Form, and media literacy. Join the movement!">
+    <meta name="twitter:image" content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg">
+    <meta name="twitter:site" content="@ABAfrica">
+    <title>Home - Africa broadcasting Academy - Empowering African Storytellers</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        crossorigin="anonymous" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM">
+    <!-- Additional Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img alt="ABA Logo" class="logo-image" src="assets/images/logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
-                    <li>
-                        <strong>Impact:</strong>
-                        Transform the lives of young Africans and the communities they serve.
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
-                    <li>
-                        <strong>Legacy:</strong>
-                        Be part of a movement redefining how the world sees Africa.
+                    <li class="nav-item">
+                        <a class="nav-link" href="stories.html">Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="applicationform.html">Application Form</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="students.html">Students’ Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <!-- Country Selector (Flags Only) -->
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="countryDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://flagcdn.com/w20/bj.png" alt="Benin" style="width:20px; height:14px;">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="countryDropdown">
+                            <li>
+                                <a class="dropdown-item p-1" href="#">
+                                    <img src="https://flagcdn.com/w20/bj.png" style="width:20px; height:14px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item p-1" href="#">
+                                    <img src="https://flagcdn.com/w20/gh.png" style="width:20px; height:14px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item p-1" href="#">
+                                    <img src="https://flagcdn.com/w20/ci.png" style="width:20px; height:14px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item p-1" href="#">
+                                    <img src="https://flagcdn.com/w20/tg.png" style="width:20px; height:14px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item p-1" href="#">
+                                    <img src="https://flagcdn.com/w20/ng.png" style="width:20px; height:14px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item p-1" href="#">
+                                    <img src="https://flagcdn.com/w20/ke.png" style="width:20px; height:14px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item p-1" href="#">
+                                    <img src="https://flagcdn.com/w20/ug.png" style="width:20px; height:14px;">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item p-1" href="#">
+                                    <img src="https://flagcdn.com/w20/sn.png" style="width:20px; height:14px;">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-cta ms-3" href="applicationform.html">Apply Now</a>
                     </li>
                 </ul>
             </div>
-        </section>
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Open+Sans&display=swap');
+        </div>
+    </nav>
 
-/* Layout */
-.hero-split {
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
-}
+    <!-- Premium Hero Section -->
+    <section aria-labelledby="hero-title"
+        class="premium-hero position-relative d-flex align-items-center justify-content-center text-white" id="home">
+        <!-- Animated Background Image -->
+        <div aria-hidden="true" class="hero-premium-bg position-absolute top-0 start-0 w-100 h-100"></div>
+        <!-- Multi-layered Overlays -->
+        <div aria-hidden="true" class="hero-premium-overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
-.hero-left,
-.hero-right {
-  flex: 1;
-  position: relative;
-  min-height: auto; /* Reset any fixed min-height */
-  overflow: visible; /* Avoid clipping */
-}
+        <!-- Floating Elegant Elements -->
+        <div class="hero-orb orb-1 position-absolute" data-speed="0.05"></div>
+        <div class="hero-orb orb-2 position-absolute" data-speed="0.08"></div>
+        <div class="hero-orb orb-3 position-absolute" data-speed="0.03"></div>
 
-/* Image */
-.hero-left img.background-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-/* Right content */
-.hero-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 4rem;
-  background: #0a0f3a;
-  color: #f5f5dc;
-}
-
-.content-wrapper {
-  max-width: 600px;
-  z-index: 10;
-  text-align: left;
-}
-
-.hero-main-message {
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  font-size: clamp(2.5rem, 5vw, 3rem);
-  line-height: 1.1;
-  margin-bottom: 3rem;
-  color: #ffd700;
-}
-
-.hero-main-message .highlight {
-  color: #fff8dc;
-  font-style: italic;
-}
-
-/* CTAs */
-.cta-buttons {
-  margin-bottom: 2.5rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 1rem 3rem;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color 0.3s ease;
-  border: none;
-  min-width: 180px;
-  margin-right: 1rem;
-}
-
-.btn-primary {
-  background-color: #ffd700;
-  color: #0a0f3a;
-  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #e6c200;
-  outline: none;
-}
-
-.btn-secondary {
-  background: transparent;
-  border: 2.5px solid #ffd700;
-  color: #ffd700;
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus {
-  background-color: #ffd700;
-  color: #0a0f3a;
-  outline: none;
-}
-
-.hero-subtext {
-  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
-  max-width: 480px;
-  color: #f0e68c;
-}
-
-/* Why Partnership Section */
-.why-partnership {
-  background: #0f1932;
-  padding: 4rem 2rem;
-  color: #f5f5dc;
-  text-align: center;
-}
-
-.why-partnership .container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.why-partnership h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  color: #ffd700;
-  margin-bottom: 1.5rem;
-}
-
-.why-partnership p {
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-  margin-bottom: 2rem;
-}
-
-.benefits-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0 auto;
-  max-width: 700px;
-  text-align: left;
-}
-
-.benefits-list li {
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  position: relative;
-  padding-left: 2rem;
-}
-
-.benefits-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #ffd700;
-  font-weight: 900;
-  font-size: 1.2rem;
-  line-height: 1;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .hero-split {
-    flex-direction: column;
-    height: auto;  /* Allow container height to grow */
-  }
-  .hero-left,
-  .hero-right {
-    width: 100%;
-    height: auto;      /* Remove fixed height */
-    min-height: 300px; /* Reasonable minimum height */
-    overflow: visible; /* Prevent clipping */
-  }
-  .hero-right {
-    padding: 2rem 1.5rem 3rem;
-    text-align: center;
-  }
-  .content-wrapper {
-    max-width: 100%;
-  }
-  .hero-main-message {
-    font-size: 2rem;
-  }
-  .cta-buttons .btn {
-    width: 100%;
-    margin-bottom: 1rem;
-    margin-right: 0;
-  }
-  .why-partnership {
-    padding: 3rem 1rem;
-  }
-  .benefits-list {
-    text-align: center;
-  }
-  .benefits-list li {
-    padding-left: 0;
-    font-size: 1.1rem;
-  }
-  .benefits-list li::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-        </style>
-        <!-- What's Your Story - Luxury Hero with Three.js Background -->
-        <section class="py-5 position-relative text-light" id="quiz" style="background: #0f0f0f; overflow: hidden; height: 100vh;">
-            <!-- Three.js Canvas -->
-            <canvas id="three-bg" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: -2;"></canvas>
-            <!-- Gold Overlay for depth -->
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at top right, rgba(255,215,0,0.12), transparent 60%); z-index: -1;"></div>
-            <div class="container text-center">
-                <h1 class="display-4 fw-bold mb-3 fade-in-delay position-relative" style="letter-spacing: 1px; color: #FFD700; display: inline-block;">
-                    What’s Your Story?
-                    <span class="gold-underline"></span>
+        <!-- Hero Content Box -->
+        <div class="container position-relative z-3">
+            <div class="hero-glass-card mx-auto text-center" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="hero-icon-cluster mb-4">
+                    <i data-lucide="camera" class="hero-mini-icon"></i>
+                    <i data-lucide="mic" class="hero-mini-icon mx-3"></i>
+                    <i data-lucide="play-circle" class="hero-mini-icon"></i>
+                </div>
+                <h1 class="hero-title mb-3 mb-md-4" id="hero-title">
+                    Reframing Africa, <br><span class="highlight">Empowering Storytellers</span>
                 </h1>
-                <p class="lead mb-5 text-light opacity-90 fade-in-delay-2" style="max-width: 700px; margin: 0 auto;">
-                    Experience the elegance of storytelling.  
-            In just moments, our interactive quiz reveals your signature style — 
-            whether through captivating visuals, immersive audio, or a fusion of both.
+                <p class="hero-subtitle mb-4 mb-md-5">
+                    Unleashing Authentic Narratives Through Broadcast Excellence
                 </p>
-                <div class="quiz-container fade-in-delay-3">
-                    <div id="quiz-question" class="mb-4 fs-5 fw-semibold" style="color: #FFD700;">
-                        Which inspires you more?
-                    </div>
-                    <div class="d-flex justify-content-center gap-3">
-                        <button class="btn gold-outline-btn px-4 py-2 rounded-pill" onclick="selectQuizOption('visual')">
-                            Visual
-                        </button>
-                        <button class="btn gold-solid-btn px-4 py-2 rounded-pill" onclick="selectQuizOption('audio')">
-                            Audio
-                        </button>
-                    </div>
-                    <div class="mt-4 fs-6 fst-italic text-light opacity-50" id="quiz-result"></div>
+                <div class="hero-actions">
+                    <a aria-label="Discover Our Stories"
+                        class="btn btn-premium-cta d-inline-flex align-items-center px-5 py-3 text-uppercase"
+                        href="/stories.html" role="button">
+                        <span class="me-2">Discover Our Stories</span>
+                        <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+                    </a>
                 </div>
             </div>
-        </section>
-        <!-- Import Three.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
-        <script>
-    const canvas = document.getElementById('three-bg');
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+        </div>
 
-   // Gold particles
-const particlesCount = 1500; 
-const positions = new Float32Array(particlesCount * 3);
+        <!-- Scroll Indicator -->
+        <div aria-hidden="true"
+            class="hero-scroll-indicator position-absolute bottom-0 start-50 translate-middle-x pb-4">
+            <div class="mouse-icon">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
 
-    function animate() {
-        requestAnimationFrame(animate);
-        particles.rotation.y += 0.0008;
-        renderer.render(scene, camera);
-    }
-    animate();
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* ========== Tokens ========== */
+        :root {
+            --ink: #0b0f1a;
+            --ink-2: #0f1932;
+            --gold: #FFD700;
+            --ivory: #f5f0e6;
+            --muted: #c8c3b9;
+            --glass: rgba(255, 255, 255, 0.08);
+        }
 
-    // Handle resize
-    window.addEventListener('resize', () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-        </script>
-        <style>
-    .fade-in-delay { animation: fadeIn 1.2s ease-in-out forwards; opacity: 0; }
-    .fade-in-delay-2 { animation: fadeIn 1.2s ease-in-out 0.5s forwards; opacity: 0; }
-    .fade-in-delay-3 { animation: fadeIn 1.2s ease-in-out 1s forwards; opacity: 0; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        /* ============================
+   Premium Hero Section
+============================ */
+        .premium-hero {
+            min-height: 100vh;
+            min-height: 100dvh;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .gold-underline { position: absolute; left: 0; bottom: -6px; height: 3px; width: 0%; background: linear-gradient(90deg, transparent, #FFD700, transparent); animation: underlineGold 1.5s ease forwards; animation-delay: 1s; }
-    @keyframes underlineGold { to { width: 100%; } }
+        .hero-premium-bg {
+            background-image: url('/assets/images/training.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: kenBurns 20s infinite alternate;
+        }
 
-    .gold-outline-btn { border: 2px solid #FFD700; color: #FFD700; background: transparent; min-width: 140px; transition: all 0.3s ease; }
-    .gold-outline-btn:hover { background: rgba(255,215,0,0.15); box-shadow: 0 0 12px rgba(255,215,0,0.6); }
-    .gold-solid-btn { background: #FFD700; color: #0f0f0f; border: none; min-width: 140px; transition: all 0.3s ease; }
-    .gold-solid-btn:hover { background: #FFC107; box-shadow: 0 0 12px rgba(255,215,0,0.6); }
-        </style>
-        <!-- About Section: The Narrative Nexus -->
-        <section class="narrative-nexus py-5 position-relative" id="about">
-            <!-- WebGL Background Canvas (for 3D Globe or Particles) -->
-            <canvas class="narrative-bg" id="narrative-globe"></canvas>
-            <div class="container position-relative">
-                <!-- Section Header with Animated Tagline -->
-                <div class="text-center mb-5">
-                    <h2 class="narrative-title text-black" data-aos="fade-down">
-                        The Narrative Nexus
-                    </h2>
-                    <p class="narrative-subtitle text-black" data-aos="fade-up" data-aos-delay="100">
-                        Reclaiming Africa’s Voice in a Global Symphony
-                    </p>
-                    <div class="divider-neon mx-auto mt-3" data-aos="zoom-in" data-aos-delay="200"></div>
+        .hero-premium-overlay {
+            background: linear-gradient(135deg, rgba(11, 15, 26, 0.8) 0%, rgba(11, 15, 26, 0.4) 50%, rgba(11, 15, 26, 0.8) 100%);
+            z-index: 1;
+        }
+
+        .hero-glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: clamp(1.5rem, 5vw, 4rem);
+            margin: 1rem;
+            max-width: 900px;
+            width: calc(100% - 2rem);
+            z-index: 2;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .premium-hero .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 7vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: #fff;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .premium-hero .highlight {
+            color: var(--gold);
+            position: relative;
+            display: inline-block;
+        }
+
+        .premium-hero .hero-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            color: var(--muted);
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            font-weight: 300;
+        }
+
+        .hero-icon-cluster {
+            color: var(--gold);
+            opacity: 0.8;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+        }
+
+        .hero-mini-icon {
+            width: 24px;
+            height: 24px;
+            stroke-width: 1.5;
+        }
+
+        .hero-orb {
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+            z-index: 1;
+            filter: blur(40px);
+        }
+
+        .orb-1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 10%;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            bottom: 10%;
+            right: 5%;
+        }
+
+        .orb-3 {
+            width: 250px;
+            height: 250px;
+            top: 40%;
+            right: 20%;
+            background: radial-gradient(circle, rgba(0, 183, 235, 0.1) 0%, transparent 70%);
+        }
+
+        .btn-premium-cta {
+            background: linear-gradient(90deg, #FFD700, #F4C430);
+            color: #000 !important;
+            font-weight: 700;
+            border-radius: 50px;
+            padding: clamp(0.8rem, 2vw, 1.1rem) clamp(1.5rem, 5vw, 3.5rem);
+            letter-spacing: 1px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+            border: none;
+            display: inline-block;
+        }
+
+        .btn-premium-cta:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
+            background: linear-gradient(90deg, #F4C430, #FFD700);
+        }
+
+        @keyframes kenBurns {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.15);
+            }
+        }
+
+        .hero-scroll-indicator {
+            z-index: 3;
+            opacity: 0.7;
+        }
+
+        .mouse-icon {
+            width: 24px;
+            height: 40px;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .wheel {
+            width: 2px;
+            height: 6px;
+            background: #fff;
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scrollWheel 2s infinite;
+        }
+
+        @keyframes scrollWheel {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(-50%, 15px);
+            }
+        }
+
+        /* Mobile Optimization for Hero */
+        @media (max-width: 576px) {
+            .hero-glass-card {
+                padding: 1.5rem;
+                border-radius: 20px;
+            }
+
+            .hero-scroll-indicator {
+                display: none;
+            }
+
+            .premium-hero {
+                padding-top: 60px;
+                /* Account for fixed navbar */
+            }
+        }
+
+        /* ============================
+   Training Showcase Section
+============================ */
+        .training-showcase {
+            padding: 6rem 0;
+            background: var(--light);
+        }
+
+        /* Titles */
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+            font-size: 1.2rem;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+            width: 100%;
+        }
+
+        /* Gallery Item */
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.35s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Images */
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.12);
+        }
+
+        /* Overlay */
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(10, 36, 99, 0.9));
+            padding: 2rem;
+            color: white;
+            transform: translateY(40px);
+            opacity: 0;
+            transition: all 0.35s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Overlay Text Enhancements */
+        .gallery-overlay h3 {
+            margin: 0 0 0.3rem 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .gallery-overlay p {
+            margin: 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.3rem;
+            }
+
+            .gallery-item img {
+                height: 240px;
+            }
+
+            .gallery-overlay {
+                padding: 1.5rem;
+            }
+        }
+
+        /* ========== Base ========== */
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: #0a0f0f;
+            color: #fff;
+            font-family: 'Manrope', sans-serif
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin-inline: auto
+        }
+
+        /* ========== Luxury Hero ========== */
+        .luxury-hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.65) contrast(1.05);
+            transform: scale(1.05);
+            transition: transform .2s ease-out;
+            will-change: transform;
+            pointer-events: none;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(1000px 600px at 85% 10%, rgba(255, 215, 0, .12) 0%, rgba(0, 0, 0, 0) 60%),
+                linear-gradient(180deg, rgba(0, 0, 0, .45) 0%, rgba(0, 0, 0, .7) 75%, rgba(0, 0, 0, .85) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: clamp(2rem, 4vw, 3rem) 0;
+        }
+
+        .hero-inner {
+            max-width: 900px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            line-height: 1.18;
+            margin: 0 0 1rem;
+            letter-spacing: .2px;
+        }
+
+        .hero-title .highlight {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-lead {
+            color: #f0e6d2;
+            font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+            line-height: 1.65;
+            margin: 0 0 2rem;
+            max-width: 720px;
+        }
+
+        .cta-row {
+            display: flex;
+            gap: .8rem;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: .95rem 1.75rem;
+            border-radius: 999px;
+            font-weight: 700;
+            letter-spacing: .3px;
+            transition: .25s ease;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #111;
+            box-shadow: 0 10px 24px rgba(255, 215, 0, .25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(255, 215, 0, .35)
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 215, 0, .12);
+            box-shadow: 0 10px 24px rgba(255, 215, 0, .15)
+        }
+
+        /* ========== Why Partnership ========== */
+        .why-partnership {
+            position: relative;
+            background:
+                radial-gradient(800px 500px at 10% 0%, rgba(255, 215, 0, .08), transparent 70%),
+                linear-gradient(180deg, #0f1932 0%, #0b1226 100%);
+            padding: clamp(3rem, 6vw, 5rem) 0;
+            border-top: 1px solid rgba(255, 255, 255, .06);
+        }
+
+        .section-head {
+            text-align: center;
+            margin-bottom: clamp(1.8rem, 4vw, 2.5rem);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4.5vw, 2.8rem);
+            color: var(--gold);
+            margin: 0 0 .6rem;
+        }
+
+        .section-copy {
+            color: #e9e3d6;
+            font-size: clamp(1.05rem, 2vw, 1.15rem);
+            max-width: 830px;
+            margin: 0 auto;
+        }
+
+        .benefits-grid {
+            margin-top: clamp(1.5rem, 3vw, 2rem);
+            display: grid;
+            gap: clamp(1rem, 2.5vw, 1.4rem);
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        .benefit {
+            grid-column: span 4;
+            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 22px;
+            padding: 1.25rem 1.25rem 1.25rem 1.1rem;
+            backdrop-filter: saturate(120%) blur(8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+            display: flex;
+            gap: .9rem;
+            align-items: flex-start;
+            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+
+        .benefit:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 215, 0, .35);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, .26);
+        }
+
+        .benefit-icon {
+            flex: 0 0 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            display: grid;
+            place-items: center;
+            box-shadow: inset 0 0 12px rgba(255, 215, 0, .18), 0 0 0 4px rgba(255, 215, 0, .06);
+        }
+
+        .benefit-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--gold)
+        }
+
+        .benefit h3 {
+            margin: .15rem 0 .25rem;
+            font-size: 1.05rem;
+            color: #fff;
+            letter-spacing: .2px;
+        }
+
+        .benefit p {
+            margin: 0;
+            color: #dcd6c7;
+            line-height: 1.6;
+            font-size: .98rem;
+        }
+
+        /* grid fallback on small screens */
+        @media (max-width: 1024px) {
+            .benefit {
+                grid-column: span 6
+            }
+        }
+
+        @media (max-width: 720px) {
+            .luxury-hero {
+                height: auto;
+                padding: 4.5rem 0
+            }
+
+            .hero-lead {
+                max-width: 100%
+            }
+
+            .benefit {
+                grid-column: 1 / -1
+            }
+        }
+
+        /* ========== Training Academy Advertisement ========== */
+        .training-academy {
+            background: var(--light);
+            position: relative;
+        }
+
+        .academy-showcase {
+            background: #fff;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.1);
+        }
+
+        .academy-visual-box {
+            min-height: 400px;
+        }
+
+        .academy-visual-box img {
+            object-fit: cover;
+        }
+
+        .academy-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent 50%, rgba(15, 25, 50, 0.4) 100%);
+        }
+
+        .academy-content-box {
+            background: #0f1932;
+            color: #fff;
+        }
+
+        .academy-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            line-height: 1.2;
+        }
+
+        .academy-title .highlight {
+            color: var(--gold);
+        }
+
+        .academy-lead {
+            color: var(--muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .training-tracks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .track-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .track-item i {
+            width: 16px;
+            height: 16px;
+            color: var(--gold);
+        }
+
+        .track-item:hover {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .bg-gold {
+            background-color: var(--gold);
+        }
+
+        @media (max-width: 991px) {
+            .academy-visual-box {
+                min-height: 300px;
+            }
+        }
+
+        /* Accessibility: respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .hero-bg {
+                transition: none
+            }
+        }
+    </style>
+    <!-- ========== HERO ========== -->
+    <section class="luxury-hero">
+        <div class="hero-bg" style="background-image:url('assets/images/training/training-3.jpg');" aria-hidden="true">
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="container hero-inner" data-aos="fade-up" data-aos-duration="1200">
+                <h1 class="hero-title">
+                    “When Africa tells her story, the world listens.
+                    <br>
+                    <span class="highlight">Let’s make sure our storytellers are ready.</span>
+                </h1>
+                <p class="hero-lead">
+                    Africa is more than the headlines — it is innovation, beauty, resilience, and limitless potential.
+                    At Africa Broadcasting Academy, we train the next generation of African journalists and filmmakers.
+                </p>
+                <div class="cta-row" data-aos="fade-up" data-aos-delay="200">
+                    <a href="/sponsor.html" class="btn btn-primary">Sponsor a Student</a>
+                    <a href="/contact.html" class="btn btn-secondary">Partner with Us</a>
                 </div>
-                <!-- Mission Content with Interactive Panels -->
-                <div class="mission-panels">
-                    <div class="row align-items-center mb-5 narrative-panel" data-aos="fade-right" data-aos-delay="300">
-                        <div class="col-lg-6 mb-4 mb-lg-0">
-                            <div class="panel-content">
-                                <h3 class="panel-title">A Legacy of Untold Stories</h3>
-                                <p class="panel-text">
-                                    At the core of Africa lies a tapestry of untold stories — narratives of innovation,
-                            resilience,
-                            creativity, and community — too often obscured by external perspectives. The Broadcast
-                            Training Academy is
-                            here to rewrite this story, amplifying Africa’s authentic voice through a global platform.
+            </div>
+        </div>
+    </section>
+    <!-- ========== WHY PARTNERSHIP ========== -->
+    <section class="why-partnership">
+        <div class="container">
+            <header class="section-head" data-aos="fade-up">
+                <h2 class="section-title">Why Your Partnership Matters</h2>
+                <p class="section-copy">
+                    Behind every great story is someone who believed enough to give it a voice. Your support directly
+                    sponsors
+                    students who cannot afford professional media training but have the talent and passion to change the
+                    African narrative.
+                </p>
+            </header>
+            <div class="benefits-grid">
+                <!-- Visibility -->
+                <article class="benefit" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <!-- eye icon -->
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 1 1 .001-8.001A4 4 0 0 1 12 16z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Visibility</h3>
+                        <p>Feature your brand in our training programs, media projects, and events.</p>
+                    </div>
+                </article>
+                <!-- Impact -->
+                <article class="benefit" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <!-- heart icon -->
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 21s-7.2-4.35-9.6-8.7C.6 9.6 2.7 6 6.3 6c2.1 0 3.6 1.2 4.5 2.4C11.1 7.2 12.6 6 14.7 6c3.6 0 5.7 3.6 3.9 6.3C19.2 16.65 12 21 12 21z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Impact</h3>
+                        <p>Transform the lives of young Africans and the communities they serve.</p>
+                    </div>
+                </article>
+                <!-- Legacy -->
+                <article class="benefit" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <!-- star icon -->
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.89L18.18 22 12 18.77 5.82 22 7 14.16l-5-4.89 6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Legacy</h3>
+                        <p>Be part of a movement redefining how the world sees Africa.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TRAINING ACADEMY ADVERTISEMENT ========== -->
+    <section class="training-academy py-5" id="training-academy">
+        <div class="container">
+            <div class="academy-showcase" data-aos="fade-up">
+                <div class="row g-0 align-items-stretch rounded-5 overflow-hidden shadow-2xl">
+                    <!-- Visual Side -->
+                    <div class="col-lg-6 position-relative academy-visual-box">
+                        <img src="assets/images/training/training_advert.jpg"
+                            alt="Africa Broadcasting Academy Training Session" class="w-100 h-100 object-fit-cover">
+                        <div class="academy-overlay"></div>
+                        <div class="academy-tag position-absolute top-0 start-0 m-4">
+                            <span class="badge bg-gold text-dark px-3 py-2 rounded-pill fw-bold">NEW INTAKE OPEN</span>
+                        </div>
+                    </div>
+                    <!-- Content Side -->
+                    <div class="col-lg-6 academy-content-box p-4 p-md-5 d-flex flex-column justify-content-center">
+                        <h2 class="academy-title mb-3">Empowering the Next Generation of <span class="highlight">African
+                                Storytellers</span></h2>
+                        <p class="academy-lead mb-4">
+                            Join our intensive world-class modules designed to equip you with the technical precision
+                            and cultural soul required for global broadcasting excellence.
+                        </p>
+
+                        <div class="training-tracks-grid mb-5">
+                            <div class="track-item"><i data-lucide="mic"></i> Journalism</div>
+                            <div class="track-item"><i data-lucide="video"></i> Video Editing</div>
+                            <div class="track-item"><i data-lucide="pen-tool"></i> Script Writing</div>
+                            <div class="track-item"><i data-lucide="smartphone"></i> Social Media Reel</div>
+                            <div class="track-item"><i data-lucide="layout"></i> Content Creation</div>
+                            <div class="track-item"><i data-lucide="volume-2"></i> Voice Over</div>
+                            <div class="track-item"><i data-lucide="tv"></i> Presentation</div>
+                        </div>
+
+                        <div class="academy-cta">
+                            <a href="applicationform.html"
+                                class="btn btn-premium-cta px-5 py-3 text-uppercase d-inline-flex align-items-center">
+                                <span class="me-2">Enroll Now</span>
+                                <i data-lucide="sparkles"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- AOS + Parallax JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+
+        /* Subtle pointer-parallax for hero background */
+        (function () {
+            const bg = document.querySelector('.hero-bg');
+            if (!bg) return;
+            const maxShift = 10; // px
+            let raf;
+            let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+
+            function onMove(e) {
+                const x = (e.clientX / window.innerWidth - 0.5) * maxShift;
+                const y = (e.clientY / window.innerHeight - 0.5) * maxShift;
+                targetX = x; targetY = y;
+                if (!raf) loop();
+            }
+            function loop() {
+                raf = requestAnimationFrame(loop);
+                currentX += (targetX - currentX) * 0.08;
+                currentY += (targetY - currentY) * 0.08;
+                bg.style.transform = `scale(1.05) translate(${currentX}px, ${currentY}px)`;
+            }
+
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            window.addEventListener('mousemove', onMove);
+        })();
+    </script>
+    <!-- About Section: The Narrative Nexus -->
+    <section class="narrative-nexus py-5 position-relative" id="about">
+        <!-- WebGL Background Canvas (for 3D Globe or Particles) -->
+        <canvas class="narrative-bg" id="narrative-globe"></canvas>
+        <div class="container position-relative">
+            <!-- Section Header with Animated Tagline -->
+            <div class="text-center mb-5">
+                <h2 class="narrative-title text-black" data-aos="fade-down">
+                    The Narrative Nexus
+                </h2>
+                <p class="narrative-subtitle text-black" data-aos="fade-up" data-aos-delay="100">
+                    Reclaiming Africa’s Voice in a Global Symphony
+                </p>
+                <div class="divider-neon mx-auto mt-3" data-aos="zoom-in" data-aos-delay="200"></div>
+            </div>
+            <!-- Mission Content with Interactive Panels -->
+            <div class="mission-panels">
+                <div class="row align-items-center mb-5 narrative-panel" data-aos="fade-right" data-aos-delay="300">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="panel-content">
+                            <h3 class="panel-title">A Legacy of Untold Stories</h3>
+                            <p class="panel-text">
+                                At the core of Africa lies a tapestry of untold stories — narratives of innovation,
+                                resilience,
+                                creativity, and community — too often obscured by external perspectives. The Broadcast
+                                Training Academy is
+                                here to rewrite this story, amplifying Africa’s authentic voice through a global
+                                platform.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="panel-image">
+                            <img alt="African marketplace showcasing cultural vibrancy in a documentary setting"
+                                class="img-fluid narrative-img" src="/assets/images/training/training-141.jpg">
+                            <div class="image-overlay"></div>
+                            </img>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-5 narrative-panel" data-aos="fade-left" data-aos-delay="400">
+                    <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                        <div class="panel-content">
+                            <h3 class="panel-title">Empowering a New Generation</h3>
+                            <p class="panel-text">
+                                We’re building a continent-wide movement of young African storytellers — trained,
+                                empowered,
+                                and inspired
+                                to share their unfiltered truths. Through state-of-the-art broadcast training,
+                                Application Form,
+                                and media
+                                literacy, we equip the next generation with the tools to create content that resonates
+                                with
+                                Africa’s true
+                                essence, unshackled from foreign narratives.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="panel-image">
+                            <img alt="African storyteller filming a documentary in a rural setting"
+                                class="img-fluid narrative-img" src="/assets/images/training/training-104.jpg">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-5 narrative-panel" data-aos="fade-right" data-aos-delay="500">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="panel-content">
+                            <h3 class="panel-title">A Cultural Revolution</h3>
+                            <p class="panel-text">
+                                ABA is more than an academy; it’s a cultural revolution — a bold mission to reclaim the
+                                African narrative
+                                and broadcast it to the world with unapologetic authenticity. We’re redefining global
+                                media
+                                through the
+                                lens of Africa’s visionaries.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="panel-image">
+                            <img alt="State-of-the-art broadcast studio at Africa broadcasting Academy"
+                                class="img-fluid narrative-img" src="/assets/images/herolady.jpg">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+                <section class="position-relative text-white" id="legacy-reclaimed"
+                    style="background: url('/assets/images/Academy.webp') center/cover no-repeat; padding: 6rem 2rem;">
+                    <!-- Transparent Dark Overlay -->
+                    <div class="position-absolute top-0 start-0 w-100 h-100"
+                        style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+                    <!-- Main Content -->
+                    <div class="container position-relative z-2">
+                        <div class="row justify-content-center text-center mb-5">
+                            <div class="col-lg-10">
+                                <h2 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown">A Legacy
+                                    Reclaimed!</h2>
+                                <p class="lead animate__animated animate__fadeInUp animate__delay-1s text-light">
+                                    We’re not just teaching broadcasting — we’re reigniting Africa’s voice.
+                                    <span style="color: #26C6DA;">Africa Broadcasting Academy</span>
+                                    is where culture meets
+                                    storytelling,
+                                    where global standards meet local soul, and where tomorrow’s voices are trained to
+                                    lead the
+                                    narrative from the front.
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="panel-image">
-                                <img alt="African marketplace showcasing cultural vibrancy in a documentary setting" class="img-fluid narrative-img" src="/assets/images/training.jpg">
-                                <div class="image-overlay"></div>
-                                </img>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-5 narrative-panel" data-aos="fade-left" data-aos-delay="400">
-                        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-                            <div class="panel-content">
-                                <h3 class="panel-title">Empowering a New Generation</h3>
-                                <p class="panel-text">
-                                    We’re building a continent-wide movement of young African storytellers — trained, empowered,
-                            and inspired
-                            to share their unfiltered truths. Through state-of-the-art broadcast training, Application Form,
-                            and media
-                            literacy, we equip the next generation with the tools to create content that resonates with
-                            Africa’s true
-                            essence, unshackled from foreign narratives.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 order-lg-1">
-                            <div class="panel-image">
-                                <img alt="African storyteller filming a documentary in a rural setting" class="img-fluid narrative-img" src="/assets/images/Storieslagacy.jpg">
-                                <div class="image-overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-5 narrative-panel" data-aos="fade-right" data-aos-delay="500">
-                        <div class="col-lg-6 mb-4 mb-lg-0">
-                            <div class="panel-content">
-                                <h3 class="panel-title">A Cultural Revolution</h3>
-                                <p class="panel-text">
-                                    ABA is more than an academy; it’s a cultural revolution — a bold mission to reclaim the
-                            African narrative
-                            and broadcast it to the world with unapologetic authenticity. We’re redefining global media
-                            through the
-                            lens of Africa’s visionaries.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="panel-image">
-                                <img alt="State-of-the-art broadcast studio at Africa broadcasting Academy" class="img-fluid narrative-img" src="/assets/images/herolady.jpg">
-                                <div class="image-overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <section class="position-relative text-white" id="legacy-reclaimed" style="background: url('/assets/images/Academy.webp') center/cover no-repeat; padding: 6rem 2rem;">
-                        <!-- Transparent Dark Overlay -->
-                        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-                        <!-- Main Content -->
-                        <div class="container position-relative z-2">
-                            <div class="row justify-content-center text-center mb-5">
-                                <div class="col-lg-10">
-                                    <h2 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown">A Legacy Reclaimed!</h2>
-                                    <p class="lead animate__animated animate__fadeInUp animate__delay-1s text-light">
-                                        We’re not just teaching broadcasting — we’re reigniting Africa’s voice.
-                                        <span style="color: #26C6DA;">Africa Broadcasting Academy</span>
-                                        is where culture meets
-                    storytelling,
-                    where global standards meet local soul, and where tomorrow’s voices are trained to lead the
-                    narrative from the front.
+                        <div class="row text-center g-4">
+                            <div class="col-md-4 animate__animated animate__fadeInLeft animate__delay-2s">
+                                <div class="bg-dark rounded-4 p-4 h-100 shadow-lg border"
+                                    style="border-color: #26C6DA;">
+                                    <i class="fas fa-broadcast-tower fa-2x mb-3" style="color: #26C6DA;"></i>
+                                    <h5 class="fw-semibold text-white">World-Class Training</h5>
+                                    <p class="text-light small">
+                                        We equip storytellers with the skills, ethics, and confidence to compete — and
+                                        lead — on global
+                                        media stages.
                                     </p>
                                 </div>
                             </div>
-                            <div class="row text-center g-4">
-                                <div class="col-md-4 animate__animated animate__fadeInLeft animate__delay-2s">
-                                    <div class="bg-dark rounded-4 p-4 h-100 shadow-lg border" style="border-color: #26C6DA;">
-                                        <i class="fas fa-broadcast-tower fa-2x mb-3" style="color: #26C6DA;"></i>
-                                        <h5 class="fw-semibold text-white">World-Class Training</h5>
-                                        <p class="text-light small">
-                                            We equip storytellers with the skills, ethics, and confidence to compete — and lead — on global
-                        media stages.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-3s">
-                                    <div class="bg-dark rounded-4 p-4 h-100 shadow-lg border" style="border-color: #26C6DA;">
-                                        <i class="fas fa-globe-africa fa-2x mb-3" style="color: #26C6DA;"></i>
-                                        <h5 class="fw-semibold text-white">Authentic African Voice</h5>
-                                        <p class="text-light small">
-                                            Every lesson, every module is rooted in cultural pride — because we don’t imitate, we originate.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 animate__animated animate__fadeInRight animate__delay-4s">
-                                    <div class="bg-dark rounded-4 p-4 h-100 shadow-lg border" style="border-color: #26C6DA;">
-                                        <i class="fas fa-users fa-2x mb-3" style="color: #26C6DA;"></i>
-                                        <h5 class="fw-semibold text-white">Pan-African Impact</h5>
-                                        <p class="text-light small">
-                                            From Lagos to Nairobi, Accra to Johannesburg — our alumni are shaping Africa’s media future with
-                        purpose.
-                                        </p>
-                                    </div>
+                            <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-3s">
+                                <div class="bg-dark rounded-4 p-4 h-100 shadow-lg border"
+                                    style="border-color: #26C6DA;">
+                                    <i class="fas fa-globe-africa fa-2x mb-3" style="color: #26C6DA;"></i>
+                                    <h5 class="fw-semibold text-white">Authentic African Voice</h5>
+                                    <p class="text-light small">
+                                        Every lesson, every module is rooted in cultural pride — because we don’t
+                                        imitate, we originate.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="text-center mt-5 animate__animated animate__fadeInUp animate__delay-5s">
-                                <a class="btn btn-lg rounded-pill px-5 shadow-lg" href="about.html" style="border: 2px solid #26C6DA; color: #26C6DA;">
-                                    LEARN MORE!
-                                </a>
+                            <div class="col-md-4 animate__animated animate__fadeInRight animate__delay-4s">
+                                <div class="bg-dark rounded-4 p-4 h-100 shadow-lg border"
+                                    style="border-color: #26C6DA;">
+                                    <i class="fas fa-users fa-2x mb-3" style="color: #26C6DA;"></i>
+                                    <h5 class="fw-semibold text-white">Pan-African Impact</h5>
+                                    <p class="text-light small">
+                                        From Lagos to Nairobi, Accra to Johannesburg — our alumni are shaping Africa’s
+                                        media future with
+                                        purpose.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </section>
-                    <!-- Clients Section with Interactive Logos -->
-                    <div class="clients-card mt-5 py-5">
-                        <h3 class="narrative-subtitle text-center mb-4 text-black" data-aos="fade-up">
-                            Global Partners
-                        </h3>
-                        <blockquote class="narrative-quote text-center mb-4" data-aos="fade-up" data-aos-delay="100">
-                            <p class="quote-text">
-                                “Forging enduring global alliances, I take pride in collaborating
-                    with the world’s most influential brands.”
-                            </p>
-                            <div class="client-logos d-flex justify-content-center flex-wrap" data-aos="fade-up" data-aos-delay="300">
-                                <a href="https://www.who.int" rel="noopener noreferrer" target="_blank">
-                                    <img alt="World Health Organization logo" class="client-logo" src="assets/images/clients/who.png">
-                                </a>
-                                <a href="https://www.unicef.org" rel="noopener noreferrer" target="_blank">
-                                    <img alt="UNICEF logo" class="client-logo" src="assets/images/clients/unicef.png">
-                                </a>
-                                <a href="https://www.bbc.co.uk/programmes/p07xs5qx" rel="noopener noreferrer" target="_blank">
-                                    <img alt="BBC News logo" class="client-logo" src="assets/images/clients/bbc.png">
-                                </a>
-                                <a href="https://www.dw.com/en/my-city-port-harcourt/video-69998782" rel="noopener noreferrer" target="_blank">
-                                    <img alt="DW News logo" class="client-logo" src="assets/images/clients/dw.jpeg">
-                                </a>
-                                <a href="https://youtu.be/QEZ7Smn2WXA" rel="noopener noreferrer" target="_blank">
-                                    <img alt="CGTN News logo" class="client-logo" src="assets/images/clients/cgtn.jpeg">
-                                </a>
-                                <a href="https://www.europa.eu" rel="noopener noreferrer" target="_blank">
-                                    <img alt="European Union logo" class="client-logo" src="assets/images/clients/eu.jpeg">
-                                </a>
-                                <a href="https://www.iom.int" rel="noopener noreferrer" target="_blank">
-                                    <img alt="International Organization for Migration logo" class="client-logo" src="assets/images/clients/iom.png">
-                                </a>
-                                <a href="https://www.giz.de/en" rel="noopener noreferrer" target="_blank">
-                                    <img alt="GIZ logo" class="client-logo" src="assets/images/clients/giz.jpeg">
-                                </a>
-                                <a href="https://www.unhcr.org" rel="noopener noreferrer" target="_blank">
-                                    <img alt="UNHCR logo" class="client-logo" src="assets/images/clients/unhcr.png"></img>
-                                </a>
-                                <a href="https://www.voanews.com" rel="noopener noreferrer" target="_blank">
-                                    <img alt="Voice of America logo" class="client-logo" src="assets/images/clients/voa.png"></img>
-                                </a>
-                                <a href="https://www.facebook.com/trtworld/videos/africa-matters-kenya-shifting-gears-to-cleaner-transport/117570424677534/" rel="noopener noreferrer" target="_blank">
-                                    <img alt="TRT World logo" class="client-logo" src="assets/images/clients/cgtnafrica.png"></img>
-                                </a>
-                            </div>
+                        <div class="text-center mt-5 animate__animated animate__fadeInUp animate__delay-5s">
+                            <a class="btn btn-lg rounded-pill px-5 shadow-lg" href="about.html"
+                                style="border: 2px solid #26C6DA; color: #26C6DA;">
+                                LEARN MORE!
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- Clients Section with Interactive Logos -->
+                <div class="clients-card mt-5 py-5">
+                    <h3 class="narrative-subtitle text-center mb-4 text-black" data-aos="fade-up">
+                        Global Partners
+                    </h3>
+                    <blockquote class="narrative-quote text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <p class="quote-text">
+                            “Forging enduring global alliances, I take pride in collaborating
+                            with the world’s most influential brands.”
+                        </p>
+                        <div class="client-logos d-flex justify-content-center flex-wrap" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <a href="https://www.who.int" rel="noopener noreferrer" target="_blank">
+                                <img alt="World Health Organization logo" class="client-logo"
+                                    src="assets/images/clients/who.png">
+                            </a>
+                            <a href="https://www.unicef.org" rel="noopener noreferrer" target="_blank">
+                                <img alt="UNICEF logo" class="client-logo" src="assets/images/clients/unicef.png">
+                            </a>
+                            <a href="https://www.bbc.co.uk/programmes/p07xs5qx" rel="noopener noreferrer"
+                                target="_blank">
+                                <img alt="BBC News logo" class="client-logo" src="assets/images/clients/bbc.png">
+                            </a>
+                            <a href="https://www.dw.com/en/my-city-port-harcourt/video-69998782"
+                                rel="noopener noreferrer" target="_blank">
+                                <img alt="DW News logo" class="client-logo" src="assets/images/clients/dw.jpeg">
+                            </a>
+                            <a href="https://youtu.be/QEZ7Smn2WXA" rel="noopener noreferrer" target="_blank">
+                                <img alt="CGTN News logo" class="client-logo" src="assets/images/clients/cgtn.jpeg">
+                            </a>
+                            <a href="https://www.europa.eu" rel="noopener noreferrer" target="_blank">
+                                <img alt="European Union logo" class="client-logo" src="assets/images/clients/eu.jpeg">
+                            </a>
+                            <a href="https://www.iom.int" rel="noopener noreferrer" target="_blank">
+                                <img alt="International Organization for Migration logo" class="client-logo"
+                                    src="assets/images/clients/iom.png">
+                            </a>
+                            <a href="https://www.giz.de/en" rel="noopener noreferrer" target="_blank">
+                                <img alt="GIZ logo" class="client-logo" src="assets/images/clients/giz.jpeg">
+                            </a>
+                            <a href="https://www.unhcr.org" rel="noopener noreferrer" target="_blank">
+                                <img alt="UNHCR logo" class="client-logo" src="assets/images/clients/unhcr.png"></img>
+                            </a>
+                            <a href="https://www.voanews.com" rel="noopener noreferrer" target="_blank">
+                                <img alt="Voice of America logo" class="client-logo"
+                                    src="assets/images/clients/voa.png"></img>
+                            </a>
+                            <a href="https://www.facebook.com/trtworld/videos/africa-matters-kenya-shifting-gears-to-cleaner-transport/117570424677534/"
+                                rel="noopener noreferrer" target="_blank">
+                                <img alt="TRT World logo" class="client-logo"
+                                    src="assets/images/clients/cgtnafrica.png"></img>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="text-center mt-5">
+
+
+
+        <!-- Training Showcase Section -->
+        <section class="training-showcase" id="training-showcase">
+            <div class="container">
+                <div data-aos="fade-up">
+                    <h2 class="section-title">Recently Concluded Training</h2>
+                    <p class="section-subtitle">Witness the transformative journey
+                        of our latest cohort through immersive, hands-on broadcast
+                        training</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <!-- Training Image 1 -->
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="/assets/images/training/training-1.jpg" alt="Students in 
+            broadcast studio training">
+                        <div class="gallery-overlay">
+                            <h5>Studio Production Masterclass</h5>
+                            <p>Hands-on training in professional broadcast
+                                environment</p>
+                        </div>
+                    </div>
+
+                    <!-- Training Image 2 -->
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                        <img src="/assets/images/training/training-10.jpg" alt="Field reporting 
+            exercise">
+                        <div class="gallery-overlay">
+                            <h5>Field Reporting Excellence</h5>
+                            <p>Real-world journalism experience in authentic
+                                settings</p>
+                        </div>
+                    </div>
+
+                    <!-- Training Image 3 -->
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                        <img src="/assets/images/training/training-9.jpg" alt="Post-production 
+            workshop">
+                        <div class="gallery-overlay">
+                            <h5>Digital Editing Workshop</h5>
+                            <p>Mastering cutting-edge post-production techniques</p>
+                        </div>
+                    </div>
+
+                    <!-- Training Image 4 -->
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                        <img src="/assets/images/training/training-101.jpg" alt="Graduation 
+            ceremony">
+                        <div class="gallery-overlay">
+                            <h5>Graduation Celebration</h5>
+                            <p>Celebrating the achievements of our talented
+                                graduates</p>
+                        </div>
+                    </div>
+
+                    <!-- Training Image 5 -->
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                        <img src="/assets/images/training/training-104.jpg" alt="Industry expert 
+            session">
+                        <div class="gallery-overlay">
+                            <h5>Industry Expert Sessions</h5>
+                            <p>Learning from seasoned media professionals</p>
+                        </div>
+                    </div>
+
+                    <!-- Training Image 6 -->
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+                        <img src="/assets/images/training/training-102.jpg" alt="Collaborative 
+            project work">
+                        <div class="gallery-overlay">
+                            <h5>Team Collaboration Projects</h5>
+                            <p>Building professional networks and collaborative
+                                skills</p>
                         </div>
                     </div>
                 </div>
-            </section>
-            <div class="text-center mt-5">
-                <!-- Application Form Section -->
-                <section class="py-5 bg-light" id="Application Form">
-                    <div class="container text-center">
-                        <h2 class="section-title mb-4" data-aos="fade-up">Application Form Program</h2>
-                        <p class="lead mb-4 text-black" data-aos="fade-up" data-aos-delay="100">
-                            Our Application Form program connects aspiring African storytellers with top media professionals through intensive
-            hands-on training and personal guidance.
-                        </p>
-                        <a
-                            class="btn btn-cta btn-lg"
-                            data-aos="fade-up"
-                            data-aos-delay="200"
-                            href="applicationform.html"
-                        >
-                            Apply for Application Form
-                        </a>
-                    </div>
-                </section>
-                <!-- Live Chat Widget -->
-                <!-- WhatsApp Floating Button -->
-                <a
-                    class="whatsapp-float"
-                    href="https://wa.me/2348128422499"
-                    target="_blank"
-                    title="Chat with us on WhatsApp"
-                >
-                    <img alt="WhatsApp Chat" src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"></img>
+
+                <div class="text-center" data-aos="fade-up">
+                    <a href="/gallery.html" class="btn btn-primary">View Complete Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Form Section -->
+        <section class="py-5 bg-light" id="Application Form">
+            <div class="container text-center">
+                <h2 class="section-title mb-4" data-aos="fade-up">Application Form Program</h2>
+                <p class="lead mb-4 text-black" data-aos="fade-up" data-aos-delay="100">
+                    Our Application Form program connects aspiring African storytellers with top media professionals
+                    through intensive
+                    hands-on training and personal guidance.
+                </p>
+                <a class="btn btn-cta btn-lg" data-aos="fade-up" data-aos-delay="200" href="applicationform.html">
+                    Apply for Application Form
                 </a>
-                <!-- Footer -->
-                <footer class="footer mt-5 py-5">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Logo and brief intro -->
-                            <div class="col-md-4 mb-4">
-                                <h2 class="footer-logo">ABA</h2>
-                                <p class="footer-description">
-                                    Empowering Africa's future through innovation, leadership, and education.
-                                </p>
-                                <div class="social-links mt-3">
-                                    <a href="https://www.facebook.com/share/1Hg4nrcmje/?mibextid=wwXIfr">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Quick Links -->
-                            <div class="col-md-2 mb-4">
-                                <h5 class="footer-title">Quick Links</h5>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#about">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="#programs">Programs</a>
-                                    </li>
-                                    <li>
-                                        <a href="#stories">Success Stories</a>
-                                    </li>
-                                    <li>
-                                        <a href="#events">Events</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Resources -->
-                            <div class="col-md-3 mb-4">
-                                <h5 class="footer-title">Resources</h5>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Podcast</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">VR Experience</a>
-                                    </li>
-                                    <li>
-                                        <a href="#contact">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Newsletter -->
-                            <div class="col-md-3 mb-4">
-                                <h5 class="footer-title">Subscribe</h5>
-                                <form class="footer-newsletter">
-                                    <input class="form-control mb-2" placeholder="Your email address" type="email">
-                                    <button class="btn btn-cta w-100" type="submit">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- Bottom Footer -->
-                        <div class="text-center mt-4 footer-bottom">
-                            <small>© 2025 ABA. All rights reserved. | Designed with ❤️</small>
+            </div>
+        </section>
+        <!-- Live Chat Widget -->
+        <!-- WhatsApp Floating Button -->
+        <a class="whatsapp-float" href="https://wa.me/2348128422499" target="_blank" title="Chat with us on WhatsApp">
+            <img alt="WhatsApp Chat" src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"></img>
+        </a>
+        <footer class="footer mt-5 py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo and brief intro -->
+                    <div class="col-md-4 mb-4">
+                        <h2 class="footer-logo">ABA</h2>
+                        <p class="footer-description">
+                            Empowering Africa's future through innovation, leadership, and education.
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.facebook.com/share/16RgZeLksV/?mibextid=wwXIfr">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/91058174/admin/analytics/followers/">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/africabroadcastingacademy?igsh=Y3d1dGJpeTA3eXhi">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </div>
                     </div>
-                </footer>
-                <!-- Bootstrap 5 JS and Popper.js -->
-                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-                <!-- Animate.css for animations -->
-                <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-                <!-- Bootstrap Icons for content type icons -->
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-                <!-- AOS JS -->
-                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-                <!-- Custom JS -->
-                <script src="js/script.js"></script>
-                </link>
-            </body>
-        </html>
+                    <!-- Quick Links -->
+                    <div class="col-md-2 mb-4">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="about.html">About Us</a>
+                            </li>
+                            <li>
+                                <a href="programs.html">Programs</a>
+                            </li>
+                            <li>
+                                <a href="stories.html">Success Stories</a>
+                            </li>
+                            <li>
+                                <a href="students.html">Students</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Resources -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="footer-title">Resources</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="applicationform.html">Application</a>
+                            </li>
+                            <li>
+                                <a href="sponsor.html">Sponsor</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Newsletter -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="footer-title">Subscribe</h5>
+                        <form class="footer-newsletter">
+                            <input class="form-control mb-2" placeholder="Your email address" type="email">
+                            <button class="btn btn-cta w-100" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Bottom Footer -->
+                <div class="text-center mt-4 footer-bottom">
+                    © 2025 ABA. All rights reserved. | Developed by
+                    <a class="text-decoration-none fw-semibold" href="https://vincentagber.vercel.app/" target="_blank"
+                        rel="noopener">
+                        Vincent Agber
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap 5 JS and Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+        <!-- Animate.css for animations -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons for content type icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- Custom JS -->
+        <script src="js/script.js"></script>
+        </link>
+</body>
+
+</html>

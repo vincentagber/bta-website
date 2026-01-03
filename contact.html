@@ -185,10 +185,7 @@
                             🇳🇬
                             <a href="tel:+2348128422499">+234 812 842 2499</a>
                         </p>
-                        <p>
-                            🇳🇬
-                            <a href="tel:+2348064207821">+234 806 420 7821</a>
-                        </p>
+                    
                         <p>
                             🇧🇯
                             <a href="tel:+22940173901">+229 40 173 901</a>
@@ -218,6 +215,7 @@
                 </div>
             </div>
         </section>
+        
         <!-- Contact Form and Map Section -->
         <section class="contact-form-map py-5 bg-light">
             <div class="container">
@@ -225,7 +223,7 @@
                     <!-- Contact Form -->
                     <div class="col-md-6 mb-4" data-aos="fade-right">
                         <h2 class="section-title mb-4">Send Us a Message</h2>
-                        <form id="contact-form" method="POST" action="send-mail.php">
+                        <form id="contact-form" method="POST" action="https://formspree.io/f/xldlkjqn">
                             <div class="mb-3">
                                 <label class="form-label text-black" for="contact-name">Name</label>
                                 <input
@@ -266,16 +264,49 @@
                                 ></textarea>
                             </div>
                             <button class="btn btn-cta" type="submit">Send Message</button>
+                            <p id="form-status" class="mt-3"></p>
                         </form>
                     </div>
                     <!-- Map -->
                     <div class="col-md-6 mb-4" data-aos="fade-left">
                         <h2 class="section-title mb-4">Our Location</h2>
-                        <div id="map" style="height: 400px;"></div>
+                        <div style="height: 400px;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7927.534366872059!2d3.379205!3d6.524379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b3da9d5a8a3%3A0x9d0e3b77f6e7bfc!2sLagos%20State!5e0!3m2!1sen!2sng!4v1692200785234!5m2!1sen!2sng"
+                                width="100%"
+                                height="100%"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <script>
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  const data = new FormData(form);
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { Accept: "application/json" }
+    });
+    if (response.ok) {
+      status.innerHTML = "✅ Thank you! Your message has been sent.";
+      status.style.color = "green";
+      form.reset();
+    } else {
+      status.innerHTML = "❌ Oops! Something went wrong. Please try again.";
+      status.style.color = "red";
+    }
+</script>
         <!-- Footer -->
         <footer class="footer mt-5 py-5">
             <div class="container">
@@ -287,16 +318,16 @@
                             Empowering Africa's future through innovation, leadership, and education.
                         </p>
                         <div class="social-links mt-3">
-                            <a href="https://www.facebook.com/share/1Hg4nrcmje/?mibextid=wwXIfr">
+                            <a href="https://www.facebook.com/share/16RgZeLksV/?mibextid=wwXIfr">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                             <a href="#">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/company/91058174/admin/analytics/followers/">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://www.instagram.com/africabroadcastingacademy?igsh=Y3d1dGJpeTA3eXhi">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
@@ -306,16 +337,16 @@
                         <h5 class="footer-title">Quick Links</h5>
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#about">About Us</a>
+                                <a href="about.html">About Us</a>
                             </li>
                             <li>
-                                <a href="#programs">Programs</a>
+                                <a href="programs.html">Programs</a>
                             </li>
                             <li>
-                                <a href="#stories">Success Stories</a>
+                                <a href="stories.html">Success Stories</a>
                             </li>
                             <li>
-                                <a href="#events">Events</a>
+                                <a href="students.html">Students</a>
                             </li>
                         </ul>
                     </div>
@@ -327,13 +358,13 @@
                                 <a href="#">Blog</a>
                             </li>
                             <li>
-                                <a href="#">Podcast</a>
+                                <a href="applicationform.html">Application</a>
                             </li>
                             <li>
-                                <a href="#">VR Experience</a>
+                                <a href="sponsor.html">Sponsor</a>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <a href="contact.html">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -348,7 +379,15 @@
                 </div>
                 <!-- Bottom Footer -->
                 <div class="text-center mt-4 footer-bottom">
-                    <small>© 2025 ABA. All rights reserved. | Designed with ❤️</small>
+                    © 2025 ABA. All rights reserved. | Developed by
+                    <a
+                        class="text-decoration-none fw-semibold"
+                        href="https://vincentagber.vercel.app/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Vincent Agber
+                    </a>
                 </div>
             </div>
         </footer>
