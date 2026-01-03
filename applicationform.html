@@ -178,6 +178,12 @@
                             method="POST"
                             novalidate
                         >
+                            <!-- Honeypot for SPAM protection -->
+                            <div style="display:none; visibility:hidden;">
+                                <label>Leave this field empty</label>
+                                <input type="text" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
                             <!-- 1. Personal Information -->
                             <h3 class="h5 fw-semibold mb-3">1. Personal Information</h3>
                             <div class="row g-3 mb-4">
