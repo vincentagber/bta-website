@@ -36,7 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Body    = "Name: $name\nEmail: $email\nPhone: $phone\n\nMessage:\n$message";
 
         $mail->send();
-        echo "success";
+        header("Location: thank-you.html");
+        exit;
     } catch (Exception $e) {
         error_log("PHPMailer Error: " . $mail->ErrorInfo);
         echo "error";

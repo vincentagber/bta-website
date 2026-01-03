@@ -107,8 +107,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->AltBody = strip_tags(str_replace("<br>", "\n", $bodyContent));
 
             $mail->send();
-            echo "<h2>Application Submitted</h2>";
-            echo "<p>Thank you, {$fullName}. We have received your application and will contact you soon.</p>";
+            header("Location: thank-you.html");
+            exit;
         } catch (Exception $e) {
             echo "<h2>Error</h2>";
             echo "<p>Failed to send the application. Error: {$mail->ErrorInfo}</p>";
