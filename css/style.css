@@ -1630,3 +1630,131 @@ body {
     height: 150px;
   }
 }
+
+
+/* Premium Thank You Page Styles */
+:root {
+  --gold-primary: #C5A059;
+  --dark-bg: #0f0f0f;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+.thank-you-container-premium {
+  min-height: 85vh;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px;
+}
+
+/* Background Decorative Orbs */
+.thank-you-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--gold-primary);
+  top: -100px;
+  left: -100px;
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  background: #ffffff;
+  bottom: -50px;
+  right: -50px;
+}
+
+/* Glassmorphism Card */
+.thank-you-glass-card {
+  position: relative;
+  z-index: 1;
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 3rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.thank-you-icon-box {
+  width: 100px;
+  height: 100px;
+  background: rgba(197, 160, 89, 0.1);
+  border: 1px solid var(--gold-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+}
+
+.text-gold {
+  color: var(--gold-primary);
+}
+
+.thank-you-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.thank-you-copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+}
+
+.highlight {
+  color: var(--gold-primary);
+  font-weight: 600;
+}
+
+/* Luxury CTA Button */
+.btn-premium-cta {
+  background: transparent;
+  border: 1px solid var(--gold-primary);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-premium-cta:hover {
+  background: var(--gold-primary);
+  color: #000;
+  box-shadow: 0 0 30px rgba(197, 160, 89, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .thank-you-title {
+    font-size: 2.5rem;
+  }
+
+  .thank-you-glass-card {
+    padding: 2rem;
+  }
+}
