@@ -285,84 +285,99 @@ p,
 /* Specific Section Padding Update */
 .section-padding {
 
-/* Gallery description under title: bold, highly visible, truncated to two lines */
-.gallery-desc {
-  color: var(--off-white);
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-top: 0.5rem;
-  opacity: 0.95;
-  max-height: 3.2rem; /* approx two lines */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
+  /* Gallery description under title: bold, highly visible, truncated to two lines */
+  .gallery-desc {
+    color: var(--off-white);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    opacity: 0.95;
+    max-height: 3.2rem;
+    /* approx two lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
 
-/* Lightbox styles */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  padding: 2rem;
-}
-.lightbox.show {
-  display: flex;
-}
-.lightbox-content {
-  max-width: 1200px;
-  width: 100%;
-  color: var(--white);
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 1.5rem;
-  align-items: start;
-}
-.lightbox-img {
-  width: 100%;
-  height: 80vh;
-  object-fit: contain;
-  background: #000;
-}
-.lightbox-meta {
-  max-height: 80vh;
-  overflow: auto;
-}
-.lightbox-title {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-}
-.lightbox-desc {
-  color: var(--off-white);
-  font-weight: 700;
-  line-height: 1.4;
-}
-.lightbox-close,
-.lightbox-prev,
-.lightbox-next {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.1);
-  color: var(--white);
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-right: 0.5rem;
-}
-.lightbox-controls {
-  margin-top: 1rem;
-}
+  /* Lightbox styles */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 2rem;
+  }
 
-@media (max-width: 900px) {
-  .lightbox-content { grid-template-columns: 1fr; }
-  .lightbox-img { height: 60vh; }
-}
+  .lightbox.show {
+    display: flex;
+  }
+
+  .lightbox-content {
+    max-width: 1200px;
+    width: 100%;
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .lightbox-img {
+    width: 100%;
+    height: 80vh;
+    object-fit: contain;
+    background: #000;
+  }
+
+  .lightbox-meta {
+    max-height: 80vh;
+    overflow: auto;
+  }
+
+  .lightbox-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .lightbox-desc {
+    color: var(--off-white);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+
+  .lightbox-controls {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .lightbox-content {
+      grid-template-columns: 1fr;
+    }
+
+    .lightbox-img {
+      height: 60vh;
+    }
+  }
+
   padding: clamp(4rem, 8vw, 8rem) 0;
   position: relative;
 }
@@ -678,8 +693,7 @@ p,
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 1.5s ease-out;
-  /* Smooth Fade */
+  transition: opacity 2s ease-in-out;
   transform: scale(1);
 }
 
@@ -687,13 +701,13 @@ p,
   opacity: 1;
 }
 
-/* Specific zoom directions for variety */
+/* Specific zoom directions */
 .hero-slide.zoom-in {
-  animation: zoomIn 20s infinite alternate;
+  animation: zoomIn 25s infinite alternate;
 }
 
 .hero-slide.zoom-out {
-  animation: zoomOut 20s infinite alternate;
+  animation: zoomOut 25s infinite alternate;
 }
 
 @keyframes zoomIn {
@@ -716,29 +730,33 @@ p,
   }
 }
 
-/* Hero Controls (Manual Navigation) */
+/* Refined Hero Controls - High Visibility & Luxury */
 .hero-controls {
   position: absolute;
-  bottom: 40px;
-  right: 40px;
-  z-index: 10;
+  bottom: 50px;
+  right: 50px;
+  z-index: 20;
+  /* Ensure above overlay */
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .hero-btn {
-  width: 50px;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  /* Gold subtle border */
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+  /* Darker distinctive background */
   color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .hero-btn:hover {
@@ -746,62 +764,96 @@ p,
   color: var(--ink);
   border-color: var(--gold);
   transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
-/* ========== Carousel Component ========== */
-.custom-carousel {
-  position: relative;
+.hero-btn i {
+  font-size: 1.2rem;
+}
+
+/* ========== Luxury Swiper Carousel ========== */
+.swiper {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  /* Base width */
+  height: 450px;
+  border-radius: 8px;
   overflow: hidden;
-  border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  margin-top: 2rem;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  filter: brightness(0.5) saturate(0.8);
+  opacity: 0.6;
 }
 
-.carousel-inner {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-item {
-  position: relative;
-  display: none;
-  float: left;
-  width: 100%;
-  margin-right: -100%;
-  backface-visibility: hidden;
-  transition: transform 0.6s ease-in-out;
-}
-
-.carousel-item.active,
-.carousel-item-next,
-.carousel-item-prev {
+.swiper-slide img {
   display: block;
-}
-
-.carousel-item-next:not(.carousel-item-start),
-.active.carousel-item-end {
-  transform: translateX(100%);
-}
-
-.carousel-item-prev:not(.carousel-item-end),
-.active.carousel-item-start {
-  transform: translateX(-100%);
-}
-
-.carousel-img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
 }
 
-.carousel-caption-custom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-  padding: 3rem 2rem 1rem;
-  color: white;
-  text-align: center;
+.swiper-slide-active {
+  transform: scale(1.1) !important;
+  filter: brightness(1) saturate(1.1);
+  opacity: 1;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(212, 175, 55, 0.5);
+  /* Gold outline */
+  z-index: 10;
+}
+
+/* Elegant Pagination */
+.swiper-pagination-bullet {
+  background: var(--white);
+  opacity: 0.2;
+  width: 40px !important;
+  /* Long dashes */
+  height: 3px !important;
+  border-radius: 0 !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--gold);
+  opacity: 1;
+}
+
+/* Custom Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--gold);
+  background: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--gold);
+  color: var(--ink);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+@media (min-width: 768px) {
+  .swiper-slide {
+    width: 400px;
+    height: 600px;
+  }
 }

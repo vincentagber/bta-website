@@ -258,8 +258,11 @@
 
       const img = document.createElement('img');
       img.className = 'gallery-image';
-      img.src = src;
+      // defer actual image load using data-src and IntersectionObserver
+      img.dataset.src = src;
+      img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
       img.alt = title || category;
+      img.loading = 'lazy';
 
       const overlay = document.createElement('div');
       overlay.className = 'gallery-item-overlay';
@@ -475,6 +478,17 @@
       // merge trainingMeta2 into trainingMeta for lookup
       Object.assign(trainingMeta, trainingMeta2);
 
+      // Auto-generate training captions for 101–150 when explicit metadata is not provided
+      for (let n = 101; n <= 150; n++) {
+        const key = `training-${n}.jpg`;
+        if (!trainingMeta[key]) {
+          trainingMeta[key] = {
+            title: `Training Session ${n}`,
+            desc: `Participants engaged in a focused practical session ${n}, building professional broadcast skills.`
+          };
+        }
+      }
+
       // Training images
       trainingFiles.forEach((f, i) => {
         if (f.startsWith('.')) return; // skip hidden files
@@ -494,6 +508,28 @@
     }
 
     buildGallery();
+
+    // Initialize lazy-loading for gallery images created above
+    (function initLazyGallery() {
+      const lazyImages = Array.from(document.querySelectorAll('img.gallery-image[data-src]'));
+      if (!lazyImages.length) return;
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
+            }
+          });
+        }, { rootMargin: '250px 0px' });
+        lazyImages.forEach(img => io.observe(img));
+      } else {
+        // fallback: load all images immediately
+        lazyImages.forEach(img => { img.src = img.dataset.src; img.removeAttribute('data-src'); });
+      }
+    })();
 
     // Determine initial filter from query param or hash (supports direct links)
     const urlParams = new URLSearchParams(window.location.search);
