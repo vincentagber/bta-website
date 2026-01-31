@@ -124,6 +124,14 @@ img {
   display: block;
 }
 
+/* Header Logo Size */
+.navbar-brand .logo-image {
+  max-height: 100px;
+  /* Increased from default */
+  width: auto;
+  object-fit: contain;
+}
+
 /* Only force text color for generic text containers, NOT navbar links which are handled separately due to white header */
 .text-dark,
 .bg-light p,
