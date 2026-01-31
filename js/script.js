@@ -229,39 +229,123 @@ document.addEventListener('DOMContentLoaded', () => {
     disable: window.innerWidth < 576 ? 'mobile' : false, // Disable AOS on small mobiles for performance
   });
 
-  // Subtle Parallax Effect (Disabled on Mobile for Performance)
-  const heroBackground = document.querySelector('.hero-premium-bg');
-  if (window.innerWidth >= 768) {
-    window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY;
-      heroBackground.style.transform = `scale(${1.05 + scrollPosition / 6000})`;
+  // === Hero Slider (Ken Burns Effect) ===
+  function initHeroSlider() {
+    const sliderContainer = document.getElementById('heroSlider');
+    if (!sliderContainer) return;
+
+    // placeholder images - user can add the new ones here
+    const slides = [
+      'assets/images/bootcamp/IMG_3104.JPG',
+      'assets/images/bootcamp/IMG_3099.JPG',
+      'assets/images/hero.jpg',
+      'assets/images/training.jpg',
+      'assets/images/camp.jpg' // Assuming this exists or falls back
+    ];
+
+    let currentSlide = 0;
+    const slideInterval = 6000;
+    let slideTimer;
+
+    // Create Slide Elements
+    slides.forEach((src, index) => {
+      const slide = document.createElement('div');
+      slide.classList.add('hero-slide');
+      if (index === 0) slide.classList.add('active', 'zoom-in');
+      slide.style.backgroundImage = `url('${src}')`;
+      sliderContainer.appendChild(slide);
     });
+
+    const heroSlides = document.querySelectorAll('.hero-slide');
+
+    function showSlide(index) {
+      // Remove active class and zoom classes from all
+      heroSlides.forEach(slide => {
+        slide.classList.remove('active');
+        // We don't remove zoom immediately to allow fade out with zoom intact? 
+        // Actually, CSS handles opacity transition. 
+        // Best to reset zoom classes after transition to restart animation next time.
+        setTimeout(() => {
+          if (!slide.classList.contains('active')) {
+            slide.classList.remove('zoom-in', 'zoom-out');
+          }
+        }, 1500);
+      });
+
+      // Prepare new slide
+      const nextSlide = heroSlides[index];
+      nextSlide.classList.add('active');
+
+      // Randomize zoom direction
+      const zoomClass = Math.random() > 0.5 ? 'zoom-in' : 'zoom-out';
+      nextSlide.classList.add(zoomClass);
+
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      let next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      let prev = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    }
+
+    // Auto Play
+    function startTimer() {
+      slideTimer = setInterval(nextSlide, slideInterval);
+    }
+
+    function resetTimer() {
+      clearInterval(slideTimer);
+      startTimer();
+    }
+
+    startTimer();
+
+    // Manual Controls
+    const prevBtn = document.getElementById('heroPrev');
+    const nextBtn = document.getElementById('heroNext');
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetTimer();
+      });
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetTimer();
+      });
+    }
   }
+
+  // Initialize
+  initHeroSlider();
 
   // Smooth Scroll for CTA
   document.querySelector('.btn-cta').addEventListener('click', (e) => {
     e.preventDefault();
     const target = document.querySelector(e.target.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // If external or other page, just follow link
+      window.location.href = e.target.getAttribute('href');
+    }
   });
 
   // Touch Feedback for CTA
   const ctaButton = document.querySelector('.btn-cta');
-  ctaButton.addEventListener('touchstart', () => {
-    ctaButton.classList.add('active');
-  });
-  ctaButton.addEventListener('touchend', () => {
-    ctaButton.classList.remove('active');
-  });
-
-  // Optimize Image Loading
-  const heroImage = document.querySelector('.hero-premium-bg');
-  heroImage.style.backgroundImage = `url('/assets/images/training.jpg')`; // Low-res initially
-  const highResImage = new Image();
-  highResImage.src = '/assets/images/training.jpg';
-  highResImage.onload = () => {
-    heroImage.style.backgroundImage = `url('/assets/images/training.jpg')`;
-  };
+  if (ctaButton) {
+    ctaButton.addEventListener('touchstart', () => {
+      ctaButton.classList.add('active');
+    });
+    ctaButton.addEventListener('touchend', () => {
+      ctaButton.classList.remove('active');
+    });
+  }
 
   // Initialize Lucide Icons
   if (typeof lucide !== 'undefined') {

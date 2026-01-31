@@ -35,7 +35,7 @@
   <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img alt="ABA Logo" class="logo-image" src="assets/images/bootcamp/logo.png">
+        <img alt="ABA Logo" class="logo-image" src="assets/images/logo.png">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -525,7 +525,7 @@
         const filter = button.getAttribute('data-filter');
         applyFilter(filter);
         // update URL hash for shareable link
-        try { history.replaceState(null, '', `?filter=${filter}`); } catch (e) {}
+        try { history.replaceState(null, '', `?filter=${filter}`); } catch (e) { }
       });
     });
 
