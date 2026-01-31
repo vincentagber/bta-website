@@ -1,8 +1,9 @@
 :root {
   /* Colors */
-  --gold: #D4AF37;
-  --gold-light: #F4C430;
-  --gold-dark: #B4941F;
+  --gold: #C59D5F;
+  /* Refined Logo Gold */
+  --gold-light: #DBC196;
+  --gold-dark: #8E6C36;
   --ink: #050505;
   --ink-light: #0b0f1a;
   --ink-lighter: #151b2b;
@@ -44,6 +45,31 @@ body {
   overflow-x: hidden;
   font-size: clamp(1.1rem, 1.5vw, 1.3rem);
   /* Larger distinct base font */
+}
+
+/* Global Selection Color */
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* Custom Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ink-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--gold), var(--gold-dark));
+  border-radius: 5px;
+  border: 2px solid var(--ink);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-light);
 }
 
 h1,
@@ -160,6 +186,19 @@ img {
 .navbar-dark .nav-link:hover,
 .navbar-dark .nav-link.active {
   color: var(--gold) !important;
+  position: relative;
+}
+
+.navbar-dark .nav-link:hover::after,
+.navbar-dark .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--gold);
+  box-shadow: 0 0 10px var(--gold);
 }
 
 /* Utility Classes */
@@ -218,6 +257,12 @@ img {
 
 .gallery-card:hover .gallery-img {
   transform: scale(1.1);
+}
+
+.gallery-card:hover {
+  border-bottom: 3px solid var(--gold);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+  /* Gold glow */
 }
 
 .gallery-overlay {
@@ -281,6 +326,7 @@ p,
   height: 96px;
   display: block;
 }
+
 .checkmark-large path,
 .checkmark-large circle {
   stroke: var(--gold);
@@ -415,6 +461,8 @@ p,
   background: var(--gold);
   color: var(--ink);
   border: 1px solid var(--gold);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  /* Constant Gold Glow */
 }
 
 .btn-cta:hover {
@@ -461,6 +509,7 @@ p,
 
 /* Mobile button responsiveness improvements */
 @media (max-width: 767.98px) {
+
   .btn-cta,
   .btn-outline-white,
   .btn-outline {
@@ -610,13 +659,49 @@ p,
   z-index: 3;
   animation: bounce 2s infinite;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 1;
+  color: var(--gold);
+  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
 }
 
 .hero-scroll-indicator i {
   width: 40px;
   height: 40px;
 }
+
+/* WhatsApp Floating Widget */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  /* Official WhatsApp Green */
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  z-index: 1000;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+  color: #fff !important;
+}
+
+.whatsapp-float i {
+  margin-top: 2px;
+  /* Visual tweak for centering FontAwesome icon */
+}
+
 
 /* Founders & About */
 .founder-card-alt {
