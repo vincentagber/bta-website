@@ -249,7 +249,7 @@
       "training_advert.jpg"
     ];
 
-    function createGalleryItem(src, category, title, delay) {
+    function createGalleryItem(src, category, title, desc, delay) {
       const item = document.createElement('div');
       item.className = 'gallery-item';
       item.setAttribute('data-category', category);
@@ -275,6 +275,13 @@
       overlay.appendChild(span);
       overlay.appendChild(h4);
 
+      if (desc) {
+        const p = document.createElement('p');
+        p.className = 'gallery-desc';
+        p.textContent = desc;
+        overlay.appendChild(p);
+      }
+
       item.appendChild(img);
       item.appendChild(overlay);
       return item;
@@ -286,10 +293,61 @@
       let delay = 0;
 
       // Bootcamp first (featured)
+      // Bootcamp metadata (title + one-line description inferred / provided)
+      const bootcampMeta = {
+        "IMG_2275.JPG": { title: "Orientation Morning", desc: "Participants gathered for the program kickoff, setting expectations and team goals." },
+        "IMG_2276.JPG": { title: "Icebreakers & Formation", desc: "Early team-building activities establishing roles and collaborative rhythm." },
+        "IMG_2284.JPG": { title: "Field Briefing", desc: "Instructors deliver an on-location plan and safety brief before field exercises." },
+        "IMG_2292.JPG": { title: "Camera Fundamentals", desc: "Hands-on camera operation session focusing on framing and exposure." },
+        "IMG_2298.JPG": { title: "Sound Check", desc: "Technicians and trainees test microphones and monitor levels on set." },
+        "IMG_2307.JPG": { title: "Directing The Shot", desc: "Trainees practice blocking, directing talent, and composing scenes." },
+        "IMG_2989.JPG": { title: "Hands-On Workshop", desc: "Close-up of practical instruction—students actively adjusting gear." },
+        "IMG_3088.JPG": { title: "On-Location Reporting", desc: "Field team conducting interviews and capturing contextual footage." },
+        "IMG_3092.JPG": { title: "Studio Live Session", desc: "Learners running a live studio segment under instructor supervision." },
+        "IMG_3099.JPG": { title: "Technical Setup", desc: "Camera and rig configuration being prepared for a shoot." },
+        "IMG_3104.JPG": { title: "Group Critique", desc: "Trainees reviewing footage together, learning constructive feedback." },
+        "IMG_3107.JPG": { title: "Production Control", desc: "The control desk during a live or simulated broadcast session." },
+        "IMG_3108.JPG": { title: "Lens & Focus Workshop", desc: "Training focused on lens choice and manual focus techniques." },
+        "IMG_3109.JPG": { title: "Crew Coordination", desc: "Team members communicating cues and action during production." },
+        "IMG_3119.JPG": { title: "Post-Production Prep", desc: "Organising footage and logs, preparing for editing workflows." },
+        "IMG_8787.JPG": { title: "Orientation Lineup", desc: "Early cohort photo or registration moment, establishing cohort identity." },
+        "IMG_8788.JPG": { title: "Leadership Brief", desc: "Senior instructor delivering a high-level cultural and editorial briefing." },
+        "IMG_8790.JPG": { title: "Storyboarding Session", desc: "Participants sketching shot lists and narrative flows." },
+        "IMG_8795.JPG": { title: "Live Action Capture", desc: "Active take in progress—movement, lighting, and timing in focus." },
+        "IMG_8796.JPG": { title: "Strategy Huddle", desc: "Small team planning an approach to a tricky story or shoot." },
+        "IMG_8798.JPG": { title: "Execution Moment", desc: "Trainees carrying out a planned scene with professional focus." },
+        "IMG_8799.JPG": { title: "Teamwork in Motion", desc: "Collaboration between camera, sound, and production roles." },
+        "IMG_8800.JPG": { title: "Passion & Practice", desc: "Close-up of a student immersed in their craft—intensity and focus." },
+        "IMG_8801.JPG": { title: "Focus & Direction", desc: "Instructor coaching a student on framing and delivery." },
+        "IMG_8802.JPG": { title: "Determination Shot", desc: "A trainee demonstrating persistence during a complex task." },
+        "IMG_8803.JPG": { title: "Grit & Grind", desc: "Long-form practice or late-session work showing endurance." },
+        "IMG_8804.JPG": { title: "Resilience Moment", desc: "Problem-solving under pressure—technical or editorial fixes." },
+        "IMG_8808.JPG": { title: "Final Project Review", desc: "Instructors and peers assessing capstone work and outcomes." },
+        "IMG_8809.JPG": { title: "Action Frame", desc: "Dynamic field capture, emphasizing movement and timing." },
+        "IMG_8810.JPG": { title: "Collaboration Block", desc: "Teams coordinating coverage and storytelling roles." },
+        "IMG_8812.JPG": { title: "Innovation Lab", desc: "Experimenting with creative techniques or new storytelling formats." },
+        "IMG_8813.JPG": { title: "Support & Feedback", desc: "Mentors offering guidance and performance notes to participants." },
+        "IMG_8815.JPG": { title: "Community Moment", desc: "Networking, sharing insights, and building industry connections." },
+        "IMG_8816.JPG": { title: "Skill Drill", desc: "Repeated practical exercise to build accuracy and speed." },
+        "IMG_8817.JPG": { title: "Technical Adjustment", desc: "Fine-tuning equipment for optimal shoot conditions." },
+        "IMG_8818.JPG": { title: "Team Spirit", desc: "Group interaction that captures morale and mutual encouragement." },
+        "IMG_8819.JPG": { title: "Unity Frame", desc: "Cohort photo or collaborative shot representing shared purpose." },
+        "IMG_8823.JPG": { title: "Vision Planning", desc: "Creative planning session laying out bigger editorial goals." },
+        "IMG_8825.JPG": { title: "Impact Capture", desc: "A moment framing subjects or scenes that communicate clear impact." },
+        "IMG_8827.JPG": { title: "Legacy Work", desc: "Final edits or presentations illustrating the cohort’s strongest pieces." },
+        "IMG_8828.JPG": { title: "Network Building", desc: "Trainees meeting guests, partners, or industry mentors." },
+        "IMG_8829.JPG": { title: "Future-Focused", desc: "Portraits or images suggesting forward momentum and opportunity." },
+        "IMG_8830.JPG": { title: "Creation Frame", desc: "Behind-the-scenes of content creation—setting up a shot or taking notes." },
+        "IMG_8841.JPG": { title: "Interview Moment", desc: "On-camera interview setup with subject and sound team in place." },
+        "IMG_8851.JPG": { title: "Behind The Scenes", desc: "Candid capture of the production process and support work." }
+      };
+
       bootcampFiles.forEach((f, i) => {
-        const title = f.replace(/\.[^/.]+$/, '').replace(/_/g, ' ').replace(/IMG\s*/i, '').trim();
+        const meta = bootcampMeta[f] || {};
+        const title = meta.title || f.replace(/\.[^/.]+$/, '').replace(/_/g, ' ').replace(/IMG\s*/i, '').trim();
+        const desc = meta.desc || '';
         const src = `assets/images/bootcamp/${f}`;
-        grid.appendChild(createGalleryItem(src, 'bootcamp', title || 'Bootcamp', delay));
+        grid.appendChild(createGalleryItem(src, 'bootcamp', title || 'Bootcamp', desc, delay));
         delay = (delay + 50) % 400;
       });
 
