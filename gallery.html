@@ -284,8 +284,17 @@
 
       item.appendChild(img);
       item.appendChild(overlay);
+
+      // click opens lightbox (index will be set when item is created)
+      item.addEventListener('click', () => {
+        const idx = parseInt(item.getAttribute('data-index'));
+        if (!Number.isNaN(idx)) openLightbox(idx);
+      });
       return item;
     }
+
+    // master data array for lightbox navigation
+    const galleryData = [];
 
     function buildGallery() {
       const grid = document.getElementById('galleryGrid');
@@ -347,7 +356,11 @@
         const title = meta.title || f.replace(/\.[^/.]+$/, '').replace(/_/g, ' ').replace(/IMG\s*/i, '').trim();
         const desc = meta.desc || '';
         const src = `assets/images/bootcamp/${f}`;
-        grid.appendChild(createGalleryItem(src, 'bootcamp', title || 'Bootcamp', desc, delay));
+        const idx = galleryData.length;
+        galleryData.push({ src, category: 'bootcamp', title, desc });
+        const item = createGalleryItem(src, 'bootcamp', title || 'Bootcamp', desc, delay);
+        item.setAttribute('data-index', idx);
+        grid.appendChild(item);
         delay = (delay + 50) % 400;
       });
 
@@ -405,6 +418,63 @@
         "training-50.jpg": { title: "Focus & Dedication", desc: "Concentration and persistence during intensive practical tasks." }
       };
 
+      // Training metadata (batch 2: training-51.jpg through training-100.jpg)
+      const trainingMeta2 = {
+        "training-51.jpg": { title: "Audio Mixing", desc: "Students learning to balance levels and clean tracks for clarity." },
+        "training-52.jpg": { title: "Camera Rig Practice", desc: "Assembling and testing rigs for dynamic shots." },
+        "training-53.jpg": { title: "Reporting In The Field", desc: "Capturing live reports and contextual B-roll." },
+        "training-54.jpg": { title: "Editing Techniques", desc: "Layering cuts for pacing and storytelling." },
+        "training-55.jpg": { title: "Lighting For Interviews", desc: "Creating flattering, consistent light for subjects." },
+        "training-56.jpg": { title: "Presenter Coaching", desc: "On-camera coaching to sharpen delivery and presence." },
+        "training-57.jpg": { title: "Drone Safety", desc: "Basics of aerial capture and safe operations (where applicable)." },
+        "training-58.jpg": { title: "Camera Stabilization", desc: "Using gimbals and tripods for smooth footage." },
+        "training-59.jpg": { title: "Quick Turnaround", desc: "Producing short edits under tight deadlines." },
+        "training-60.jpg": { title: "Lighting Control", desc: "Using flags, diffusion and reflectors to shape light." },
+        "training-61.jpg": { title: "Visual Narratives", desc: "Constructing emotional through-lines with footage." },
+        "training-62.jpg": { title: "Location Scouting", desc: "Choosing atmospheres that reinforce the story." },
+        "training-63.jpg": { title: "Multi-Camera Ops", desc: "Coordinating multiple angles for comprehensive coverage." },
+        "training-64.jpg": { title: "Field Interview", desc: "Capturing authentic responses and contextual visuals." },
+        "training-65.jpg": { title: "Script Editing", desc: "Tightening scripts to communicate clearly and directly." },
+        "training-66.jpg": { title: "Color Workflow", desc: "Applying consistent color grading across looks." },
+        "training-67.jpg": { title: "Advanced Framing", desc: "Refining compositions for visual impact." },
+        "training-68.jpg": { title: "Sound Capture", desc: "Advanced microphone techniques for noisy environments." },
+        "training-69.jpg": { title: "Creative Brief", desc: "Translating briefs into clear production plans." },
+        "training-70.jpg": { title: "Broadcast Standards", desc: "Ensuring content meets technical delivery specifications." },
+        "training-71.jpg": { title: "Solo Shoots", desc: "Producing tight packages with small crews or solo operators." },
+        "training-72.jpg": { title: "Run-and-Gun", desc: "Fast-paced field shooting for breaking stories." },
+        "training-73.jpg": { title: "Interview Lighting 2", desc: "Advanced techniques for sculpting subject light." },
+        "training-74.jpg": { title: "Voiceover Recording", desc: "Recording voiceovers with clarity and intent." },
+        "training-75.jpg": { title: "Interactive Session", desc: "Group exercises designed to build collaborative competencies." },
+        "training-76.jpg": { title: "Post Workflow", desc: "Efficient asset management and delivery pipelines." },
+        "training-77.jpg": { title: "Camera Calibration", desc: "Ensuring consistent exposure and color across units." },
+        "training-78.jpg": { title: "Story Labs", desc: "Small teams prototype narrative approaches quickly." },
+        "training-79.jpg": { title: "Field Lighting 2", desc: "Solutions for difficult natural light conditions." },
+        "training-80.jpg": { title: "Final Edit", desc: "Pulling together assets into a final, broadcast-ready package." },
+        "training-81.jpg": { title: "Talent Direction", desc: "Coaching non-professional on-camera contributors." },
+        "training-82.jpg": { title: "Editing Collaboration", desc: "Pair editing sessions for faster iteration and critique." },
+        "training-83.jpg": { title: "Camera Maintenance", desc: "Practical care to avoid downtime and technical faults." },
+        "training-84.jpg": { title: "Color Checks", desc: "Using scopes and references to match shots precisely." },
+        "training-85.jpg": { title: "Speed Edits", desc: "Techniques to create polished content on tight schedules." },
+        "training-86.jpg": { title: "Field Safety 2", desc: "Advanced planning and risk mitigation for complex shoots." },
+        "training-87.jpg": { title: "Narrative Structure", desc: "Shaping sequences that hold audience attention." },
+        "training-88.jpg": { title: "Sound Design 2", desc: "Adding atmosphere and emotional texture with sound." },
+        "training-89.jpg": { title: "Multi-Cam Sync", desc: "Syncing footage efficiently for multi-angle editing." },
+        "training-90.jpg": { title: "Outbound Reporting", desc: "Preparing teams for remote and international coverage." },
+        "training-91.jpg": { title: "Pitch Prep", desc: "Refining story pitches for commissioning and partners." },
+        "training-92.jpg": { title: "Live Mix", desc: "Hands-on live mixing for immediate broadcast delivery." },
+        "training-93.jpg": { title: "Documentary Craft", desc: "Principles of long-form storytelling and pacing." },
+        "training-94.jpg": { title: "Short Form Strategy", desc: "Optimising content for digital and mobile audiences." },
+        "training-95.jpg": { title: "Post Critique", desc: "Final review sessions to polish output before release." },
+        "training-96.jpg": { title: "Field Camera Ops", desc: "Advanced camera movement and frame control in the field." },
+        "training-97.jpg": { title: "Production Scheduling", desc: "Creating schedules that keep projects on time and on budget." },
+        "training-98.jpg": { title: "On-Set Etiquette", desc: "Professional behaviours that speed up set operations." },
+        "training-99.jpg": { title: "Creative Direction", desc: "Leading creative teams and aligning vision with execution." },
+        "training-100.jpg": { title: "Capstone Showcase", desc: "Final presentations that highlight the cohort’s best work." }
+      };
+
+      // merge trainingMeta2 into trainingMeta for lookup
+      Object.assign(trainingMeta, trainingMeta2);
+
       // Training images
       trainingFiles.forEach((f, i) => {
         if (f.startsWith('.')) return; // skip hidden files
@@ -412,7 +482,11 @@
         const title = meta.title || f.replace(/\.[^/.]+$/, '').replace(/_/g, ' ').replace(/training-?/i, 'Training ').trim();
         const desc = meta.desc || '';
         const src = `assets/images/training/${f}`;
-        grid.appendChild(createGalleryItem(src, 'training', title || 'Training', desc, delay));
+        const idx = galleryData.length;
+        galleryData.push({ src, category: 'training', title, desc });
+        const item = createGalleryItem(src, 'training', title || 'Training', desc, delay);
+        item.setAttribute('data-index', idx);
+        grid.appendChild(item);
         delay = (delay + 50) % 400;
       });
 
@@ -464,6 +538,83 @@
       activeBtn.classList.remove('btn-outline-white');
       activeBtn.classList.add('active', 'btn-cta');
     }
+
+    // --- Lightbox implementation ---
+    let currentIndex = null;
+
+    function openLightbox(idx) {
+      currentIndex = idx;
+      showLightbox();
+    }
+
+    function showLightbox() {
+      const data = galleryData[currentIndex];
+      if (!data) return;
+      const lb = document.getElementById('lightbox');
+      const lbImg = lb.querySelector('.lightbox-img');
+      const lbTitle = lb.querySelector('.lightbox-title');
+      const lbDesc = lb.querySelector('.lightbox-desc');
+      lbImg.src = data.src;
+      lbTitle.textContent = data.title || '';
+      lbDesc.textContent = data.desc || '';
+      lb.classList.add('show');
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      lb.classList.remove('show');
+      currentIndex = null;
+    }
+
+    function nextLightbox() {
+      if (currentIndex === null) return;
+      currentIndex = (currentIndex + 1) % galleryData.length;
+      showLightbox();
+    }
+
+    function prevLightbox() {
+      if (currentIndex === null) return;
+      currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+      showLightbox();
+    }
+
+    // build minimal lightbox DOM
+    (function createLightboxDOM() {
+      const lb = document.createElement('div');
+      lb.id = 'lightbox';
+      lb.className = 'lightbox';
+      lb.innerHTML = `
+        <div class="lightbox-content">
+          <div>
+            <img class="lightbox-img" src="" alt="">
+          </div>
+          <div class="lightbox-meta">
+            <h3 class="lightbox-title"></h3>
+            <p class="lightbox-desc"></p>
+            <div class="lightbox-controls">
+              <button class="lightbox-prev">Prev</button>
+              <button class="lightbox-next">Next</button>
+              <button class="lightbox-close">Close</button>
+            </div>
+          </div>
+        </div>`;
+      document.body.appendChild(lb);
+
+      lb.addEventListener('click', (e) => {
+        if (e.target === lb) closeLightbox();
+      });
+      lb.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+      lb.querySelector('.lightbox-next').addEventListener('click', nextLightbox);
+      lb.querySelector('.lightbox-prev').addEventListener('click', prevLightbox);
+
+      // keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (!document.getElementById('lightbox').classList.contains('show')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextLightbox();
+        if (e.key === 'ArrowLeft') prevLightbox();
+      });
+    })();
 
   </script>
 </body>
