@@ -459,6 +459,38 @@ p,
   width: auto;
 }
 
+/* Mobile button responsiveness improvements */
+@media (max-width: 767.98px) {
+  .btn-cta,
+  .btn-outline-white,
+  .btn-outline {
+    display: block !important;
+    width: 100% !important;
+    padding: 0.95rem 1rem !important;
+    font-size: 1rem !important;
+    border-radius: 10px !important;
+    margin-bottom: 0.75rem !important;
+    text-align: center !important;
+  }
+
+  /* Keep navbar CTA compact in collapsed nav to avoid over-stretching */
+  .navbar .btn-cta {
+    display: inline-flex !important;
+    width: auto !important;
+  }
+
+  /* Slightly larger filter buttons for touch */
+  .filter-btn {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* Ensure hero action buttons stack and have space */
+  .hero .btn {
+    margin-bottom: 0.75rem;
+  }
+}
+
 /* ========== 5. Page Specific ========== */
 /* ========== Heroes ========== */
 .premium-hero {
