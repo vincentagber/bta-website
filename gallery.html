@@ -351,12 +351,68 @@
         delay = (delay + 50) % 400;
       });
 
+      // Training metadata (batch 1: training-1.jpg through training-50.jpg)
+      const trainingMeta = {
+        "training-1.jpg": { title: "Camera Fundamentals", desc: "Students practice framing, exposure and basic camera movement." },
+        "training-2.jpg": { title: "Lighting Basics", desc: "Hands-on workshop on three-point lighting and light shaping." },
+        "training-3.jpg": { title: "Sound & Microphones", desc: "Mic placement and audio level checks for clean field sound." },
+        "training-4.jpg": { title: "Studio Workflow", desc: "Understanding studio roles and live production flow." },
+        "training-5.jpg": { title: "Editorial Planning", desc: "Developing a short narrative and shot list as a team." },
+        "training-6.jpg": { title: "Interview Techniques", desc: "Preparing questions and conducting on-camera interviews." },
+        "training-7.jpg": { title: "Camera Movement", desc: "Practicing dollies, pans and smooth handheld techniques." },
+        "training-8.jpg": { title: "Field Reporting", desc: "Capturing context and b-roll to support stories in the field." },
+        "training-9.jpg": { title: "Composition", desc: "Using rule-of-thirds, leading lines, and balance for strong frames." },
+        "training-10.jpg": { title: "Group Dynamics", desc: "Teamwork and collaborative production during practical exercises." },
+        "training-11.jpg": { title: "Storyboard Practice", desc: "Translating storyboards into executable shot plans." },
+        "training-12.jpg": { title: "Fast Turnaround Edits", desc: "Editing short packages under tight time constraints." },
+        "training-13.jpg": { title: "On-Camera Presentation", desc: "Coaching for confident on-screen delivery and presence." },
+        "training-14.jpg": { title: "Field Lighting", desc: "Adapting lighting setups for outdoor and mixed-light environments." },
+        "training-15.jpg": { title: "Focus & Lenses", desc: "Lens selection and manual focus techniques for sharp results." },
+        "training-16.jpg": { title: "Sound Design", desc: "Introduction to layering and cleaning audio in post-production." },
+        "training-17.jpg": { title: "Script to Screen", desc: "Turning scripts into visual plans with clear editorial intent." },
+        "training-18.jpg": { title: "Color & Grading", desc: "Basic color correction workflows to achieve consistent visuals." },
+        "training-19.jpg": { title: "Practical Lighting", desc: "Hands-on applying lighting theory to real scenes." },
+        "training-20.jpg": { title: "Camera Operation", desc: "Students rotating through camera operator roles and checks." },
+        "training-21.jpg": { title: "Field Safety", desc: "Planning for safety and logistics during external shoots." },
+        "training-22.jpg": { title: "Editing Workflow", desc: "Organising assets and efficient timelines for fast edits." },
+        "training-23.jpg": { title: "Producer Brief", desc: "Role of the producer in planning and execution of shoots." },
+        "training-24.jpg": { title: "Interview Lighting", desc: "Setting up flattering, interview-appropriate lighting." },
+        "training-25.jpg": { title: "Mentorship Moment", desc: "Instructor feedback and one-on-one coaching." },
+        "training-26.jpg": { title: "Camera Rigging", desc: "Preparing rigs and stabilisation for complex moves." },
+        "training-27.jpg": { title: "Narrative Editing", desc: "Crafting story arcs from raw footage in the edit suite." },
+        "training-28.jpg": { title: "Short Form Production", desc: "Creating concise, high-impact short videos." },
+        "training-29.jpg": { title: "Audio Techniques", desc: "Using lavaliers, booms, and learning to mix live sound." },
+        "training-30.jpg": { title: "Field Direction", desc: "Directing non-actors and managing on-location talent." },
+        "training-31.jpg": { title: "Live Broadcast Drill", desc: "Simulated live broadcast workflows under timed conditions." },
+        "training-32.jpg": { title: "Camera Checks", desc: "Pre-shoot checklists and technical confirmation routines." },
+        "training-33.jpg": { title: "Visual Storytelling", desc: "Translating ideas into visual sequences with editorial clarity." },
+        "training-34.jpg": { title: "Post-Review", desc: "Group critique session to identify improvements and strengths." },
+        "training-35.jpg": { title: "Creative Workshop", desc: "Experimenting with visual styles and unconventional approaches." },
+        "training-36.jpg": { title: "Field Editing", desc: "Assembling rough cuts near the shoot location for feedback." },
+        "training-37.jpg": { title: "Lighting Setups", desc: "Advanced lighting exercises for controlled atmospheres." },
+        "training-38.jpg": { title: "Camera Angles", desc: "Exploring high/low angles and dynamic framing for impact." },
+        "training-39.jpg": { title: "Interview Prep", desc: "Preparing interview subjects and setting context for the camera." },
+        "training-40.jpg": { title: "Group Editing", desc: "Collaborative editing sessions to refine storytelling choices." },
+        "training-41.jpg": { title: "Sound Recording", desc: "Best practices for capturing clean on-location audio." },
+        "training-42.jpg": { title: "Practical Learning", desc: "Real-world tasks that reinforce technical skills and judgement." },
+        "training-43.jpg": { title: "Camera Care", desc: "Maintenance and handling best practices for longevity." },
+        "training-44.jpg": { title: "Script Clinics", desc: "Short clinics focused on tightening scripts for broadcast." },
+        "training-45.jpg": { title: "Production Logistics", desc: "Coordinating transport, equipment and crew on shoots." },
+        "training-46.jpg": { title: "Visual Research", desc: "Scouting and planning visuals before principal photography." },
+        "training-47.jpg": { title: "Practice Shots", desc: "Rehearsals and test shots to refine technical choices." },
+        "training-48.jpg": { title: "Team Briefing", desc: "Daily briefings that align the crew and creative goals." },
+        "training-49.jpg": { title: "On-Set Discipline", desc: "Emphasizing timing, quiet professionalism and crew etiquette." },
+        "training-50.jpg": { title: "Focus & Dedication", desc: "Concentration and persistence during intensive practical tasks." }
+      };
+
       // Training images
       trainingFiles.forEach((f, i) => {
         if (f.startsWith('.')) return; // skip hidden files
-        const title = f.replace(/\.[^/.]+$/, '').replace(/_/g, ' ').replace(/training-?/i, 'Training ').trim();
+        const meta = trainingMeta[f] || {};
+        const title = meta.title || f.replace(/\.[^/.]+$/, '').replace(/_/g, ' ').replace(/training-?/i, 'Training ').trim();
+        const desc = meta.desc || '';
         const src = `assets/images/training/${f}`;
-        grid.appendChild(createGalleryItem(src, 'training', title || 'Training', delay));
+        grid.appendChild(createGalleryItem(src, 'training', title || 'Training', desc, delay));
         delay = (delay + 50) % 400;
       });
 

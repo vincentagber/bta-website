@@ -284,6 +284,21 @@ p,
 
 /* Specific Section Padding Update */
 .section-padding {
+
+/* Gallery description under title: bold, highly visible, truncated to two lines */
+.gallery-desc {
+  color: var(--off-white);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  opacity: 0.95;
+  max-height: 3.2rem; /* approx two lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
   padding: clamp(4rem, 8vw, 8rem) 0;
   position: relative;
 }
