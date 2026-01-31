@@ -275,6 +275,17 @@ p,
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+/* Thank-you page checkmark */
+.checkmark-large {
+  width: 96px;
+  height: 96px;
+  display: block;
+}
+.checkmark-large path,
+.checkmark-large circle {
+  stroke: var(--gold);
+}
+
 /* Ensure card text is visible */
 .card-premium p,
 .gallery-title,
