@@ -23,6 +23,8 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <!-- Flag Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -50,6 +52,30 @@
           <li class="nav-item ms-lg-3">
             <a class="btn btn-cta" href="applicationform.html">Apply Now</a>
           </li>
+          <li class="nav-item dropdown ms-2">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="fi fi-bj fis rounded-1 fs-4"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg" style="min-width: auto;">
+              <li><a class="dropdown-item text-center" href="#"><span class="fi fi-bj fis rounded-1 fs-4"></span></a>
+              </li>
+              <li><a class="dropdown-item text-center" href="#"><span class="fi fi-gh fis rounded-1 fs-4"></span></a>
+              </li>
+              <li><a class="dropdown-item text-center" href="#"><span class="fi fi-ci fis rounded-1 fs-4"></span></a>
+              </li>
+              <li><a class="dropdown-item text-center" href="#"><span class="fi fi-tg fis rounded-1 fs-4"></span></a>
+              </li>
+              <li><a class="dropdown-item text-center" href="#"><span class="fi fi-ng fis rounded-1 fs-4"></span></a>
+              </li>
+              <li><a class="dropdown-item text-center" href="#"><span class="fi fi-ke fis rounded-1 fs-4"></span></a>
+              </li>
+              <li><a class="dropdown-item text-center" href="#"><span class="fi fi-ug fis rounded-1 fs-4"></span></a>
+              </li>
+              <li><a class="dropdown-item text-center" href="#"><span class="fi fi-sn fis rounded-1 fs-4"></span></a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -75,15 +101,13 @@
     </div>
   </section>
 
-  <!-- Gallery Controls -->
+  <!-- Gallery Controls (training + bootcamp only) -->
   <section class="bg-ink-light py-4 border-bottom border-secondary sticky-top" style="top: 76px; z-index: 900;">
     <div class="container">
       <div class="d-flex justify-content-center flex-wrap gap-2">
         <button class="btn btn-outline-white btn-sm active filter-btn" data-filter="all">All</button>
         <button class="btn btn-outline-white btn-sm filter-btn" data-filter="bootcamp">Bootcamp</button>
         <button class="btn btn-outline-white btn-sm filter-btn" data-filter="training">Training</button>
-        <button class="btn btn-outline-white btn-sm filter-btn" data-filter="studio">Studio</button>
-        <button class="btn btn-outline-white btn-sm filter-btn" data-filter="field">Field Work</button>
       </div>
     </div>
   </section>
@@ -92,332 +116,7 @@
   <section class="section-padding bg-ink">
     <div class="container">
       <div class="gallery-grid" id="galleryGrid">
-
-        <!-- BOOTCAMP SERIES -->
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8787.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Orientation Day</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8790.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Field Briefing</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8795.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Live Action</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8818.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Team Spirit</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_3092.JPG" alt="Studio" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Studio</span>
-            <h4 class="gallery-title">On Air</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_3099.JPG" alt="Technical" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Technical</span>
-            <h4 class="gallery-title">Camera Setup</h4>
-          </div>
-        </div>
-
-        <!-- TRAINING SERIES - Selected High Quality -->
-        <div class="gallery-item" data-category="training">
-          <img src="assets/images/training/training-1.jpg" alt="Training" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Training</span>
-            <h4 class="gallery-title">Classroom Session</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="training">
-          <img src="assets/images/training/training-10.jpg" alt="Training" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Training</span>
-            <h4 class="gallery-title">Group Dynamics</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="training">
-          <img src="assets/images/training/training-25.jpg" alt="Training" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Training</span>
-            <h4 class="gallery-title">Mentorship</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="training">
-          <img src="assets/images/training/training-42.jpg" alt="Training" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Training</span>
-            <h4 class="gallery-title">Practical Learning</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="training">
-          <img src="assets/images/training/training-50.jpg" alt="Training" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Training</span>
-            <h4 class="gallery-title">Focus & Dedication</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="training">
-          <img src="assets/images/training/training-75.jpg" alt="Training" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Training</span>
-            <h4 class="gallery-title">Interactive Session</h4>
-          </div>
-        </div>
-
-        <!-- STUDIO & FIELD MIX -->
-        <div class="gallery-item" data-category="studio">
-          <img src="assets/images/bootcamp/IMG_3107.JPG" alt="Studio" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Studio</span>
-            <h4 class="gallery-title">Production Control</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="field">
-          <img src="assets/images/bootcamp/IMG_3088.JPG" alt="Field" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Field Work</span>
-            <h4 class="gallery-title">On Location</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="field">
-          <img src="assets/images/bootcamp/IMG_8841.JPG" alt="Field" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Field Work</span>
-            <h4 class="gallery-title">Interviewing</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="studio">
-          <img src="assets/images/training/training-102.jpg" alt="Studio" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Studio</span>
-            <h4 class="gallery-title">Broadcast Setup</h4>
-          </div>
-        </div>
-
-        <!-- MORE TRAINING VARIETY -->
-        <div class="gallery-item" data-category="training">
-          <img src="assets/images/training/training-120.jpg" alt="Training" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Training</span>
-            <h4 class="gallery-title">Skill Mastery</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="training">
-          <img src="assets/images/training/training-150.jpg" alt="Training" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Training</span>
-            <h4 class="gallery-title">Creative Workshop</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="training">
-          <img src="assets/images/training/training-180.jpg" alt="Training" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Training</span>
-            <h4 class="gallery-title">Media Literacy</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="training">
-          <img src="assets/images/training/training-200.jpg" alt="Training" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Workshop</span>
-            <h4 class="gallery-title">Digital Skills</h4>
-          </div>
-        </div>
-
-        <!-- MORE BOOTCAMP -->
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8828.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Building Networks</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8808.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Final Projects</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8810.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Collaboration</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8812.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Innovation</h4>
-          </div>
-        </div>
-
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8787.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Field Ready</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8788.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Leadership</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8796.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Strategy</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8798.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Execution</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8799.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Teamwork</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8800.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Passion</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8801.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Focus</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8802.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Determination</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8803.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Grit</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8804.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Resilience</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8809.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Action</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8813.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Support</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8815.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Community</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8816.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Strength</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8819.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Unity</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8823.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Vision</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8825.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Impact</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8827.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Legacy</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8829.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Future</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8830.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Creation</h4>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="bootcamp">
-          <img src="assets/images/bootcamp/IMG_8851.JPG" alt="Bootcamp" class="gallery-image">
-          <div class="gallery-item-overlay">
-            <span class="gallery-category">Bootcamp</span>
-            <h4 class="gallery-title">Behind Scenes</h4>
-          </div>
-        </div>
+        <!-- Dynamically populated: training + bootcamp images -->
       </div>
 
       <div class="text-center mt-5">
@@ -481,33 +180,161 @@
   <script>
     AOS.init({ once: true, duration: 800 });
 
-    // Gallery Filtering
+    // Lists of image files (training + bootcamp)
+    const bootcampFiles = [
+      "IMG_2275.JPG", "IMG_2276.JPG", "IMG_2284.JPG", "IMG_2292.JPG", "IMG_2298.JPG", "IMG_2307.JPG",
+      "IMG_2989.JPG", "IMG_3088.JPG", "IMG_3092.JPG", "IMG_3099.JPG", "IMG_3104.JPG", "IMG_3107.JPG",
+      "IMG_3108.JPG", "IMG_3109.JPG", "IMG_3119.JPG", "IMG_8787.JPG", "IMG_8788.JPG", "IMG_8790.JPG",
+      "IMG_8795.JPG", "IMG_8796.JPG", "IMG_8798.JPG", "IMG_8799.JPG", "IMG_8800.JPG", "IMG_8801.JPG",
+      "IMG_8802.JPG", "IMG_8803.JPG", "IMG_8804.JPG", "IMG_8808.JPG", "IMG_8809.JPG", "IMG_8810.JPG",
+      "IMG_8812.JPG", "IMG_8813.JPG", "IMG_8815.JPG", "IMG_8816.JPG", "IMG_8817.JPG", "IMG_8818.JPG",
+      "IMG_8819.JPG", "IMG_8823.JPG", "IMG_8825.JPG", "IMG_8827.JPG", "IMG_8828.JPG", "IMG_8829.JPG",
+      "IMG_8830.JPG", "IMG_8841.JPG", "IMG_8851.JPG"
+    ];
+
+    const trainingFiles = [
+      "training-1.jpg", "training-10.jpg", "training-100.jpg", "training-101.jpg", "training-102.jpg", "training-103.jpg",
+      "training-104.jpg", "training-105.jpg", "training-106.jpg", "training-107.jpg", "training-108.jpg", "training-109.jpg",
+      "training-11.jpg", "training-110.jpg", "training-111.jpg", "training-112.jpg", "training-113.jpg", "training-114.jpg",
+      "training-115.jpg", "training-116.jpg", "training-117.jpg", "training-118.jpg", "training-119.jpg", "training-12.jpg",
+      "training-120.jpg", "training-121.jpg", "training-122.jpg", "training-123.jpg", "training-124.jpg", "training-125.jpg",
+      "training-126.jpg", "training-127.jpg", "training-128.jpg", "training-129.jpg", "training-13.jpg", "training-130.jpg",
+      "training-131.jpg", "training-132.jpg", "training-133.jpg", "training-134.jpg", "training-135.jpg", "training-136.jpg",
+      "training-137.jpg", "training-138.jpg", "training-139.jpg", "training-14.jpg", "training-140.jpg", "training-141.jpg",
+      "training-142.jpg", "training-143.jpg", "training-144.jpg", "training-145.jpg", "training-146.jpg", "training-147.jpg",
+      "training-148.jpg", "training-149.jpg", "training-15.jpg", "training-150.jpg", "training-151.jpg", "training-152.jpg",
+      "training-153.jpg", "training-154.jpg", "training-155.jpg", "training-156.jpg", "training-157.jpg", "training-158.jpg",
+      "training-159.jpg", "training-16.jpg", "training-160.jpg", "training-161.jpg", "training-162.jpg", "training-163.jpg",
+      "training-164.jpg", "training-165.jpg", "training-166.jpg", "training-167.jpg", "training-168.jpg", "training-169.jpg",
+      "training-17.jpg", "training-170.jpg", "training-171.jpg", "training-172.jpg", "training-173.jpg", "training-174.jpg",
+      "training-175.jpg", "training-176.jpg", "training-177.jpg", "training-178.jpg", "training-179.jpg", "training-18.jpg",
+      "training-180.jpg", "training-181.jpg", "training-182.jpg", "training-183.jpg", "training-184.jpg", "training-185.jpg",
+      "training-186.jpg", "training-187.jpg", "training-188.jpg", "training-189.jpg", "training-19.jpg", "training-190.jpg",
+      "training-191.jpg", "training-192.jpg", "training-193.jpg", "training-194.jpg", "training-195.jpg", "training-196.jpg",
+      "training-197.jpg", "training-198.jpg", "training-199.jpg", "training-2.jpg", "training-20.jpg", "training-200.jpg",
+      "training-201.jpg", "training-202.jpg", "training-203.jpg", "training-204.jpg", "training-205.jpg", "training-206.jpg",
+      "training-207.jpg", "training-208.jpg", "training-209.jpg", "training-21.jpg", "training-210.jpg", "training-211.jpg",
+      "training-212.jpg", "training-213.jpg", "training-214.jpg", "training-215.jpg", "training-216.jpg", "training-217.jpg",
+      "training-218.jpg", "training-219.jpg", "training-22.jpg", "training-220.jpg", "training-221.jpg", "training-222.jpg",
+      "training-223.jpg", "training-224.jpg", "training-225.jpg", "training-226.jpg", "training-227.jpg", "training-228.jpg",
+      "training-229.jpg", "training-23.jpg", "training-230.jpg", "training-231.jpg", "training-232.jpg", "training-233.jpg",
+      "training-234.jpg", "training-235.jpg", "training-236.jpg", "training-237.jpg", "training-238.jpg", "training-239.jpg",
+      "training-24.jpg", "training-240.jpg", "training-241.jpg", "training-242.jpg", "training-243.jpg", "training-244.jpg",
+      "training-245.jpg", "training-246.jpg", "training-247.jpg", "training-248.jpg", "training-249.jpg", "training-25.jpg",
+      "training-250.jpg", "training-251.jpg", "training-252.jpg", "training-253.jpg", "training-254.jpg", "training-255.jpg",
+      "training-256.jpg", "training-257.jpg", "training-258.jpg", "training-259.jpg", "training-26.jpg", "training-260.jpg",
+      "training-261.jpg", "training-262.jpg", "training-263.jpg", "training-264.jpg", "training-265.jpg", "training-266.jpg",
+      "training-267.jpg", "training-268.jpg", "training-269.jpg", "training-27.jpg", "training-270.jpg", "training-271.jpg",
+      "training-272.jpg", "training-273.jpg", "training-274.jpg", "training-275.jpg", "training-276.jpg", "training-277.jpg",
+      "training-278.jpg", "training-279.jpg", "training-28.jpg", "training-280.jpg", "training-281.jpg", "training-282.jpg",
+      "training-283.jpg", "training-284.jpg", "training-285.jpg", "training-286.jpg", "training-287.jpg", "training-288.jpg",
+      "training-289.jpg", "training-29.jpg", "training-290.jpg", "training-291.jpg", "training-292.jpg", "training-293.jpg",
+      "training-294.jpg", "training-295.jpg", "training-296.jpg", "training-297.jpg", "training-298.jpg", "training-299.jpg",
+      "training-3.jpg", "training-30.jpg", "training-300.jpg", "training-301.jpg", "training-302.jpg", "training-303.jpg",
+      "training-304.jpg", "training-305.jpg", "training-306.jpg", "training-307.jpg", "training-308.jpg", "training-309.jpg",
+      "training-31.jpg", "training-310.jpg", "training-311.jpg", "training-312.jpg", "training-313.jpg", "training-314.jpg",
+      "training-315.jpg", "training-316.jpg", "training-317.jpg", "training-318.jpg", "training-32.jpg", "training-33.jpg",
+      "training-34.jpg", "training-35.jpg", "training-36.jpg", "training-37.jpg", "training-38.jpg", "training-39.jpg",
+      "training-4.jpg", "training-40.jpg", "training-41.jpg", "training-42.jpg", "training-43.jpg", "training-44.jpg",
+      "training-45.jpg", "training-46.jpg", "training-47.jpg", "training-48.jpg", "training-49.jpg", "training-5.jpg",
+      "training-50.jpg", "training-51.jpg", "training-52.jpg", "training-53.jpg", "training-54.jpg", "training-55.jpg",
+      "training-56.jpg", "training-57.jpg", "training-58.jpg", "training-59.jpg", "training-6.jpg", "training-60.jpg",
+      "training-61.jpg", "training-62.jpg", "training-63.jpg", "training-64.jpg", "training-65.jpg", "training-66.jpg",
+      "training-67.jpg", "training-68.jpg", "training-69.jpg", "training-7.jpg", "training-70.jpg", "training-71.jpg",
+      "training-72.jpg", "training-73.jpg", "training-74.jpg", "training-75.jpg", "training-76.jpg", "training-77.jpg",
+      "training-78.jpg", "training-79.jpg", "training-8.jpg", "training-80.jpg", "training-81.jpg", "training-82.jpg",
+      "training-83.jpg", "training-84.jpg", "training-85.jpg", "training-86.jpg", "training-87.jpg", "training-88.jpg",
+      "training-89.jpg", "training-9.jpg", "training-90.jpg", "training-91.jpg", "training-92.jpg", "training-93.jpg",
+      "training-94.jpg", "training-95.jpg", "training-96.jpg", "training-97.jpg", "training-98.jpg", "training-99.jpg",
+      "training_advert.jpg"
+    ];
+
+    function createGalleryItem(src, category, title, delay) {
+      const item = document.createElement('div');
+      item.className = 'gallery-item';
+      item.setAttribute('data-category', category);
+      item.setAttribute('data-aos', 'fade-up');
+      if (delay) item.setAttribute('data-aos-delay', delay);
+
+      const img = document.createElement('img');
+      img.className = 'gallery-image';
+      img.src = src;
+      img.alt = title || category;
+
+      const overlay = document.createElement('div');
+      overlay.className = 'gallery-item-overlay';
+
+      const span = document.createElement('span');
+      span.className = 'gallery-category';
+      span.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+
+      const h4 = document.createElement('h4');
+      h4.className = 'gallery-title';
+      h4.textContent = title || '';
+
+      overlay.appendChild(span);
+      overlay.appendChild(h4);
+
+      item.appendChild(img);
+      item.appendChild(overlay);
+      return item;
+    }
+
+    function buildGallery() {
+      const grid = document.getElementById('galleryGrid');
+      grid.innerHTML = '';
+      let delay = 0;
+
+      // Bootcamp first (featured)
+      bootcampFiles.forEach((f, i) => {
+        const title = f.replace(/\.[^/.]+$/, '').replace(/_/g, ' ').replace(/IMG\s*/i, '').trim();
+        const src = `assets/images/bootcamp/${f}`;
+        grid.appendChild(createGalleryItem(src, 'bootcamp', title || 'Bootcamp', delay));
+        delay = (delay + 50) % 400;
+      });
+
+      // Training images
+      trainingFiles.forEach((f, i) => {
+        if (f.startsWith('.')) return; // skip hidden files
+        const title = f.replace(/\.[^/.]+$/, '').replace(/_/g, ' ').replace(/training-?/i, 'Training ').trim();
+        const src = `assets/images/training/${f}`;
+        grid.appendChild(createGalleryItem(src, 'training', title || 'Training', delay));
+        delay = (delay + 50) % 400;
+      });
+
+      AOS.refresh();
+    }
+
+    buildGallery();
+
+    // Gallery Filtering (works with dynamically created items)
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    function applyFilter(filter) {
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+          item.style.display = 'block';
+          item.classList.add('animate__animated', 'animate__fadeIn');
+        } else {
+          item.style.display = 'none';
+          item.classList.remove('animate__animated', 'animate__fadeIn');
+        }
+      });
+    }
 
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
         filterButtons.forEach(btn => btn.classList.remove('active', 'btn-cta'));
         filterButtons.forEach(btn => btn.classList.add('btn-outline-white'));
-
         button.classList.remove('btn-outline-white');
-        button.classList.add('active', 'btn-cta'); // Highlight active
-
+        button.classList.add('active', 'btn-cta');
         const filter = button.getAttribute('data-filter');
-
-        galleryItems.forEach(item => {
-          if (filter === 'all' || item.getAttribute('data-category') === filter) {
-            item.style.display = 'block';
-            item.classList.add('animate__animated', 'animate__fadeIn');
-          } else {
-            item.style.display = 'none';
-            item.classList.remove('animate__animated', 'animate__fadeIn');
-          }
-        });
+        applyFilter(filter);
       });
     });
 
-    // Set initial active state style
+    // initial active state
     document.querySelector('.filter-btn.active').classList.remove('btn-outline-white');
     document.querySelector('.filter-btn.active').classList.add('btn-cta');
 
