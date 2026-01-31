@@ -229,29 +229,31 @@ document.addEventListener('DOMContentLoaded', () => {
     disable: window.innerWidth < 576 ? 'mobile' : false, // Disable AOS on small mobiles for performance
   });
 
-  // === Hero Slider (Ken Burns Effect) ===
+  // === Hero Slider (Scale on Scroll + Auto Cycle) ===
   function initHeroSlider() {
     const sliderContainer = document.getElementById('heroSlider');
     if (!sliderContainer) return;
 
-    // placeholder images - user can add the new ones here
+    // Use all 10 images concept (repeating for now as placeholders)
     const slides = [
       'assets/images/bootcamp/IMG_3104.JPG',
       'assets/images/bootcamp/IMG_3099.JPG',
       'assets/images/hero.jpg',
       'assets/images/training.jpg',
-      'assets/images/camp.jpg' // Assuming this exists or falls back
+      'assets/images/camp.jpg',
+      'assets/images/bootcamp/IMG_3092.JPG',
+      'assets/images/bootcamp/IMG_3107.JPG'
     ];
 
     let currentSlide = 0;
-    const slideInterval = 6000;
+    const slideInterval = 5000; // 5 seconds
     let slideTimer;
 
     // Create Slide Elements
     slides.forEach((src, index) => {
       const slide = document.createElement('div');
       slide.classList.add('hero-slide');
-      if (index === 0) slide.classList.add('active', 'zoom-in');
+      if (index === 0) slide.classList.add('active');
       slide.style.backgroundImage = `url('${src}')`;
       sliderContainer.appendChild(slide);
     });
@@ -259,26 +261,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroSlides = document.querySelectorAll('.hero-slide');
 
     function showSlide(index) {
-      // Remove active class and zoom classes from all
+      // Reset old slide
       heroSlides.forEach(slide => {
         slide.classList.remove('active');
-        // We don't remove zoom immediately to allow fade out with zoom intact? 
-        // Actually, CSS handles opacity transition. 
-        // Best to reset zoom classes after transition to restart animation next time.
-        setTimeout(() => {
-          if (!slide.classList.contains('active')) {
-            slide.classList.remove('zoom-in', 'zoom-out');
-          }
-        }, 1500);
+        slide.style.transform = 'scale(1)';
       });
 
-      // Prepare new slide
-      const nextSlide = heroSlides[index];
-      nextSlide.classList.add('active');
+      // Activate new slide
+      heroSlides[index].classList.add('active');
 
-      // Randomize zoom direction
-      const zoomClass = Math.random() > 0.5 ? 'zoom-in' : 'zoom-out';
-      nextSlide.classList.add(zoomClass);
+      // Recalculate zoom for new slide immediately based on current scroll
+      const scrollY = window.scrollY;
+      if (scrollY < window.innerHeight) {
+        const scale = 1 + (scrollY * 0.0005);
+        heroSlides[index].style.transform = `scale(${Math.min(scale, 1.2)})`;
+      }
 
       currentSlide = index;
     }
@@ -304,6 +301,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     startTimer();
+
+    // Scroll Triggered Zoom (Hero Section)
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      // Optimization: only calc if in viewport or near top
+      if (scrollY < window.innerHeight * 1.5) {
+        const scale = 1 + (scrollY * 0.0005);
+        const finalScale = Math.min(scale, 1.2);
+
+        // Apply to active slide
+        if (heroSlides[currentSlide]) {
+          heroSlides[currentSlide].style.transform = `scale(${finalScale})`;
+        }
+      }
+    });
 
     // Manual Controls
     const prevBtn = document.getElementById('heroPrev');
@@ -374,38 +386,46 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Swiper (Professional Carousel)
   if (typeof Swiper !== 'undefined') {
     var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
+      effect: "coverflow", // Premium 3D feel
       grabCursor: true,
       centeredSlides: true,
-      slidesPerView: "auto",
+      slidesPerView: "auto", // Allows varied widths based on CSS
       loop: true,
+      lazy: true,
+      speed: 800, // Smooth transition speed
       coverflowEffect: {
-        rotate: 30,
+        rotate: 0, // Flat rotation for better visibility
         stretch: 0,
-        depth: 100,
-        modifier: 1,
+        depth: 150, // Deep perspective
+        modifier: 1.5,
         slideShadows: true,
       },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        dynamicBullets: true, // Elegant dots
       },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
       autoplay: {
-        delay: 3000,
+        delay: 5000, // 5 Seconds cycle
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
       // Breakpoints for responsiveness
       breakpoints: {
         320: {
-          slidesPerView: 1,
+          slidesPerView: 1.2,
           spaceBetween: 20
         },
-        768: {
-          slidesPerView: "auto",
+        600: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        1024: {
+          slidesPerView: "auto", // Desktop uses CSS width
         }
       }
     });

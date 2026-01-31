@@ -499,6 +499,14 @@ p,
   z-index: 1;
 }
 
+/* Specific Darker Overlay for Thank You / Special Pages */
+.hero-overlay.dark-mode {
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(5, 5, 5, 1) 100%);
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -693,42 +701,17 @@ p,
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out, transform 0.1s linear;
+  /* Responsive scroll zoom */
   transform: scale(1);
+  will-change: transform, opacity;
 }
 
 .hero-slide.active {
   opacity: 1;
 }
 
-/* Specific zoom directions */
-.hero-slide.zoom-in {
-  animation: zoomIn 25s infinite alternate;
-}
-
-.hero-slide.zoom-out {
-  animation: zoomOut 25s infinite alternate;
-}
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.15);
-  }
-}
-
-@keyframes zoomOut {
-  0% {
-    transform: scale(1.15);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
+/* Scroll Zoom handled via Javascript */
 
 /* Refined Hero Controls - High Visibility & Luxury */
 .hero-controls {
