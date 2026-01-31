@@ -307,6 +307,11 @@
 
     buildGallery();
 
+    // Determine initial filter from query param or hash (supports direct links)
+    const urlParams = new URLSearchParams(window.location.search);
+    let initialFilter = urlParams.get('filter') || window.location.hash.replace('#', '') || 'all';
+    if (!['all', 'training', 'bootcamp'].includes(initialFilter)) initialFilter = 'all';
+
     // Gallery Filtering (works with dynamically created items)
     const filterButtons = document.querySelectorAll('.filter-btn');
 
@@ -331,12 +336,20 @@
         button.classList.add('active', 'btn-cta');
         const filter = button.getAttribute('data-filter');
         applyFilter(filter);
+        // update URL hash for shareable link
+        try { history.replaceState(null, '', `?filter=${filter}`); } catch (e) {}
       });
     });
 
-    // initial active state
-    document.querySelector('.filter-btn.active').classList.remove('btn-outline-white');
-    document.querySelector('.filter-btn.active').classList.add('btn-cta');
+    // apply initial filter and set button active state
+    applyFilter(initialFilter);
+    filterButtons.forEach(btn => btn.classList.remove('active', 'btn-cta'));
+    filterButtons.forEach(btn => btn.classList.add('btn-outline-white'));
+    const activeBtn = Array.from(filterButtons).find(b => b.getAttribute('data-filter') === initialFilter) || document.querySelector('.filter-btn');
+    if (activeBtn) {
+      activeBtn.classList.remove('btn-outline-white');
+      activeBtn.classList.add('active', 'btn-cta');
+    }
 
   </script>
 </body>
