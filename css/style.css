@@ -47,6 +47,10 @@ body {
   /* Larger distinct base font */
 }
 
+.bg-black {
+  background-color: #000000 !important;
+}
+
 /* Global Selection Color */
 ::selection {
   background: var(--gold);
