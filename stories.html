@@ -1,585 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Explore authentic African narratives crafted by the Africa broadcasting Academy’s talented storytellers. Discover documentaries that reclaim Africa’s voice on a global stage." name="description">
-        <meta content="African storytelling, documentaries, Africa broadcasting Academy, media training, African narrative, cultural stories, Samson Gbenga Adeleke" name="keywords">
-        <meta content="Africa broadcasting Academy" name="author">
-        <meta content="index, follow" name="robots">
-        <!-- Open Graph Tags -->
-        <meta content="Stories - Africa broadcasting Academy" property="og:title">
-        <meta content="Discover authentic African stories through documentaries that reclaim the continent’s narrative. Join the movement to amplify Africa’s voice." property="og:description">
-        <meta content="https://www.africabroadcastingacademy.com/assets/images/og-stories.jpg" property="og:image">
-        <meta content="https://www.africabroadcastingacademy.com/stories.html" property="og:url">
-        <meta content="website" property="og:type">
-        <meta content="Africa broadcasting Academy" property="og:site_name">
-        <!-- Twitter Card Tags -->
-        <meta content="summary_large_image" name="twitter:card">
-        <meta content="Stories - Africa broadcasting Academy" name="twitter:title">
-        <meta content="Discover authentic African stories through documentaries that reclaim the continent’s narrative. Join the movement to amplify Africa’s voice." name="twitter:description">
-        <meta content="https://www.africabroadcastingacademy.com/assets/images/og-stories.jpg" name="twitter:image">
-        <meta content="@ABAfrica" name="twitter:site">
-        <!-- Favicon -->
-        <link href="assets/images/logo.png" rel="icon" type="image/png">
-        <title>Stories - Africa broadcasting Academy - Empowering African Storytellers</title>
-        <!-- Bootstrap CSS -->
-        <link
-            crossorigin="anonymous"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-            rel="stylesheet"
-        >
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Montserrat:wght@300;400;600&amp;family=Inter:wght@300;400;600&amp;family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
-        <!-- AOS CSS -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link
-            crossorigin="anonymous"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-            referrerpolicy="no-referrer"
-            rel="stylesheet"
-        >
-        <!-- Animate.css -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-        <!-- Bootstrap Icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-        <!-- Custom CSS -->
-        <link href="css/style.css" rel="stylesheet"></link>
-    </head>
-    <body>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img alt="ABA Logo" class="logo-image" src="assets/images/logo.png">
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto align-items-lg-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="stories.html">Stories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="applicationform.html">Application Form</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="programs.html">Programs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="students.html">Students’ Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <!-- Country Selector (Flags Only) -->
-                        <li class="nav-item dropdown ms-lg-3">
-                            <a
-                                class="nav-link dropdown-toggle d-flex align-items-center"
-                                href="#"
-                                id="countryDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                <img src="https://flagcdn.com/w20/bj.png" alt="Benin" style="width:20px; height:14px;">
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="countryDropdown">
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/bj.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/gh.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ci.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/tg.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ng.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ke.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ug.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/sn.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-cta ms-3" href="applicationform.html">Apply Now</a>
-                        </li>
-                    </ul>
-                </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Success Stories - Africa Broadcasting Academy</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img alt="ABA Logo" class="logo-image" src="assets/images/logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link active text-gold" href="stories.html">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="students.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-cta" href="applicationform.html">Apply Now</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <!-- Stories Hero Banner -->
-        <section class="position-relative text-white" id="stories-hero">
-            <canvas class="position-absolute top-0 start-0 w-100 h-100" id="stories-globe" style="z-index: 0;"></canvas>
-            <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)); z-index: 1;"></div>
-            <div class="container position-relative text-center py-5" style="z-index: 2;">
-                <h1 class="hero-title animate__animated animate__fadeInDown" data-aos="fade-down" style="color: #fff;">
-                    Voices of Africa
+        </div>
+    </nav>
+
+    <!-- Premium Hero Section -->
+    <section class="premium-hero">
+        <div class="hero-premium-bg" style="background-image: url('assets/images/Storieslagacy.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-glass-card" data-aos="fade-up">
+                <h1 class="hero-title">
+                    Voices of <span class="highlight">Change</span>
                 </h1>
-                <p
-                    class="hero-subtitle animate__animated animate__fadeInUp"
-                    data-aos="fade-up"
-                    data-aos-delay="100"
-                    style="color: #fff;"
-                >
-                    Unfiltered narratives that resonate across the globe.
+                <p class="hero-subtitle">
+                    Meet the alumni who are redefining African media. Real people, real stories, real impact.
                 </p>
             </div>
-        </section>
-        <!-- Featured Story Carousel -->
-        <section class="py-5 bg-light" id="featured-stories">
-            <div class="container">
-                <h2 class="section-title text-center mb-5" data-aos="fade-up">
-                    Featured Stories
-                </h2>
-                <div class="carousel slide" data-bs-ride="carousel" id="featuredCarousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row align-items-center">
-                                <div class="col-md-6">
-                                    <img
-                                        alt="Samson Gbenga Adeleke surviving in Ghana's jungle"
-                                        class="d-block w-100 rounded"
-                                        loading="lazy"
-                                        src="/assets/images/training/training-14.jpg"
-                                    >
-                                </div>
-                                <div class="col-md-6 text-center text-md-start">
-                                    <h3 class="carousel-title text-black">Surviving Ghana’s Jungle: Samson’s Journey</h3>
-                                    <p class="carousel-text text-black">
-                                        Follow Samson Gbenga Adeleke as he navigates the challenges of Ghana’s dense jungle,
-                                testing his resilience and survival skills in this gripping documentary.
-                                    </p>
-                                    <a
-                                        aria-label="Watch Surviving Ghana’s Jungle: Samson’s Journey"
-                                        class="btn btn-primary"
-                                        data-bs-target="#storyModal1"
-                                        data-bs-toggle="modal"
-                                        href="#"
-                                    >
-                                        Watch Now
-                                    </a>
-                                </div>
-                            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <i data-lucide="chevron-down" class="text-white animate__animated animate__bounce animate__infinite"></i>
+        </div>
+    </section>
+
+    <!-- Featured Stories -->
+    <section class="section-padding bg-ink">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Story 1 -->
+                <div class="col-lg-12">
+                    <div class="card-premium p-0 overflow-hidden d-lg-flex align-items-stretch" data-aos="fade-up">
+                        <div class="col-lg-6 position-relative" style="min-height: 400px;">
+                            <img src="assets/images/story1.jpg" alt="Featured Story"
+                                class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
                         </div>
-                        <div class="carousel-item">
-                            <div class="row align-items-center">
-                                <div class="col-md-6">
-                                    <img
-                                        alt="Fulani herders traveling with their cattle"
-                                        class="d-block w-100 rounded"
-                                        loading="lazy"
-                                        src="/assets/images/training/training-15.jpg"
-                                    >
-                                </div>
-                                <div class="col-md-6 text-center text-md-start">
-                                    <h3 class="carousel-title text-black">Journey with Fulani Herders</h3>
-                                    <p class="carousel-text text-black">
-                                        Experience the nomadic life of Fulani herders as they traverse vast landscapes,
-                                preserving their traditions amidst modern challenges.
-                                    </p>
-                                    <a
-                                        aria-label="Watch Journey with Fulani Herders"
-                                        class="btn btn-primary"
-                                        data-bs-target="#storyModal4"
-                                        data-bs-toggle="modal"
-                                        href="#"
-                                    >
-                                        Watch Now
-                                    </a>
-                                </div>
+                        <div class="col-lg-6 p-5 d-flex flex-column justify-content-center">
+                            <div class="mb-3 text-gold text-uppercase letter-spacing-2 fw-bold small">Alumni Spotlight
+                            </div>
+                            <h2 class="text-white mb-4">Breaking Boundaries in Broadcast</h2>
+                            <p class="text-off-white mb-4">"The training at ABA didn't just teach me how to handle a
+                                camera; it taught me how to see the world. Today, I tell stories that matter to my
+                                community, stories that would have otherwise gone unheard."</p>
+                            <div>
+                                <p class="mb-0 fw-bold text-white">Chinedu Okafor</p>
+                                <p class="small text-muted">Class of 2023, Documentary Filmmaking</p>
                             </div>
                         </div>
                     </div>
-                    <button
-                        class="carousel-control-prev"
-                        data-bs-slide="prev"
-                        data-bs-target="#featuredCarousel"
-                        type="button"
-                    >
-                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        class="carousel-control-next"
-                        data-bs-slide="next"
-                        data-bs-target="#featuredCarousel"
-                        type="button"
-                    >
-                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+
+                <!-- Story 2 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-premium h-100 p-0 overflow-hidden">
+                        <div style="height: 300px;">
+                            <img src="assets/images/story2.jpg" alt="Story" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h4 text-gold mb-3">From Classroom to Newsroom</h3>
+                            <p class="text-off-white mb-4">Sarah's journey from an aspiring journalist to a prime-time
+                                news anchor demonstrates the power of persistence and world-class mentorship.</p>
+                            <a href="#" class="btn btn-link text-gold ms-0 ps-0 text-decoration-none">Read Full Story <i
+                                    class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-premium h-100 p-0 overflow-hidden">
+                        <div style="height: 300px;">
+                            <img src="assets/images/story3.jpg" alt="Story" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h4 text-gold mb-3">Amplifying Local Voices</h3>
+                            <p class="text-off-white mb-4">Discover how our graduates are launching independent media
+                                platforms to cover local politics and culture with integrity.</p>
+                            <a href="#" class="btn btn-link text-gold ms-0 ps-0 text-decoration-none">Read Full Story <i
+                                    class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </section>
-        <!-- Stories Section -->
-        <section class="py-5 position-relative" id="stories">
-            <div class="section-overlay" style="background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-            <div class="container position-relative">
-                <h2 class="section-title text-center text-white mb-3" data-aos="zoom-in">
-                    Our Stories
-                </h2>
-                <p class="text-center mb-4 lead text-white" data-aos="fade-up" data-aos-delay="100">
-                    Immerse yourself in authentic African narratives, meticulously crafted by our visionary storytellers.
-                </p>
-                <div class="filter-buttons text-center mb-5" data-aos="fade-up" data-aos-delay="200">
-                    <button
-                        aria-label="Show all stories"
-                        aria-pressed="true"
-                        class="btn btn-filter active"
-                        onclick="filterStories('all', event)"
-                    >
-                        All
-                    </button>
-                    <button
-                        aria-label="Show documentary stories"
-                        aria-pressed="false"
-                        class="btn btn-filter"
-                        onclick="filterStories('documentary', event)"
-                    >
-                        Documentary
-                    </button>
-                </div>
-                <div class="row stories-grid">
-                    <!-- Story 1 -->
-                    <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="100">
-                        <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
-                        <div class="story-card card position-relative">
-                            <img
-                                alt="Samson Gbenga Adeleke surviving in Ghana's jungle"
-                                class="card-img-top"
-                                loading="lazy"
-                                src="/assets/images/WIZARD.png"
-                            >
-                            <span class="category-badge documentary">Documentary</span>
-                            <div class="card-body">
-                                <h5 class="card-title text-white">Wizard Chan and his home town Port Harcourt</h5>
-                                <p class="text-white">
-                                    Afrobeats artist Wizard Chan takes us on an exciting journey through his city of Port Harcourt in Nigeria. The city is
-                        known for its rich culture and traditions, Port Harcourt in Nigeria is also breeding ground for superstars like Timaya,
-                        Burna Boy and Omah Ley.
-                                </p>
-                                <a
-                                    aria-label="Watch Surviving Ghana’s Jungle: Samson’s Journey"
-                                    class="btn btn-primary"
-                                    data-bs-target="#storyModal1"
-                                    data-bs-toggle="modal"
-                                    href="https://www.dw.com/en/my-city-port-harcourt/video-69998782"
-                                >
-                                    Watch Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Story 2 -->
-                    <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="200">
-                        <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
-                        <div class="story-card card position-relative">
-                            <img
-                                alt="Traditional Benin talking drums in a cultural setting"
-                                class="card-img-top"
-                                loading="lazy"
-                                src="/assets/images/Hustle.png"
-                            >
-                            <span class="category-badge documentary">Documentary</span>
-                            <div class="card-body">
-                                <h5 class="card-title text-white">My Hustle: How long did Samson survive Ghana's jungle?</h5>
-                                <p class="text-white">
-                                    Ready to trade the city for the wild? In 'My Hustle in the wild,' DW’s Samson Adeleke steps into the heart of Ghana's
-                            jungle for a two-day survival adventure.
-                                </p>
-                                <a
-                                    aria-label="Watch The Talking Drums of Benin"
-                                    class="btn btn-primary"
-                                    data-bs-target="#storyModal2"
-                                    data-bs-toggle="modal"
-                                    href="https://www.dw.com/en/my-hustle-how-long-did-samson-survive-ghanas-jungle/video-70579595"
-                                >
-                                    Watch Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Story 3 -->
-                    <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="300">
-                        <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
-                        <div class="story-card card position-relative">
-                            <img
-                                alt="Ghanaian fisherman working on the water"
-                                class="card-img-top"
-                                loading="lazy"
-                                src="/assets/images/Making Benin.png"
-                            >
-                            <span class="category-badge documentary">Documentary</span>
-                            <div class="card-body">
-                                <h5 class="card-title text-white">My Hustle: Making Benin's drums talk</h5>
-                                <p class="text-white">
-                                    On this episode of My Hustle, The 77 Percent’s Samson Adeleke finds out what it takes to build, play and dance to
-                        talking drums in Benin Republic's famous Pepit'arts drum school.
-                                </p>
-                                <a
-                                    aria-label="Watch Life on the Water: A Ghanaian Fisherman’s Story"
-                                    class="btn btn-primary"
-                                    data-bs-target="#storyModal3"
-                                    data-bs-toggle="modal"
-                                    href="https://www.dw.com/en/my-hustle-making-benins-drums-talk/video-71950253"
-                                >
-                                    Watch Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Story 4 -->
-                    <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="400">
-                        <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
-                        <div class="story-card card position-relative">
-                            <img
-                                alt="Fulani herders traveling with their cattle"
-                                class="card-img-top"
-                                loading="lazy"
-                                src="/assets/images/sam.png"
-                            >
-                            <span class="category-badge documentary">Documentary</span>
-                            <div class="card-body">
-                                <h5 class="card-title text-white">My Hustle: Catching up with a Ghanaian fisherman</h5>
-                                <p class="text-white">
-                                    My Hustle's Samson Adeleke takes us onto the waters of the Ghanaian coast to fish with fisherman Nii Aryeetey and his
-                        crew. He learns all about the hard work of casting and pulling in nets and is stunned at the amount of plastic the
-                        fisherman pull in with their catch.
-                                </p>
-                                <a
-                                    aria-label="Watch Journey with Fulani Herders"
-                                    class="btn btn-primary"
-                                    data-bs-target="#storyModal4"
-                                    data-bs-toggle="modal"
-                                    href="https://www.dw.com/en/my-hustle-catching-up-with-a-ghanaian-fisherman/video-72241299"
-                                >
-                                    Watch Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Story 5 -->
-                    <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="100">
-                        <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
-                        <div class="story-card card position-relative">
-                            <img
-                                alt="Samson Gbenga Adeleke surviving in Ghana's jungle"
-                                class="card-img-top"
-                                loading="lazy"
-                                src="/assets/images/SamH.png"
-                            >
-                            <span class="category-badge documentary">Documentary</span>
-                            <div class="card-body">
-                                <h5 class="card-title text-white">My Hustle: On the move with Fulani herders</h5>
-                                <p class="text-white">
-                                    On this episode of My Hustle, The 77 Percent's Samson Adeleke joins Fulani herders with their cattle. He gets a taste of
-                        life on the move in northern Nigeria and discovers how the herders speak to their cattle.
-                                </p>
-                                <a
-                                    aria-label="Watch Surviving Ghana’s Jungle: Samson’s Journey"
-                                    class="btn btn-primary"
-                                    data-bs-target="#storyModal1"
-                                    data-bs-toggle="modal"
-                                    href="https://www.dw.com/en/my-hustle-on-the-move-with-fulani-herders/video-71494612"
-                                >
-                                    Watch Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Story 6 -->
-                    <div class="col-md-4 mb-4 story documentary position-relative" data-aos="slide-up" data-aos-delay="500">
-                        <canvas class="story-particles position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; pointer-events: none;"></canvas>
-                        <div class="story-card card position-relative">
-                            <img
-                                alt="Lagos Area Boys hustling on the streets"
-                                class="card-img-top"
-                                loading="lazy"
-                                src="/assets/images/AREABOYS.png"
-                            >
-                            <span class="category-badge documentary">Documentary</span>
-                            <div class="card-body">
-                                <h5 class="card-title text-white">Lagos' area boys collect fees, keep buses moving</h5>
-                                <p class="text-white">
-                                    What's it like to be an Agbero, or area boy, hustling in the Lagos public transport system? In this episode of "My
-                            Hustle," DW's Samson Adeleke takes a look into the gritty, fast-paced world of area boys. From collecting fees to
-                            keeping the buses moving, it's all about the hustle. But where does the money that Agberos collect from drivers go to?
-                                </p>
-                                <a
-                                    aria-label="Watch The Hustle of Lagos’ Area Boys"
-                                    class="btn btn-primary"
-                                    data-bs-target="#storyModal5"
-                                    data-bs-toggle="modal"
-                                    href="https://www.dw.com/en/my-hustle-lagos-agbero-or-area-boys/video-70141766"
-                                >
-                                    Watch Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Brief Quotes -->
+    <section class="section-padding bg-ink-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-white">Student Experiences</h2>
+                <div class="divider-gold mx-auto mt-4"></div>
             </div>
-        </section>
-        <!-- Modal Structure for Stories (Example for Story 1) -->
-        <div
-            aria-hidden="true"
-            aria-labelledby="storyModal1Label"
-            class="modal fade"
-            id="storyModal1"
-            tabindex="-1"
-        >
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="storyModal1Label">Surviving Ghana’s Jungle: Samson’s Journey</h5>
-                        <button
-                            aria-label="Close"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            type="button"
-                        ></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="ratio ratio-16x9">
-                            <iframe allowfullscreen="" src="https://www.youtube.com/embed/sample-video" title="Surviving Ghana’s Jungle"></iframe>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="p-4 border border-secondary rounded-3 h-100 bg-ink">
+                        <div class="d-flex text-gold mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
+                        <p class="text-white fst-italic">"The bootcamp was intense but life-changing. I learned more in
+                            3 weeks than I did in 3 years of university."</p>
+                        <p class="text-gold fw-bold mb-0 mt-3">- Emmanuel K.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 border border-secondary rounded-3 h-100 bg-ink">
+                        <div class="d-flex text-gold mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-white fst-italic">"The instructors are industry legends. Being mentored by them
+                            gave me the confidence to launch my own channel."</p>
+                        <p class="text-gold fw-bold mb-0 mt-3">- Grace A.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 border border-secondary rounded-3 h-100 bg-ink">
+                        <div class="d-flex text-gold mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-white fst-italic">"Top tier equipment and facilities. ABA provides everything you
+                            need to become a professional."</p>
+                        <p class="text-gold fw-bold mb-0 mt-3">- David O.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Add similar modals for storyModal2, storyModal3, etc., with appropriate video sources -->
-        <!-- Footer -->
-        <footer class="footer mt-5 py-5">
-            <div class="container">
-                <div class="row">
-                    <!-- Logo and brief intro -->
-                    <div class="col-md-4 mb-4">
-                        <h2 class="footer-logo">ABA</h2>
-                        <p class="footer-description">
-                            Empowering Africa's future through innovation, leadership, and education.
-                        </p>
-                        <div class="social-links mt-3">
-                            <a href="https://www.facebook.com/share/1Hg4nrcmje/?mibextid=wwXIfr">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Quick Links -->
-                    <div class="col-md-2 mb-4">
-                        <h5 class="footer-title">Quick Links</h5>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#about">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#programs">Programs</a>
-                            </li>
-                            <li>
-                                <a href="#stories">Success Stories</a>
-                            </li>
-                            <li>
-                                <a href="#events">Events</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Resources -->
-                    <div class="col-md-3 mb-4">
-                        <h5 class="footer-title">Resources</h5>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#">Podcast</a>
-                            </li>
-                            <li>
-                                <a href="#">VR Experience</a>
-                            </li>
-                            <li>
-                                <a href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Newsletter -->
-                    <div class="col-md-3 mb-4">
-                        <h5 class="footer-title">Subscribe</h5>
-                        <form class="footer-newsletter">
-                            <input class="form-control mb-2" placeholder="Your email address" type="email">
-                            <button class="btn btn-cta w-100" type="submit">Subscribe</button>
-                        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="d-block mb-4">
+                        <img src="assets/images/logo.png" alt="ABA Logo" height="60">
+                    </a>
+                    <p class="text-off-white">Empowering Africa's future through innovation, leadership, and education.
+                        We are reclaiming the narrative, one story at a time.</p>
+                </div>
+                <!-- Standard Footer Links -->
+                <div class="col-lg-2 col-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <div class="footer-nav">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="programs.html">Programs</a>
                     </div>
                 </div>
-                <!-- Bottom Footer -->
-                <div class="text-center mt-4 footer-bottom">
-                    <small>© 2025 ABA. All rights reserved. | Designed with ❤️</small>
+                <div class="col-lg-2 col-6">
+                    <h5 class="text-white mb-4">Resources</h5>
+                    <div class="footer-nav">
+                        <a href="applicationform.html">Apply</a>
+                        <a href="sponsor.html">Sponsor</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="stories.html">Stories</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control bg-transparent border-secondary text-white"
+                                placeholder="Email Address">
+                            <button class="btn btn-cta" type="button">Subscribe</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </footer>
-        <!-- Bootstrap 5 JS and Popper.js -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-        <!-- Animate.css for animations -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-        <!-- Bootstrap Icons for content type icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-        <!-- AOS JS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <!-- Custom JS -->
-        <script src="js/script.js"></script>
-        </link>
-    </body>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Africa Broadcasting Academy. All rights reserved. | Developed by <a href="#"
+                        class="text-gold">Vincent Agber</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 1000 });
+    </script>
+</body>
+
 </html>

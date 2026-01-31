@@ -1,598 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Africa broadcasting Academy empowers young African storytellers through hands-on broadcast training, mentorship, and media literacy. Join our cultural revolution to reclaim Africa’s narrative and share authentic stories with the world." name="description">
-        <meta content="Africa broadcasting Academy, African storytelling, media training, broadcast journalism, documentary filmmaking, podcasting, African narrative, media literacy, mentorship, cultural revolution" name="keywords">
-        <meta content="Africa broadcasting Academy" name="author">
-        <meta content="index, follow" name="robots">
-        <!-- Open Graph Tags for Social Media -->
-        <meta content="Africa broadcasting Academy - Reclaiming Africa’s Narrative" property="og:title">
-        <meta content="Empowering young African storytellers to share authentic narratives through broadcast training, mentorship, and media literacy. Join the movement!" property="og:description">
-        <meta content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg" property="og:image">
-        <!-- Replace with actual image URL -->
-        <meta content="https://www.africabroadcastingacademy.com" property="og:url">
-        <meta content="website" property="og:type">
-        <meta content="Africa broadcasting Academy" property="og:site_name">
-        <!-- Google Fonts (Inter and Poppins) -->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
-        <!-- Twitter Card Tags -->
-        <meta content="summary_large_image" name="twitter:card">
-        <meta content="Africa broadcasting Academy - Reclaiming Africa’s Narrative" name="twitter:title">
-        <meta content="Empowering young African storytellers to share authentic narratives through broadcast training, mentorship, and media literacy. Join the movement!" name="twitter:description">
-        <meta content="https://www.africabroadcastingacademy.com/assets/images/og-image.jpg" name="twitter:image">
-        <!-- Replace with actual image URL -->
-        <meta content="@ABAfrica" name="twitter:site">
-        <!-- Replace with actual Twitter handle -->
-        <!-- Favicon -->
-        <link href="assets/images/logo.png" rel="icon" type="image/png">
-        <title>Programs - Africa broadcasting Academy - Empowering African Storytellers</title>
-        <!-- Bootstrap CSS -->
-        <link
-            crossorigin="anonymous"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-            rel="stylesheet"
-        >
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Montserrat:wght@300;400;600&amp;display=swap" rel="stylesheet">
-        <!-- AOS CSS -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <!-- Three.js for WebGL Background -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <!-- Favicon -->
-        <link href="assets/images/logo.png" rel="icon" type="image/png">
-        <!-- Font Awesome -->
-        <link
-            crossorigin="anonymous"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-            referrerpolicy="no-referrer"
-            rel="stylesheet"
-        >
-        <!-- Custom CSS -->
-        <link href="css/style.css" rel="stylesheet"></link>
-        </link>
-    </head>
-    <body>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img alt="ABA Logo" class="logo-image" src="assets/images/logo.png">
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto align-items-lg-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="stories.html">Stories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="applicationform.html">Application Form</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="programs.html">Programs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="students.html">Students’ Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <!-- Country Selector (Flags Only) -->
-                        <li class="nav-item dropdown ms-lg-3">
-                            <a
-                                class="nav-link dropdown-toggle d-flex align-items-center"
-                                href="#"
-                                id="countryDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                <img src="https://flagcdn.com/w20/bj.png" alt="Benin" style="width:20px; height:14px;">
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="countryDropdown">
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/bj.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/gh.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ci.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/tg.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ng.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ke.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/ug.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item p-1" href="#">
-                                        <img src="https://flagcdn.com/w20/sn.png" style="width:20px; height:14px;">
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-cta ms-3" href="applicationform.html">Apply Now</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <section class="py-5 bg-light text-dark" id="programs">
-            <div class="container" data-aos="fade-up">
-                <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bold text-gold">Our Programs</h2>
-                    <p class="lead text-black">
-                        Empowering storytellers through practical, world-class broadcast training programs.
-                    </p>
-                </div>
-                <!-- Languages of Instruction -->
-                <div class="mb-5 text-center">
-                    <h4 class="fw-bold text-gold mb-3">Languages of Instruction</h4>
-                    <p class="lead">
-                        <span class="badge bg-white text-dark border me-2">
-                            <img
-                                src="https://flagcdn.com/w20/gb.png"
-                                class="me-1"
-                                style="width:20px; height:14px;"
-                                alt="English"
-                            >
-                            English
-                        </span>
-                        <span class="badge bg-white text-dark border me-2">
-                            <img
-                                src="https://flagcdn.com/w20/fr.png"
-                                class="me-1"
-                                style="width:20px; height:14px;"
-                                alt="French"
-                            >
-                            French
-                        </span>
-                        <span class="badge bg-white text-dark border me-2">
-                            <img
-                                src="https://flagcdn.com/w20/ng.png"
-                                class="me-1"
-                                style="width:20px; height:14px;"
-                                alt="Hausa"
-                            >
-                            Hausa
-                        </span>
-                        <span class="badge bg-white text-dark border me-2">
-                            <img
-                                src="https://flagcdn.com/w20/ng.png"
-                                class="me-1"
-                                style="width:20px; height:14px;"
-                                alt="Yoruba"
-                            >
-                            Yoruba
-                        </span>
-                        <span class="badge bg-white text-dark border">
-                            <img
-                                src="https://flagcdn.com/w20/ng.png"
-                                class="me-1"
-                                style="width:20px; height:14px;"
-                                alt="Pidgin"
-                            >
-                            Pidgin English
-                        </span>
-                    </p>
-                </div>
-                <!-- Core Programs -->
-                <div class="mb-5">
-                    <h3 class="fw-bold text-gold mb-4">Core Programs</h3>
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h5 class="fw-semibold">1. Broadcast Journalism</h5>
-                                <p>
-                                    <b>Target Audience:</b>
-                                    Aspiring journalists, reporters, and media professionals.
-                                </p>
-                                <p>
-                                    <b>Learning Outcomes:</b>
-                                    Learn news writing, interviewing, and investigative reporting techniques.
-                                </p>
-                                <ul class="ps-3">
-                                    <li>News Writing &amp; Reporting</li>
-                                    <li>Interviewing Techniques</li>
-                                    <li>Investigative Journalism</li>
-                                    <li>Ethics in Journalism</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h5 class="fw-semibold">2. TV &amp; Digital Video Production</h5>
-                                <p>
-                                    <b>Target Audience:</b>
-                                    Individuals interested in video production, filmmaking, and content creation.
-                                </p>
-                                <p>
-                                    <b>Learning Outcomes:</b>
-                                    Master camera operations, lighting, sound, and directing for video production.
-                                </p>
-                                <ul class="ps-3">
-                                    <li>Camera Operations &amp; Cinematography</li>
-                                    <li>Lighting Techniques</li>
-                                    <li>Sound Recording &amp; Design</li>
-                                    <li>Field Production &amp; Directing</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h5 class="fw-semibold">3. Video Editing &amp; Post-Production</h5>
-                                <p>
-                                    <b>Target Audience:</b>
-                                    Video editors, post-production specialists, and content creators.
-                                </p>
-                                <p>
-                                    <b>Learning Outcomes:</b>
-                                    Gain expertise in video editing software, motion graphics, color grading, and audio mixing.
-                                </p>
-                                <ul class="ps-3">
-                                    <li>Adobe Premiere Pro / Final Cut Pro Training</li>
-                                    <li>Motion Graphics &amp; Animation</li>
-                                    <li>Color Grading</li>
-                                    <li>Audio Mixing</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h5 class="fw-semibold">4. Radio Production &amp; Presentation</h5>
-                                <p>
-                                    <b>Target Audience:</b>
-                                    Aspiring radio presenters, producers, and podcast creators.
-                                </p>
-                                <p>
-                                    <b>Learning Outcomes:</b>
-                                    Develop voice skills, scripting abilities, and studio operation knowledge for radio and podcasting.
-                                </p>
-                                <ul class="ps-3">
-                                    <li>Voice Training &amp; On-Air Techniques</li>
-                                    <li>Scripting for Radio</li>
-                                    <li>Radio Studio Operations</li>
-                                    <li>Podcast Production</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h5 class="fw-semibold">5. Documentary Filmmaking</h5>
-                                <p>
-                                    <b>Target Audience:</b>
-                                    Filmmakers, storytellers, and individuals passionate about documentary production.
-                                </p>
-                                <p>
-                                    <b>Learning Outcomes:</b>
-                                    Learn story development, research, interviewing, and post-production techniques for documentaries.
-                                </p>
-                                <ul class="ps-3">
-                                    <li>Story Development &amp; Scripting</li>
-                                    <li>Research &amp; Fieldwork Planning</li>
-                                    <li>Interview Techniques</li>
-                                    <li>Post-Production for Documentaries</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h5 class="fw-semibold">6. On-Camera Presentation &amp; Media Performance</h5>
-                                <p>
-                                    <b>Target Audience:</b>
-                                    Presenters, spokespersons, and media personalities.
-                                </p>
-                                <p>
-                                    <b>Learning Outcomes:</b>
-                                    Enhance screen presence, teleprompter skills, and live reporting abilities.
-                                </p>
-                                <ul class="ps-3">
-                                    <li>Screen Presence &amp; Body Language</li>
-                                    <li>Teleprompter Reading</li>
-                                    <li>Live Reporting</li>
-                                    <li>Anchoring News &amp; Programs</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Specialized Programs -->
-                <div class="mb-5">
-                    <h3 class="fw-bold text-gold mb-4">Specialized Programs</h3>
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h5 class="fw-semibold">7. Digital Content Creation &amp; Strategy</h5>
-                                <p>
-                                    <b>Target Audience:</b>
-                                    Social media managers, content creators, and digital marketers.
-                                </p>
-                                <p>
-                                    <b>Learning Outcomes:</b>
-                                    Master social media video production, mobile journalism, and online broadcasting strategies.
-                                </p>
-                                <ul class="ps-3">
-                                    <li>Social Media Video Production</li>
-                                    <li>Mobile Journalism (MoJo)</li>
-                                    <li>YouTube &amp; Online Broadcasting</li>
-                                    <li>Digital Audience Engagement</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h5 class="fw-semibold">8. TV Directing &amp; Studio Management</h5>
-                                <p>
-                                    <b>Target Audience:</b>
-                                    TV directors, studio managers, and production professionals.
-                                </p>
-                                <p>
-                                    <b>Learning Outcomes:</b>
-                                    Develop skills in multi-camera directing, studio floor management, and live show coordination.
-                                </p>
-                                <ul class="ps-3">
-                                    <li>Multi-Camera Directing</li>
-                                    <li>Studio Floor Management</li>
-                                    <li>Live Show Coordination</li>
-                                    <li>Control Room Operations</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h5 class="fw-semibold">9. Media Entrepreneurship &amp; Brand Building</h5>
-                                <p>
-                                    <b>Target Audience:</b>
-                                    Media entrepreneurs, freelancers, and media production company owners.
-                                </p>
-                                <p>
-                                    <b>Learning Outcomes:</b>
-                                    Learn how to build a personal media brand, monetize content, and start a media production company.
-                                </p>
-                                <ul class="ps-3">
-                                    <li>Building a Personal Media Brand</li>
-                                    <li>Monetization Strategies</li>
-                                    <li>Freelancing in Media</li>
-                                    <li>Starting a Media Production Company</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h5 class="fw-semibold">10. Media Law &amp; Regulatory Affairs</h5>
-                                <p>
-                                    <b>Target Audience:</b>
-                                    Media professionals, journalists, and content creators.
-                                </p>
-                                <p>
-                                    <b>Learning Outcomes:</b>
-                                    Understand media rights, copyright, defamation laws, and broadcasting regulations.
-                                </p>
-                                <ul class="ps-3">
-                                    <li>Media Rights &amp; Copyright</li>
-                                    <li>Defamation &amp; Libel Laws</li>
-                                    <li>Broadcasting Regulation</li>
-                                    <li>Ethical Decision-Making in Media</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Youth & Short-Term Courses -->
-                <div>
-                    <h3 class="fw-bold text-gold mb-4">Youth &amp; Short-Term Courses</h3>
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h6 class="fw-semibold">11. Intro to Broadcasting for Teenagers</h6>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h6 class="fw-semibold">12. Media Boot Camps (1–2 Weeks)</h6>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h6 class="fw-semibold">13. Weekend &amp; Evening Masterclasses</h6>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-4 bg-white rounded-4 shadow-sm">
-                                <h6 class="fw-semibold">14. Certificate Courses in Specialized Areas (3–6 Weeks)</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <style>
-    
-         .text-gold {
-            color: #D4A017;
-        }
-        .bg-white {
-            background-color: #fff;
-        }
-        .shadow-sm {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-        .fw-semibold {
-            font-weight: 600;
-        }
-        .badge {
-            padding: 0.5em 0.8em;
-            font-size: 0.95rem;
-            border-radius: 12px;
-        }
-        .badge img {
-            vertical-align: middle;
-        }
-        .btn-gold {
-            background-color: #D4A017;
-            color: white;
-        }
 
-        .btn-gold:hover {
-            background-color: #B28611;
-        }
-            </style>
-        </section>
-        <!-- Mentorship Section -->
-        <section class="py-5 bg-light" id="mentorship">
-            <div class="container text-center">
-                <h2 class="section-title mb-4" data-aos="fade-up">Mentorship Program</h2>
-                <p class="lead mb-4 text-black" data-aos="fade-up" data-aos-delay="100">
-                    Our mentorship program connects aspiring African storytellers with top media professionals through intensive
-            hands-on training and personal guidance.
-                </p>
-                <a
-                    class="btn btn-cta btn-lg"
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                    href="students.html"
-                >
-                    Apply for Mentorship
-                </a>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Programs - Africa Broadcasting Academy</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img alt="ABA Logo" class="logo-image" src="assets/images/logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active text-gold" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stories.html">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="students.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-cta" href="applicationform.html">Apply Now</a>
+                    </li>
+                </ul>
             </div>
-        </section>
-        <!-- Live Chat Widget -->
-        <!-- WhatsApp Floating Button -->
-        <a
-            class="whatsapp-float"
-            href="https://wa.me/2348128422499"
-            target="_blank"
-            title="Chat with us on WhatsApp"
-        >
-            <img alt="WhatsApp Chat" src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"></img>
-        </a>
-        <!-- Footer -->
-        <footer class="footer mt-5 py-5">
-            <div class="container">
-                <div class="row">
-                    <!-- Logo and brief intro -->
-                    <div class="col-md-4 mb-4">
-                        <h2 class="footer-logo">ABA</h2>
-                        <p class="footer-description">
-                            Empowering Africa's future through innovation, leadership, and education.
-                        </p>
-                        <div class="social-links mt-3">
-                            <a href="https://www.facebook.com/share/1Hg4nrcmje/?mibextid=wwXIfr">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-instagram"></i>
-                            </a>
+        </div>
+    </nav>
+
+    <!-- Premium Hero Section -->
+    <section class="premium-hero">
+        <div class="hero-premium-bg" style="background-image: url('assets/images/bootcamp/IMG_8818.JPG');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-glass-card" data-aos="fade-up">
+                <h1 class="hero-title">
+                    World-Class <span class="highlight">Training</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Master the art of broadcasting with our rigorous, hands-on curriculums designed by industry leaders.
+                </p>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <i data-lucide="chevron-down" class="text-white animate__animated animate__bounce animate__infinite"></i>
+        </div>
+    </section>
+
+    <!-- Programs Grid -->
+    <section class="section-padding bg-ink">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Program 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="card-premium h-100 p-0 overflow-hidden">
+                        <div style="height: 250px; overflow: hidden;">
+                            <img src="assets/images/training/training-120.jpg" alt="Video Editing"
+                                class="w-100 h-100 object-fit-cover" style="transition: transform 0.5s ease;">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h4 text-gold mb-3">Digital Video Editing</h3>
+                            <p class="text-off-white mb-4">Master industry-standard software like Adobe Premiere Pro and
+                                DaVinci Resolve to craft compelling visual narratives.</p>
+                            <a href="applicationform.html" class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
                         </div>
                     </div>
-                    <!-- Quick Links -->
-                    <div class="col-md-2 mb-4">
-                        <h5 class="footer-title">Quick Links</h5>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#about">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#programs">Programs</a>
-                            </li>
-                            <li>
-                                <a href="#stories">Success Stories</a>
-                            </li>
-                            <li>
-                                <a href="#events">Events</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Resources -->
-                    <div class="col-md-3 mb-4">
-                        <h5 class="footer-title">Resources</h5>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#">Podcast</a>
-                            </li>
-                            <li>
-                                <a href="#">VR Experience</a>
-                            </li>
-                            <li>
-                                <a href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Newsletter -->
-                    <div class="col-md-3 mb-4">
-                        <h5 class="footer-title">Subscribe</h5>
-                        <form class="footer-newsletter">
-                            <input class="form-control mb-2" placeholder="Your email address" type="email">
-                            <button class="btn btn-cta w-100" type="submit">Subscribe</button>
-                        </form>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-premium h-100 p-0 overflow-hidden">
+                        <div style="height: 250px; overflow: hidden;">
+                            <img src="assets/images/bootcamp/IMG_8795.JPG" alt="Cinematography"
+                                class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h4 text-gold mb-3">Cinematography</h3>
+                            <p class="text-off-white mb-4">Learn the science of lighting, composition, and camera
+                                movement to create visually stunning cinematic content.</p>
+                            <a href="applicationform.html" class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
+                        </div>
                     </div>
                 </div>
-                <!-- Bottom Footer -->
-                <div class="text-center mt-4 footer-bottom">
-                    <small>© 2025 ABA. All rights reserved. | Designed with ❤️</small>
+
+                <!-- Program 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-premium h-100 p-0 overflow-hidden">
+                        <div style="height: 250px; overflow: hidden;">
+                            <img src="assets/images/bootcamp/IMG_8841.JPG" alt="Journalism"
+                                class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h4 text-gold mb-3">Video Journalism</h3>
+                            <p class="text-off-white mb-4">From field reporting to documentary production, learn how to
+                                research, script, and report authentic stories.</p>
+                            <a href="applicationform.html" class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="card-premium h-100 p-0 overflow-hidden">
+                        <div style="height: 250px; overflow: hidden;">
+                            <img src="assets/images/training/training-10.jpg" alt="Presenting"
+                                class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h4 text-gold mb-3">TV Presenting</h3>
+                            <p class="text-off-white mb-4">Develop your on-camera charisma, voice modulation, and
+                                interviewing skills to captivate audiences.</p>
+                            <a href="applicationform.html" class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-premium h-100 p-0 overflow-hidden">
+                        <div style="height: 250px; overflow: hidden;">
+                            <img src="assets/images/training/training-50.jpg" alt="Script Writing"
+                                class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h4 text-gold mb-3">Script Writing</h3>
+                            <p class="text-off-white mb-4">Learn the structure of storytelling for formatting scripts
+                                for screen, television, and documentaries.</p>
+                            <a href="applicationform.html" class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program 6 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-premium h-100 p-0 overflow-hidden">
+                        <div style="height: 250px; overflow: hidden;">
+                            <img src="assets/images/bootcamp/IMG_3108.JPG" alt="Content Creation"
+                                class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h4 text-gold mb-3">Content Creation</h3>
+                            <p class="text-off-white mb-4">Master the digital landscape. Learn to create viral,
+                                impactful content for social media platforms.</p>
+                            <a href="applicationform.html" class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding text-center bg-ink-light">
+        <div class="container" data-aos="zoom-in">
+            <h2 class="text-white mb-4">Not sure which path to take?</h2>
+            <p class="lead text-muted mb-5">Our counselors are here to guide you towards the career that fits your
+                passion.</p>
+            <a href="contact.html" class="btn btn-cta">Talk to a Counselor</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="d-block mb-4">
+                        <img src="assets/images/logo.png" alt="ABA Logo" height="60">
+                    </a>
+                    <p class="text-off-white">Empowering Africa's future through innovation, leadership, and education.
+                        We are reclaiming the narrative, one story at a time.</p>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <div class="footer-nav">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="programs.html">Programs</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="text-white mb-4">Resources</h5>
+                    <div class="footer-nav">
+                        <a href="applicationform.html">Apply</a>
+                        <a href="sponsor.html">Sponsor</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="stories.html">Stories</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control bg-transparent border-secondary text-white"
+                                placeholder="Email Address">
+                            <button class="btn btn-cta" type="button">Subscribe</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </footer>
-        <!-- Bootstrap 5 JS and Popper.js -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-        <!-- Animate.css for animations -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-        <!-- Bootstrap Icons for content type icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-        <!-- AOS JS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <!-- Custom JS -->
-        <script src="js/script.js"></script>
-        </link>
-    </body>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Africa Broadcasting Academy. All rights reserved. | Developed by <a href="#"
+                        class="text-gold">Vincent Agber</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 1000 });
+    </script>
+</body>
+
 </html>

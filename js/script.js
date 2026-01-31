@@ -113,23 +113,28 @@ function sendMessage() {
 
 // === Google Maps Init ===
 function initMap() {
+  if (!document.getElementById('map')) return;
+
   const location = { lat: 6.5244, lng: 3.3792 };
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: location,
     styles: [
-      { elementType: 'geometry', stylers: [{ color: '#1C2526' }] },
-      { elementType: 'labels.text.fill', stylers: [{ color: '#F5F5F5' }] },
-      { elementType: 'labels.text.stroke', stylers: [{ color: '#00B7EB' }] },
-      { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#2A6A5C' }] },
-      { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#B0B0B0' }] }
+      { elementType: 'geometry', stylers: [{ color: '#080808' }] }, // Deep background
+      { elementType: 'labels.text.fill', stylers: [{ color: '#D4A017' }] }, // Gold Text
+      { elementType: 'labels.text.stroke', stylers: [{ color: '#000000' }] }, // Black Stroke
+      { featureType: 'administrative', elementType: 'geometry.stroke', stylers: [{ color: '#D4A017' }] },
+      { featureType: 'administrative.land_parcel', elementType: 'geometry.stroke', stylers: [{ color: '#D4A017' }] },
+      { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#222222' }] }, // Dark Roads
+      { featureType: 'road', elementType: 'labels.text.fill', stylers: [{ color: '#ffffff' }] },
+      { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#111111' }] }, // Dark Water
+      { featureType: 'poi', stylers: [{ visibility: 'off' }] }
     ]
   });
   new google.maps.Marker({
     position: location,
     map: map,
-    title: 'ABAHeadquarters',
-    icon: { url: 'https://maps.google.com/mapfiles/ms/icons/gold.png' }
+    title: 'ABA Headquarters',
   });
 }
 

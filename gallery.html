@@ -1,1120 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery - Africa Broadcasting Academy</title>
 
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Gallery - Africa Broadcasting Academy</title>
 
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <style>
-      :root {
-        --primary: #0a2463;
-        --secondary: #ffd700;
-        --accent: #00a8e8;
-        --dark: #1a1a2e;
-        --light: #f8f9fa;
-        --gold: #d4af37;
-        --text-dark: #2d3047;
-        --text-light: #6c757d;
-      }
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-      body {
-        font-family: "Inter", sans-serif;
-        line-height: 1.6;
-        color: var(--text-dark);
-        overflow-x: hidden;
-        background: var(--light);
-      }
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Playfair Display", serif;
-        font-weight: 600;
-      }
+<body>
 
-      /* Navigation */
-      .navbar {
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        padding: 1rem 0;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .navbar-brand img {
-        height: 50px;
-      }
-
-      /* Gallery Hero */
-      .gallery-hero {
-        background: linear-gradient(
-            135deg,
-            rgba(10, 36, 99, 0.9),
-            rgba(0, 168, 232, 0.8)
-          ),
-          url("assets/images/studio1.JPG") center/cover no-repeat;
-        padding: 8rem 0 4rem;
-        color: white;
-        text-align: center;
-      }
-
-      .gallery-hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-      }
-
-      .gallery-hero p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      /* Gallery Controls */
-      .gallery-controls {
-        background: white;
-        padding: 2rem 0;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-        position: sticky;
-        top: 80px;
-        z-index: 100;
-      }
-
-      .filter-buttons {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .filter-btn {
-        background: transparent;
-        border: 2px solid var(--primary);
-        color: var(--primary);
-        padding: 0.75rem 1.5rem;
-        border-radius: 50px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-
-      .filter-btn.active,
-      .filter-btn:hover {
-        background: var(--primary);
-        color: white;
-        transform: translateY(-2px);
-      }
-
-      /* Advanced Gallery Grid */
-      .gallery-container {
-        padding: 4rem 0;
-      }
-
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2rem;
-        margin-bottom: 3rem;
-      }
-
-      .gallery-item {
-        position: relative;
-        border-radius: 15px;
-        overflow: hidden;
-        background: white;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        cursor: pointer;
-      }
-
-      .gallery-item:hover {
-        transform: translateY(-15px) scale(1.02);
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-      }
-
-      .gallery-image {
-        width: 100%;
-        height: 280px;
-        object-fit: cover;
-        transition: transform 0.6s ease;
-      }
-
-      .gallery-item:hover .gallery-image {
-        transform: scale(1.15);
-      }
-
-      .gallery-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(transparent, rgba(10, 36, 99, 0.95));
-        padding: 2rem;
-        color: white;
-        transform: translateY(100%);
-        opacity: 0;
-        transition: all 0.4s ease;
-      }
-
-      .gallery-item:hover .gallery-overlay {
-        transform: translateY(0);
-        opacity: 1;
-      }
-
-      .gallery-category {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: var(--secondary);
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 50px;
-        font-size: 0.8rem;
-        font-weight: 600;
-      }
-
-      .gallery-info h3 {
-        margin: 0 0 0.5rem 0;
-        font-size: 1.3rem;
-      }
-
-      .gallery-info p {
-        margin: 0;
-        opacity: 0.9;
-        font-size: 0.95rem;
-      }
-
-      /* Lightbox Modal */
-      .lightbox-modal .modal-content {
-        background: transparent;
-        border: none;
-      }
-
-      .lightbox-image {
-        width: 100%;
-        border-radius: 15px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-      }
-
-      .lightbox-caption {
-        color: white;
-        text-align: center;
-        margin-top: 1rem;
-      }
-
-      /* Statistics Section */
-      .gallery-stats {
-        background: linear-gradient(135deg, var(--primary), var(--dark));
-        color: white;
-        padding: 4rem 0;
-        text-align: center;
-      }
-
-      .stat-item {
-        padding: 2rem;
-      }
-
-      .stat-number {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--gold);
-        margin-bottom: 0.5rem;
-      }
-
-      /* Loading Animation */
-      .loading-spinner {
-        display: none;
-        text-align: center;
-        padding: 2rem;
-      }
-
-      .spinner {
-        width: 40px;
-        height: 40px;
-        border: 4px solid #f3f3f3;
-        border-top: 4px solid var(--primary);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin: 0 auto;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .gallery-hero h1 {
-          font-size: 2.5rem;
-        }
-
-        .gallery-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .filter-buttons {
-          gap: 0.5rem;
-        }
-
-        .filter-btn {
-          padding: 0.5rem 1rem;
-          font-size: 0.9rem;
-        }
-      }
-
-      /* Animation Classes */
-      .fade-in {
-        animation: fadeIn 0.6s ease-in;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Scroll to Top */
-      .scroll-to-top {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        background: var(--primary);
-        color: white;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        opacity: 0;
-        transition: all 0.3s ease;
-        z-index: 1000;
-      }
-
-      .scroll-to-top.visible {
-        opacity: 1;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navigation -->
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img
-            alt="ABA Logo"
-            class="logo-image"
-            src="/assets/images/logo.png"
-          />
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="stories.html">Stories</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="applicationform.
-  html"
-                >Application Form</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="programs.html">Programs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="students.html">Students’ Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <!-- Country Selector (Flags Only) -->
-            <li class="nav-item dropdown ms-lg-3">
-              <a
-                class="nav-link dropdown-toggle d-flex align-items-center"
-                href="#"
-                id="countryDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <img
-                  src="https://flagcdn.com/w20/bj.png"
-                  alt="Benin"
-                  style="width: 20px; height: 14px"
-                />
-              </a>
-              <ul
-                class="dropdown-menu dropdown-menu-end shadow-lg"
-                aria-labelledby="countryDropdown"
-              >
-                <li>
-                  <a class="dropdown-item p-1" href="#">
-                    <img
-                      src="https://flagcdn.com/w20/bj.
-  png"
-                      style="width: 20px; height: 14px"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item p-1" href="#">
-                    <img
-                      src="https://flagcdn.com/w20/gh.
-  png"
-                      style="width: 20px; height: 14px"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item p-1" href="#">
-                    <img
-                      src="https://flagcdn.com/w20/ci.
-  png"
-                      style="width: 20px; height: 14px"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item p-1" href="#">
-                    <img
-                      src="https://flagcdn.com/w20/tg.
-  png"
-                      style="width: 20px; height: 14px"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item p-1" href="#">
-                    <img
-                      src="https://flagcdn.com/w20/ng.
-  png"
-                      style="width: 20px; height: 14px"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item p-1" href="#">
-                    <img
-                      src="https://flagcdn.com/w20/ke.
-  png"
-                      style="width: 20px; height: 14px"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item p-1" href="#">
-                    <img
-                      src="https://flagcdn.com/w20/ug.
-  png"
-                      style="width: 20px; height: 14px"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item p-1" href="#">
-                    <img
-                      src="https://flagcdn.com/w20/sn.
-  png"
-                      style="width: 20px; height: 14px"
-                    />
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                class="btn btn-cta ms-3"
-                href="applicationform.
-  html"
-                >Apply Now</a
-              >
-            </li>
-          </ul>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img alt="ABA Logo" class="logo-image" src="assets/images/logo.png">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active text-gold" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="stories.html">Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="students.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-cta" href="applicationform.html">Apply Now</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Gallery Hero -->
-    <section class="gallery-hero">
-      <div class="container">
-        <h1 data-aos="fade-down">Our Visual Journey</h1>
-        <p data-aos="fade-up" data-aos-delay="100">
-          Explore the transformative moments, training sessions, and success
-          stories that define Africa Broadcasting Academy
+  <!-- Premium Hero Section -->
+  <section class="premium-hero">
+    <div class="hero-premium-bg" style="background-image: url('assets/images/bootcamp/IMG_8788.JPG');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-glass-card" data-aos="fade-up">
+        <h1 class="hero-title">
+          Visual <span class="highlight">Journey</span>
+        </h1>
+        <p class="hero-subtitle">
+          Witness the transformation. From intensive bootcamps to hands-on field work, see how we are shaping the future
+          of African media.
         </p>
       </div>
-    </section>
+    </div>
+    <div class="hero-scroll-indicator">
+      <i data-lucide="chevron-down" class="text-white animate__animated animate__bounce animate__infinite"></i>
+    </div>
+  </section>
 
-    <!-- Gallery Controls -->
-    <section class="gallery-controls">
-      <div class="container">
-        <div class="filter-buttons">
-          <button class="filter-btn active" data-filter="all">
-            All Photos
-          </button>
-          <button class="filter-btn" data-filter="training">
-            Training Sessions
-          </button>
-          <button class="filter-btn" data-filter="graduation">
-            Graduation
-          </button>
-          <button class="filter-btn" data-filter="studio">Studio Work</button>
-          <button class="filter-btn" data-filter="field">Field Work</button>
-          <button class="filter-btn" data-filter="events">Events</button>
-          <button class="filter-btn" data-filter="students">
-            Student Projects
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Container -->
-    <section class="gallery-container">
-      <div class="container">
-        <div class="gallery-grid" id="galleryGrid">
-          <!-- Training Session Images -->
-          <div class="gallery-item" data-category="training" data-aos="fade-up">
-            <img
-              src="assets/images/training/training-1.jpg"
-              alt="Studio Production Training"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Training</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Studio Production Masterclass</h3>
-                <p>
-                  Students learning professional broadcast techniques in our
-                  state-of-the-art studio
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="gallery-item"
-            data-category="training"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <img
-              src="assets/images/training/training-2.jpg"
-              alt="Camera Operation Training"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Training</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Camera Operation Workshop</h3>
-                <p>Hands-on training with professional broadcast equipment</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Graduation Images -->
-          <div
-            class="gallery-item"
-            data-category="graduation"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <img
-              src="assets/images/training/training-3.jpg"
-              alt="Graduation Ceremony"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Graduation</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Graduation Celebration</h3>
-                <p>Celebrating the achievements of our talented graduates</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Studio Work Images -->
-          <div
-            class="gallery-item"
-            data-category="studio"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <img
-              src="assets/images/training/training-4.jpg"
-              alt="Live Broadcast Session"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Studio Work</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Live Broadcast Training</h3>
-                <p>Students practicing live news broadcasting techniques</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Field Work Images -->
-          <div
-            class="gallery-item"
-            data-category="field"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <img
-              src="assets/images/training/training-5.jpg"
-              alt="Field Reporting"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Field Work</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Field Reporting Exercise</h3>
-                <p>Real-world journalism experience in authentic settings</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Events Images -->
-          <div
-            class="gallery-item"
-            data-category="events"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <img
-              src="assets/images/training/training-6.jpg"
-              alt="Industry Workshop"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Events</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Industry Expert Workshop</h3>
-                <p>Learning from seasoned media professionals</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Student Projects Images -->
-          <div
-            class="gallery-item"
-            data-category="students"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <img
-              src="assets/images/training/training-7.jpg"
-              alt="Student Documentary"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Student Projects</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Documentary Production</h3>
-                <p>
-                  Students working on authentic African storytelling projects
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Student Projects Images -->
-          <div
-            class="gallery-item"
-            data-category="students"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <img
-              src="assets/images/training/training-8.jpg"
-              alt="Student Documentary"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Student Projects</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Documentary Production</h3>
-                <p>
-                  Students working on authentic African storytelling projects
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Student Projects Images -->
-          <div
-            class="gallery-item"
-            data-category="students"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <img
-              src="assets/images/training/training-9.jpg"
-              alt="Student Documentary"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Student Projects</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Documentary Production</h3>
-                <p>
-                  Students working on authentic African storytelling projects
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Student Projects Images -->
-          <div
-            class="gallery-item"
-            data-category="students"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <img
-              src="assets/images/training/training-11.jpg"
-              alt="Student Documentary"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Student Projects</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Documentary Production</h3>
-                <p>
-                  Students working on authentic African storytelling projects
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Student Projects Images -->
-          <div
-            class="gallery-item"
-            data-category="students"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <img
-              src="assets/images/training/training-12.jpg"
-              alt="Student Documentary"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Student Projects</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Documentary Production</h3>
-                <p>
-                  Students working on authentic African storytelling projects
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Student Projects Images -->
-          <div
-            class="gallery-item"
-            data-category="students"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <img
-              src="assets/images/training/training-13.jpg"
-              alt="Student Documentary"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Student Projects</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Documentary Production</h3>
-                <p>
-                  Students working on authentic African storytelling projects
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Student Projects Images -->
-          <div
-            class="gallery-item"
-            data-category="students"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <img
-              src="assets/images/training/training-14.jpg"
-              alt="Student Documentary"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Student Projects</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Documentary Production</h3>
-                <p>
-                  Students working on authentic African storytelling projects
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Additional Images -->
-          <div
-            class="gallery-item"
-            data-category="training"
-            data-aos="fade-up"
-            data-aos-delay="700"
-          >
-            <img
-              src="assets/images/training/training-10.jpg"
-              alt="Editing Workshop"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Training</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Digital Editing Workshop</h3>
-                <p>Mastering cutting-edge post-production techniques</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="gallery-item"
-            data-category="studio"
-            data-aos="fade-up"
-            data-aos-delay="800"
-          >
-            <img
-              src="assets/images/training/training-9.jpg"
-              alt="Sound Engineering"
-              class="gallery-image"
-            />
-            <div class="gallery-category">Studio Work</div>
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h3>Sound Engineering Session</h3>
-                <p>Professional audio production and mixing techniques</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Loading Spinner -->
-        <div class="loading-spinner" id="loadingSpinner">
-          <div class="spinner"></div>
-          <p class="mt-3">Loading more images...</p>
-        </div>
-
-        <!-- Load More Button -->
-        <div class="text-center" data-aos="fade-up">
-          <button class="btn btn-primary btn-lg" id="loadMoreBtn">
-            Load More Images
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Lightbox Modal -->
-    <div class="modal fade lightbox-modal" id="imageModal" tabindex="-1">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center">
-            <button
-              type="button"
-              class="btn-close position-absolute top-0 end-0 m-3"
-              data-bs-dismiss="modal"
-              style="filter: invert(1)"
-            ></button>
-            <img src="" alt="" class="lightbox-image" id="lightboxImage" />
-            <div class="lightbox-caption">
-              <h4 id="lightboxTitle"></h4>
-              <p id="lightboxDescription"></p>
-            </div>
-          </div>
-        </div>
+  <!-- Gallery Controls -->
+  <section class="bg-ink-light py-4 border-bottom border-secondary sticky-top" style="top: 76px; z-index: 900;">
+    <div class="container">
+      <div class="d-flex justify-content-center flex-wrap gap-2">
+        <button class="btn btn-outline-white btn-sm active filter-btn" data-filter="all">All</button>
+        <button class="btn btn-outline-white btn-sm filter-btn" data-filter="bootcamp">Bootcamp</button>
+        <button class="btn btn-outline-white btn-sm filter-btn" data-filter="training">Training</button>
+        <button class="btn btn-outline-white btn-sm filter-btn" data-filter="studio">Studio</button>
+        <button class="btn btn-outline-white btn-sm filter-btn" data-filter="field">Field Work</button>
       </div>
     </div>
+  </section>
 
-    <footer class="footer mt-5 py-5">
-        <div class="container">
-            <div class="row">
-                <!-- Logo and brief intro -->
-                <div class="col-md-4 mb-4">
-                    <h2 class="footer-logo">ABA</h2>
-                    <p class="footer-description">
-                        Empowering Africa's future through 
-   innovation, leadership, and education.
-                    </p>
-                    <div class="social-links mt-3">
-                        <a href="https://www.facebook.com/share/
-   16RgZeLksV/?mibextid=wwXIfr">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/
-   91058174/admin/analytics/followers/">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/
-   africabroadcastingacademy?
-   igsh=Y3d1dGJpeTA3eXhi">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Quick Links -->
-                <div class="col-md-2 mb-4">
-                    <h5 class="footer-title">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="about.html">About Us</a>
-                        </li>
-                        <li>
-                            <a href="programs.html">Programs</a>
-                        </li>
-                        <li>
-                            <a href="stories.html">Success Stories</
-   a>
-                        </li>
-                        <li>
-                            <a href="students.html">Students</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Resources -->
-                <div class="col-md-3 mb-4">
-                    <h5 class="footer-title">Resources</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                        <li>
-                            <a href="applicationform.
-   html">Application</a>
-                        </li>
-                        <li>
-                            <a href="sponsor.html">Sponsor</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Newsletter -->
-                <div class="col-md-3 mb-4">
-                    <h5 class="footer-title">Subscribe</h5>
-                    <form class="footer-newsletter">
-                        <input class="form-control mb-2" 
-   placeholder="Your email address" 
-   type="email">
-                        <button class="btn btn-cta w-100" 
-   type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <!-- Bottom Footer -->
-            <div class="text-center mt-4 footer-bottom">
-                © 2025 ABA. All rights reserved. | Developed by
-                <a
-                    class="text-decoration-none fw-semibold"
-                    href="https://vincentagber.vercel.app/"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    Vincent Agber
-                </a>
-            </div>
+  <!-- Gallery Grid -->
+  <section class="section-padding bg-ink">
+    <div class="container">
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- BOOTCAMP SERIES -->
+        <div class="gallery-item" data-category="bootcamp">
+          <img src="assets/images/bootcamp/IMG_8787.JPG" alt="Bootcamp" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Bootcamp</span>
+            <h4 class="gallery-title">Orientation Day</h4>
+          </div>
         </div>
-    </footer>
-    <!-- Bootstrap 5 JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/
-   dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/
-   js/bootstrap.min.js"></script>
-    <!-- Animate.css for animations -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/
-   4.1.1/animate.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons for content type icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/
-   font/bootstrap-icons.min.css" rel="stylesheet">
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
-    <!-- Scroll to Top -->
-    <div class="scroll-to-top" id="scrollToTop">
-      <i class="fas fa-chevron-up"></i>
+        <div class="gallery-item" data-category="bootcamp">
+          <img src="assets/images/bootcamp/IMG_8790.JPG" alt="Bootcamp" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Bootcamp</span>
+            <h4 class="gallery-title">Field Briefing</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="bootcamp">
+          <img src="assets/images/bootcamp/IMG_8795.JPG" alt="Bootcamp" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Bootcamp</span>
+            <h4 class="gallery-title">Live Action</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="bootcamp">
+          <img src="assets/images/bootcamp/IMG_8818.JPG" alt="Bootcamp" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Bootcamp</span>
+            <h4 class="gallery-title">Team Spirit</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="bootcamp">
+          <img src="assets/images/bootcamp/IMG_3092.JPG" alt="Studio" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Studio</span>
+            <h4 class="gallery-title">On Air</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="bootcamp">
+          <img src="assets/images/bootcamp/IMG_3099.JPG" alt="Technical" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Technical</span>
+            <h4 class="gallery-title">Camera Setup</h4>
+          </div>
+        </div>
+
+        <!-- TRAINING SERIES - Selected High Quality -->
+        <div class="gallery-item" data-category="training">
+          <img src="assets/images/training/training-1.jpg" alt="Training" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Training</span>
+            <h4 class="gallery-title">Classroom Session</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="training">
+          <img src="assets/images/training/training-10.jpg" alt="Training" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Training</span>
+            <h4 class="gallery-title">Group Dynamics</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="training">
+          <img src="assets/images/training/training-25.jpg" alt="Training" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Training</span>
+            <h4 class="gallery-title">Mentorship</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="training">
+          <img src="assets/images/training/training-42.jpg" alt="Training" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Training</span>
+            <h4 class="gallery-title">Practical Learning</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="training">
+          <img src="assets/images/training/training-50.jpg" alt="Training" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Training</span>
+            <h4 class="gallery-title">Focus & Dedication</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="training">
+          <img src="assets/images/training/training-75.jpg" alt="Training" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Training</span>
+            <h4 class="gallery-title">Interactive Session</h4>
+          </div>
+        </div>
+
+        <!-- STUDIO & FIELD MIX -->
+        <div class="gallery-item" data-category="studio">
+          <img src="assets/images/bootcamp/IMG_3107.JPG" alt="Studio" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Studio</span>
+            <h4 class="gallery-title">Production Control</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="field">
+          <img src="assets/images/bootcamp/IMG_3088.JPG" alt="Field" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Field Work</span>
+            <h4 class="gallery-title">On Location</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="field">
+          <img src="assets/images/bootcamp/IMG_8841.JPG" alt="Field" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Field Work</span>
+            <h4 class="gallery-title">Interviewing</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="studio">
+          <img src="assets/images/training/training-102.jpg" alt="Studio" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Studio</span>
+            <h4 class="gallery-title">Broadcast Setup</h4>
+          </div>
+        </div>
+
+        <!-- MORE TRAINING VARIETY -->
+        <div class="gallery-item" data-category="training">
+          <img src="assets/images/training/training-120.jpg" alt="Training" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Training</span>
+            <h4 class="gallery-title">Skill Mastery</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="training">
+          <img src="assets/images/training/training-150.jpg" alt="Training" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Training</span>
+            <h4 class="gallery-title">Creative Workshop</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="training">
+          <img src="assets/images/training/training-180.jpg" alt="Training" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Training</span>
+            <h4 class="gallery-title">Media Literacy</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="training">
+          <img src="assets/images/training/training-200.jpg" alt="Training" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Workshop</span>
+            <h4 class="gallery-title">Digital Skills</h4>
+          </div>
+        </div>
+
+        <!-- MORE BOOTCAMP -->
+        <div class="gallery-item" data-category="bootcamp">
+          <img src="assets/images/bootcamp/IMG_8828.JPG" alt="Bootcamp" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Bootcamp</span>
+            <h4 class="gallery-title">Building Networks</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="bootcamp">
+          <img src="assets/images/bootcamp/IMG_8808.JPG" alt="Bootcamp" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Bootcamp</span>
+            <h4 class="gallery-title">Final Projects</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="bootcamp">
+          <img src="assets/images/bootcamp/IMG_8810.JPG" alt="Bootcamp" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Bootcamp</span>
+            <h4 class="gallery-title">Collaboration</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="bootcamp">
+          <img src="assets/images/bootcamp/IMG_8812.JPG" alt="Bootcamp" class="gallery-image">
+          <div class="gallery-item-overlay">
+            <span class="gallery-category">Bootcamp</span>
+            <h4 class="gallery-title">Innovation</h4>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="text-muted mb-4">Showing a selection of our 500+ training moments.</p>
+        <a href="applicationform.html" class="btn btn-cta">Join Our Next Cohort</a>
+      </div>
+
     </div>
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </section>
 
-    <script>
-      // Initialize AOS
-      AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
-      });
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a href="index.html" class="d-block mb-4">
+            <img src="assets/images/logo.png" alt="ABA Logo" height="60">
+          </a>
+          <p class="text-off-white">Empowering Africa's future through innovation, leadership, and education. We are
+            reclaiming the narrative, one story at a time.</p>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5 class="text-white mb-4">Quick Links</h5>
+          <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="programs.html">Programs</a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5 class="text-white mb-4">Resources</h5>
+          <div class="footer-nav">
+            <a href="applicationform.html">Apply</a>
+            <a href="sponsor.html">Sponsor</a>
+            <a href="contact.html">Contact</a>
+            <a href="stories.html">Stories</a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="text-white mb-4">Newsletter</h5>
+          <form class="mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control bg-transparent border-secondary text-white"
+                placeholder="Email Address">
+              <button class="btn btn-cta" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Africa Broadcasting Academy. All rights reserved. | Developed by <a href="#"
+            class="text-gold">Vincent Agber</a></p>
+      </div>
+    </div>
+  </footer>
 
-      // Gallery Filtering
-      const filterButtons = document.querySelectorAll(".filter-btn");
-      const galleryItems = document.querySelectorAll(".gallery-item");
-      const loadMoreBtn = document.getElementById("loadMoreBtn");
-      const loadingSpinner = document.getElementById("loadingSpinner");
-      const scrollToTop = document.getElementById("scrollToTop");
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
 
-      filterButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          filterButtons.forEach((btn) => btn.classList.remove("active"));
-          button.classList.add("active");
+    // Gallery Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
 
-          const filter = button.getAttribute("data-filter");
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active', 'btn-cta'));
+        filterButtons.forEach(btn => btn.classList.add('btn-outline-white'));
 
-          galleryItems.forEach((item) => {
-            if (
-              filter === "all" ||
-              item.getAttribute("data-category") === filter
-            ) {
-              item.style.display = "block";
-              setTimeout(() => item.classList.add("fade-in"), 100);
-            } else {
-              item.style.display = "none";
-            }
-          });
+        button.classList.remove('btn-outline-white');
+        button.classList.add('active', 'btn-cta'); // Highlight active
+
+        const filter = button.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+            item.classList.add('animate__animated', 'animate__fadeIn');
+          } else {
+            item.style.display = 'none';
+            item.classList.remove('animate__animated', 'animate__fadeIn');
+          }
         });
       });
+    });
 
-      // Lightbox functionality
-      const imageModal = new bootstrap.Modal(
-        document.getElementById("imageModal")
-      );
-      const lightboxImage = document.getElementById("lightboxImage");
-      const lightboxTitle = document.getElementById("lightboxTitle");
-      const lightboxDescription = document.getElementById(
-        "lightboxDescription"
-      );
+    // Set initial active state style
+    document.querySelector('.filter-btn.active').classList.remove('btn-outline-white');
+    document.querySelector('.filter-btn.active').classList.add('btn-cta');
 
-      galleryItems.forEach((item) => {
-        item.addEventListener("click", () => {
-          const img = item.querySelector(".gallery-image");
-          const title = item.querySelector("h3").textContent;
-          const description = item.querySelector("p").textContent;
+  </script>
+</body>
 
-          lightboxImage.src = img.src;
-          lightboxImage.alt = img.alt;
-          lightboxTitle.textContent = title;
-          lightboxDescription.textContent = description;
-
-          imageModal.show();
-        });
-      });
-
-      // Load more functionality — updated for 100 images
-      let currentItems = 100;
-
-      loadMoreBtn.addEventListener("click", () => {
-        loadingSpinner.style.display = "block";
-        loadMoreBtn.disabled = true;
-
-        setTimeout(() => {
-          loadingSpinner.style.display = "none";
-          loadMoreBtn.textContent = "All Images Loaded";
-          loadMoreBtn.disabled = true;
-          loadMoreBtn.classList.remove("btn-primary");
-          loadMoreBtn.classList.add("btn-secondary");
-        }, 1500);
-      });
-
-      // Scroll to top functionality
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 300) {
-          scrollToTop.classList.add("visible");
-        } else {
-          scrollToTop.classList.remove("visible");
-        }
-      });
-
-      scrollToTop.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      // Navbar scroll effect
-      window.addEventListener("scroll", () => {
-        const navbar = document.querySelector(".navbar");
-
-        if (window.scrollY > 100) {
-          navbar.style.padding = "0.5rem 0";
-          navbar.style.background = "rgba(255, 255, 255, 0.98)";
-        } else {
-          navbar.style.padding = "1rem 0";
-          navbar.style.background = "rgba(255, 255, 255, 0.98)";
-        }
-      });
-    </script>
-  </body>
 </html>
