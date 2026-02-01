@@ -1,14 +1,14 @@
 :root {
   /* Colors */
-  --gold: #5F73E4;
-  /* Primary Blue */
+  --gold: #26C6DA;
+  /* Primary Cyan */
   --gold-light: #58C8C7;
   /* Teal/Aqua (Freshness) */
-  --gold-dark: #3F51B5;
-  /* Darker Blue */
+  --gold-dark: #0097A7;
+  /* Darker Cyan */
 
   /* Brand Specifics */
-  --primary-blue: #5F73E4;
+  --primary-gold: #26C6DA;
   --teal: #58C8C7;
   --charcoal: #3C3C3C;
 
@@ -25,12 +25,15 @@
   /* Lighter gray for dark background */
   --glass: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(94, 115, 228, 0.2);
-  /* Blue tint border */
+  /* gold tint border */
   --overlay: rgba(0, 0, 0, 0.7);
 
   /* Typography */
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Manrope', 'Inter', sans-serif;
+  --font-heading: 'Playfair Display',
+    serif;
+  --font-body: 'Manrope',
+    'Inter',
+    sans-serif;
 
   /* Spacing */
   --section-padding: clamp(6rem, 10vw, 10rem);
@@ -70,7 +73,7 @@ body {
   color: var(--ink);
 }
 
-/* Custom Gold Scrollbar */
+/* Custom gold Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -139,7 +142,7 @@ img {
 
 /* Header Logo Size */
 .navbar-brand .logo-image {
-  max-height: 100px;
+  max-height: 120px;
   /* Increased from default */
   width: auto;
   object-fit: contain;
@@ -178,7 +181,7 @@ img {
 }
 
 .navbar-brand img {
-  height: 50px;
+  height: 90px;
   width: auto;
 }
 
@@ -190,8 +193,27 @@ img {
 }
 
 .navbar-light .nav-link {
-  color: var(--ink) !important;
-  font-weight: 700;
+  color: #000000 !important;
+  font-weight: 800;
+  /* Extra Bold for robustness */
+  font-size: 1.15rem;
+  /* Slightly larger */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: capitalize;
+}
+
+.navbar-light .nav-link i {
+  font-size: 1.4rem;
+  /* Large, robust icon */
+  color: #000000;
+  /* Solid Black */
+  min-width: 24px;
+  /* Uniform width */
+  text-align: center;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.1));
+  /* Subtle depth */
 }
 
 /* Dark Navbar (Luxury) */
@@ -234,7 +256,7 @@ img {
 .divider-gold {
   height: 3px;
   width: 60px;
-  background-color: var(--gold);
+  background-color: #0097A7;
   margin-bottom: 1.5rem;
 }
 
@@ -286,8 +308,8 @@ img {
 
 .gallery-card:hover {
   border-bottom: 3px solid var(--gold);
-  box-shadow: 0 10px 30px rgba(95, 115, 228, 0.15);
-  /* Gold glow */
+  box-shadow: 0 10px 30px rgba(38, 198, 218, 0.15);
+  /* gold glow */
 }
 
 .gallery-overlay {
@@ -486,15 +508,15 @@ p,
   background: var(--gold);
   color: var(--ink);
   border: 1px solid var(--gold);
-  box-shadow: 0 4px 15px rgba(95, 115, 228, 0.3);
-  /* Constant Gold Glow */
+  box-shadow: 0 4px 15px rgba(38, 198, 218, 0.3);
+  /* Constant gold Glow */
 }
 
 .btn-cta:hover {
   background: transparent;
   color: var(--gold);
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(95, 115, 228, 0.2);
+  box-shadow: 0 10px 20px rgba(38, 198, 218, 0.2);
 }
 
 .btn-outline {
@@ -686,7 +708,7 @@ p,
   cursor: pointer;
   opacity: 1;
   color: var(--gold);
-  filter: drop-shadow(0 0 5px rgba(95, 115, 228, 0.5));
+  filter: drop-shadow(0 0 5px rgba(38, 198, 218, 0.5));
 }
 
 .hero-scroll-indicator i {
@@ -802,7 +824,7 @@ p,
   justify-content: flex-end;
   padding: 2rem;
   border: 1px solid var(--gold);
-  /* Gold border on hover effect */
+  /* gold border on hover effect */
 }
 
 .gallery-item:hover .gallery-item-overlay {
@@ -880,8 +902,8 @@ p,
 .hero-btn {
   width: 60px;
   height: 60px;
-  border: 1px solid rgba(95, 115, 228, 0.4);
-  /* Gold subtle border */
+  border: 1px solid rgba(38, 198, 218, 0.4);
+  /* gold subtle border */
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.5);
   /* Darker distinctive background */
@@ -900,7 +922,7 @@ p,
   color: var(--ink);
   border-color: var(--gold);
   transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(95, 115, 228, 0.4);
+  box-shadow: 0 0 20px rgba(38, 198, 218, 0.4);
 }
 
 .hero-btn i {
@@ -940,8 +962,8 @@ p,
   transform: scale(1.1) !important;
   filter: brightness(1) saturate(1.1);
   opacity: 1;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(95, 115, 228, 0.5);
-  /* Gold outline */
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(38, 198, 218, 0.5);
+  /* gold outline */
   z-index: 10;
 }
 
@@ -984,7 +1006,7 @@ p,
 .swiper-button-prev:hover {
   background: var(--gold);
   color: var(--ink);
-  box-shadow: 0 0 20px rgba(95, 115, 228, 0.3);
+  box-shadow: 0 0 20px rgba(38, 198, 218, 0.3);
 }
 
 @media (min-width: 768px) {
@@ -1004,7 +1026,7 @@ p,
 
 .hover-lift:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(95, 115, 228, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(38, 198, 218, 0.2);
 }
 
 .opacity-10 {
@@ -1029,15 +1051,15 @@ p,
   height: 2px;
   background: linear-gradient(90deg,
       transparent 0%,
-      rgba(95, 115, 228, 0.6) 20%,
-      rgba(95, 115, 228, 1) 50%,
-      rgba(95, 115, 228, 0.6) 80%,
+      rgba(0, 151, 167, 0.6) 20%,
+      rgba(0, 151, 167, 1) 50%,
+      rgba(0, 151, 167, 0.6) 80%,
       transparent 100%);
   margin: 0;
   position: relative;
   opacity: 1;
   border: none;
-  box-shadow: 0 0 15px rgba(95, 115, 228, 0.3);
+  box-shadow: 0 0 15px rgba(0, 151, 167, 0.3);
 }
 
 .robust-divider::before {
@@ -1048,18 +1070,56 @@ p,
   transform: translate(-50%, -50%);
   width: 120px;
   height: 6px;
-  background: var(--gold);
-  box-shadow: 0 0 20px rgba(95, 115, 228, 0.8), 0 0 5px rgba(255, 255, 255, 0.5);
+  background: #0097A7;
+  box-shadow: 0 0 20px rgba(0, 151, 167, 0.8), 0 0 5px rgba(255, 255, 255, 0.5);
   border-radius: 50px;
-}/* Missing Utility Classes */
+}
+
+/* Missing Utility Classes */
 .bg-gold {
-    background-color: var(--gold) !important;
+  background-color: var(--gold) !important;
 }
 
 .border-gold {
-    border-color: var(--gold) !important;
+  border-color: var(--gold) !important;
 }
 
 .text-gold {
-    color: var(--gold) !important;
+  color: var(--gold) !important;
+}
+
+/* Footer Navigation Professional Layout */
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-nav li {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.footer-nav a i {
+  width: 20px;
+  text-align: center;
+  margin-right: 0.5rem;
+  color: var(--gold);
+}
+
+.footer-nav a:hover {
+  color: var(--white);
+  transform: translateX(5px);
 }

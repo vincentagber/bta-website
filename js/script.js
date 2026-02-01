@@ -121,7 +121,7 @@ function initMap() {
     center: location,
     styles: [
       { elementType: 'geometry', stylers: [{ color: '#080808' }] }, // Deep background
-      { elementType: 'labels.text.fill', stylers: [{ color: '#D4A017' }] }, // Gold Text
+      { elementType: 'labels.text.fill', stylers: [{ color: '#D4A017' }] }, // gold Text
       { elementType: 'labels.text.stroke', stylers: [{ color: '#000000' }] }, // Black Stroke
       { featureType: 'administrative', elementType: 'geometry.stroke', stylers: [{ color: '#D4A017' }] },
       { featureType: 'administrative.land_parcel', elementType: 'geometry.stroke', stylers: [{ color: '#D4A017' }] },
