@@ -1206,37 +1206,50 @@ p,
   color: var(--white);
   transform: translateX(5px);
 }
+
 /* ========== Navigation Enhancements ========== */
 .navbar-nav .nav-link {
-    color: #333 !important; /* Ensure readable dark color */
-    font-weight: 600;
-    position: relative;
-    transition: all 0.3s ease;
+  color: #333 !important;
+  /* Base color */
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding-bottom: 5px;
+  /* Space for underline */
 }
 
+/* Hover State */
 .navbar-nav .nav-link:hover {
-    color: var(--gold) !important;
-    transform: translateY(-2px);
+  color: var(--gold) !important;
+  transform: translateY(-2px);
+  text-shadow: 0 0 15px rgba(212, 160, 23, 0.3);
+  /* Subtle premium glow */
 }
 
+/* Active State */
 .navbar-nav .nav-link.active {
-    color: var(--gold) !important;
+  color: var(--gold) !important;
+  text-shadow: 0 0 10px rgba(212, 160, 23, 0.2);
 }
 
 /* Animated Underline */
 .navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%; /* Start from center */
-    background-color: var(--gold);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  /* Gradient underline */
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s ease;
+  /* Smooth expansion */
+  transform: translateX(-50%);
+  opacity: 0;
 }
 
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link.active::after {
-    width: 80%; /* Don't span full width to differentiate slightly */
+  width: 100%;
+  opacity: 1;
 }
