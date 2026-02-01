@@ -310,7 +310,9 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Africa Broadcasting Academy. All rights reserved. | Developed by <a class="text-decoration-none fw-semibold" href="https://vincentagber.vercel.app/" target="_blank" rel="noopener" style="color: var(--gold);">Vincent Agber</a></p>
+                <p>&copy; 2025 Africa Broadcasting Academy. All rights reserved. | Developed by <a
+                        class="text-decoration-none fw-semibold" href="https://vincentagber.vercel.app/" target="_blank"
+                        rel="noopener" style="color: var(--gold);">Vincent Agber</a></p>
             </div>
         </div>
     </footer>
@@ -334,6 +336,12 @@
                     form.classList.add('was-validated')
                 }, false)
             })
+
+            // Check for error parameter from PHP redirection
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('error') === 'failed') {
+                alert("Submission failed. Please try again or contact us directly.");
+            }
         })()
     </script>
 </body>

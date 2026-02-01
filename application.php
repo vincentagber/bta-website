@@ -114,7 +114,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // --- EMAIL 2: APPLICANT AUTO-REPLY ---
         $mail->clearAddresses();
+        $mail->clearReplyTos(); // Critical: Ensure user doesn't reply to themselves
+        
         $mail->addAddress($email, $fullName);
+        $mail->addReplyTo('info@africabroadcastingacademy.com', 'African Broadcasting Academy');
+        
         $mail->Subject = "🎬 Application Secured - Africa Broadcasting Academy";
         
         $mail->Body = "
