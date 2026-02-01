@@ -140,12 +140,13 @@ img {
   display: block;
 }
 
-/* Header Logo Size */
+/* Header Logo */
 .navbar-brand .logo-image {
-  max-height: 120px;
-  /* Increased from default */
+  height: 60px;
+  /* Perfect premium size */
   width: auto;
   object-fit: contain;
+  max-width: 100%;
 }
 
 /* Only force text color for generic text containers, NOT navbar links which are handled separately due to white header */
@@ -186,7 +187,7 @@ img {
   transition: height 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
   .navbar-brand img {
     height: 40px;
   }
@@ -194,9 +195,56 @@ img {
   .navbar {
     padding: 0.5rem 0;
   }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 1050;
+    transition: left 0.3s ease-in-out;
+    padding: 2rem 1.5rem;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    display: block !important;
+    /* Override Bootstrap collapsible  */
+    overflow-y: auto;
+  }
+
+  .navbar-collapse.show {
+    left: 0;
+  }
+
+  /* Overlay backdrop */
+  .navbar-toggler[aria-expanded="true"]::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    pointer-events: none;
+    animation: fadeIn 0.3s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      pointer-events: auto;
+    }
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+  }
 }
 
-/* Light Navbar (Default) */
+/* Light Navbar  */
 .navbar-light,
 .navbar.bg-white {
   background-color: #ffffff !important;
@@ -206,7 +254,7 @@ img {
 .navbar-light .nav-link {
   color: #000000 !important;
   font-weight: 800;
-  /* Extra Bold for robustness */
+  /* Extra Bold*/
   font-size: 1.15rem;
   /* Slightly larger */
   display: flex;
