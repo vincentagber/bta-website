@@ -1206,3 +1206,37 @@ p,
   color: var(--white);
   transform: translateX(5px);
 }
+/* ========== Navigation Enhancements ========== */
+.navbar-nav .nav-link {
+    color: #333 !important; /* Ensure readable dark color */
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--gold) !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--gold) !important;
+}
+
+/* Animated Underline */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%; /* Start from center */
+    background-color: var(--gold);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 80%; /* Don't span full width to differentiate slightly */
+}
