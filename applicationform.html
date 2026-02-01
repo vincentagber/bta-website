@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Application Form - Africa Broadcasting Academy</title>
+    <meta property="og:title" content="Application Form - Africa Broadcasting Academy">
+    <meta property="og:description"
+        content="Apply now to Africa Broadcasting Academy and start your journey in professional broadcasting and media.">
+    <meta property="og:image" content="https://africabroadcastingacademy.com/assets/images/logo.png">
+    <meta property="og:url" content="https://africabroadcastingacademy.com/applicationform.html">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="assets/images/logo.png">
 
     <!-- Google Fonts -->
@@ -113,6 +119,8 @@
                     <div class="bg-ink-light p-4 p-md-5 rounded-4 border border-secondary shadow-lg" data-aos="fade-up">
                         <form action="application.php" enctype="multipart/form-data" method="POST"
                             class="needs-validation" novalidate>
+                            <!-- Security Honeypot (Hidden from users, visible to bots) -->
+                            <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
 
                             <!-- Section 1 -->
                             <h3 class="text-gold mb-4 border-bottom border-secondary pb-2">1. Personal Information</h3>
@@ -342,6 +350,20 @@
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('error') === 'failed') {
                 alert("Submission failed. Please try again or contact us directly.");
+            }
+
+            // Pre-select course based on URL parameter
+            const courseParam = urlParams.get('course');
+            if (courseParam) {
+                // Find the checkbox with the value matching the parameter
+                // We decode URI component to handle spaces (e.g., "Broadcast Journalism")
+                const courseValue = decodeURIComponent(courseParam);
+                const checkbox = document.querySelector(`input[name="courses[]"][value="${courseValue}"]`);
+                if (checkbox) {
+                    checkbox.checked = true;
+                    // Optional: Scroll to the course section
+                    checkbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             }
         })()
     </script>
