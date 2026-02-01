@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sliderContainer = document.getElementById('heroSlider');
     if (!sliderContainer) return;
 
-    // Use all 10 images concept (repeating for now as placeholders)
+    // Use all 9 images concept (repeating for now as placeholders)
     const slides = [
       'assets/images/bootcamp/CTPR7088.jpg',
       'assets/images/bootcamp/CTPR7664.jpg',
@@ -243,9 +243,6 @@ document.addEventListener('DOMContentLoaded', () => {
       'assets/images/bootcamp/CTPR7857.jpg',
       'assets/images/bootcamp/IMG_3104.JPG',
       'assets/images/bootcamp/IMG_3099.JPG',
-      'assets/images/hero.jpg',
-      'assets/images/training.jpg',
-      'assets/images/camp.jpg',
       'assets/images/bootcamp/IMG_3092.JPG',
       'assets/images/bootcamp/IMG_3107.JPG'
     ];
