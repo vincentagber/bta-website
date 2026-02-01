@@ -236,6 +236,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Use all 10 images concept (repeating for now as placeholders)
     const slides = [
+      'assets/images/bootcamp/CTPR7088.jpg',
+      'assets/images/bootcamp/CTPR7664.jpg',
+      'assets/images/bootcamp/CTPR7782.jpg',
+      'assets/images/bootcamp/CTPR7793.jpg',
+      'assets/images/bootcamp/CTPR7857.jpg',
       'assets/images/bootcamp/IMG_3104.JPG',
       'assets/images/bootcamp/IMG_3099.JPG',
       'assets/images/hero.jpg',
