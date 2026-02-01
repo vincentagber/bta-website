@@ -181,8 +181,19 @@ img {
 }
 
 .navbar-brand img {
-  height: 90px;
+  height: 56px;
   width: auto;
+  transition: height 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 40px;
+  }
+
+  .navbar {
+    padding: 0.5rem 0;
+  }
 }
 
 /* Light Navbar (Default) */
@@ -548,11 +559,7 @@ p,
   background: var(--ink-lighter);
 }
 
-/* Navbar */
-.navbar-brand img {
-  height: 50px;
-  width: auto;
-}
+
 
 /* Mobile button responsiveness improvements */
 @media (max-width: 767.98px) {
