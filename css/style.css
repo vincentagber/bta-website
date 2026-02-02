@@ -1294,3 +1294,26 @@ p,
 .form-floating>.form-control:focus::placeholder {
   color: transparent !important;
 }
+
+/* Fix Floating Labels Background & Color for Dark Mode */
+.form-floating>label {
+  background-color: transparent !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label {
+  color: var(--gold) !important;
+  background-color: transparent !important;
+  opacity: 1;
+}
+
+/* Fix Autocomplete/Autofill White Background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--ink-light) inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
