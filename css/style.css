@@ -1253,3 +1253,44 @@ p,
   width: 100%;
   opacity: 1;
 }
+
+/* Fix for Floating Labels: Ensure placeholder is hidden */
+.form-floating>.form-control::-webkit-input-placeholder {
+  color: transparent !important;
+}
+
+.form-floating>.form-control::-moz-placeholder {
+  color: transparent !important;
+}
+
+.form-floating>.form-control:-ms-input-placeholder {
+  color: transparent !important;
+}
+
+.form-floating>.form-control::-ms-input-placeholder {
+  color: transparent !important;
+}
+
+.form-floating>.form-control::placeholder {
+  color: transparent !important;
+}
+
+.form-floating>.form-control:focus::-webkit-input-placeholder {
+  color: transparent !important;
+}
+
+.form-floating>.form-control:focus::-moz-placeholder {
+  color: transparent !important;
+}
+
+.form-floating>.form-control:focus:-ms-input-placeholder {
+  color: transparent !important;
+}
+
+.form-floating>.form-control:focus::-ms-input-placeholder {
+  color: transparent !important;
+}
+
+.form-floating>.form-control:focus::placeholder {
+  color: transparent !important;
+}
