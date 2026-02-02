@@ -1317,3 +1317,61 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: white !important;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+/* --- Live Page Styles --- */
+
+/* Pulsing Dot Animation */
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #dc3545;
+  /* Bootstrap danger red */
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(220, 53, 69, 0.7);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+/* Hover Scale Utility */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+}
+
+/* Chat Interface Scrollbar */
+#chat-scroller::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chat-scroller::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#chat-scroller::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+#chat-scroller::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.hover-gold:hover {
+  color: var(--gold) !important;
+}
