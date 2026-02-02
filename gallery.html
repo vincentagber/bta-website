@@ -22,7 +22,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Flag Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
@@ -90,7 +90,7 @@
 
   <!-- Premium Hero Section -->
   <section class="premium-hero">
-    <div class="hero-premium-bg" style="background-image: url('assets/images/African storytellers.jpg');"></div>
+    <div class="hero-premium-bg" style="background-image: url('assets/images/Storieslagacy.jpg');"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-glass-card" data-aos="fade-up">
@@ -114,7 +114,7 @@
       <div class="d-flex justify-content-center flex-wrap gap-2">
         <button class="btn btn-outline-white btn-sm active filter-btn" data-filter="all">All</button>
         <button class="btn btn-outline-white btn-sm filter-btn" data-filter="bootcamp">Bootcamp</button>
-        <button class="btn btn-outline-white btn-sm filter-btn" data-filter="training">Training</button>
+        <button class="btn btn-outline-white btn-sm filter-btn" data-filter="training">Previous Trainings</button>
       </div>
     </div>
   </section>
@@ -144,6 +144,16 @@
           </a>
           <p class="text-white">Empowering Africa's future through innovation, leadership, and education. We are
             reclaiming the narrative, one story at a time.</p>
+          <div class="social-links-premium mt-4">
+            <a href="https://facebook.com/africabroadcastingacademy" class="social-icon-wrapper facebook"
+              target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/africabroadcastingacademy" class="social-icon-wrapper instagram"
+              target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/aba_academy" class="social-icon-wrapper twitter" target="_blank"><i
+                class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://youtube.com/@AfricaBroadcastingAcademy" class="social-icon-wrapper youtube"
+              target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
         <div class="col-lg-2 col-6">
           <h5 class="text-white mb-4">Quick Links</h5>
@@ -160,7 +170,7 @@
             <li><a href="applicationform.html"><i class="fas fa-paper-plane me-1"></i> Apply</a></li>
             <li><a href="sponsor.html"><i class="fas fa-hand-holding-heart me-1"></i> Sponsor</a></li>
             <li><a href="stories.html"><i class="fas fa-book-open me-1"></i> Stories</a></li>
-                        <li><a href="live.html"><i class="fas fa-broadcast-tower me-1"></i> Live</a></li>
+            <li><a href="live.html"><i class="fas fa-broadcast-tower me-1"></i> Live</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
@@ -245,23 +255,15 @@
       const overlay = document.createElement('div');
       overlay.className = 'gallery-item-overlay';
 
+      const icon = document.createElement('i');
+      icon.className = 'fas fa-expand-alt fa-2x text-white mb-2';
+
       const span = document.createElement('span');
       span.className = 'gallery-category';
       span.textContent = category.charAt(0).toUpperCase() + category.slice(1);
 
-      const h4 = document.createElement('h4');
-      h4.className = 'gallery-title';
-      h4.textContent = title;
-
+      overlay.appendChild(icon);
       overlay.appendChild(span);
-      overlay.appendChild(h4);
-
-      if (desc) {
-        const p = document.createElement('p');
-        p.className = 'gallery-desc';
-        p.textContent = desc;
-        overlay.appendChild(p);
-      }
 
       item.appendChild(img);
       item.appendChild(overlay);
@@ -342,10 +344,8 @@
     lightbox.className = 'lightbox';
     lightbox.innerHTML = `
         <div class="lightbox-content">
-          <div><img class="lightbox-img" src="" alt=""></div>
-          <div class="lightbox-meta">
-            <h3 class="lightbox-title"></h3>
-            <p class="lightbox-desc"></p>
+          <div class="lightbox-img-container">
+            <img class="lightbox-img" src="" alt="">
             <div class="lightbox-controls">
               <button class="btn btn-sm btn-outline-light me-2 lightbox-prev"><i class="fas fa-arrow-left"></i></button>
               <button class="btn btn-sm btn-outline-light me-2 lightbox-next"><i class="fas fa-arrow-right"></i></button>
@@ -356,8 +356,6 @@
     document.body.appendChild(lightbox);
 
     const lbImg = lightbox.querySelector('.lightbox-img');
-    const lbTitle = lightbox.querySelector('.lightbox-title');
-    const lbDesc = lightbox.querySelector('.lightbox-desc');
     let currentLightboxIndex = -1;
 
     function openLightbox(index) {
@@ -374,8 +372,6 @@
 
     function updateLightboxContent(item) {
       lbImg.src = item.src;
-      lbTitle.textContent = item.title;
-      lbDesc.textContent = item.desc;
     }
 
     function findNextItemIndex(currentIndex, direction) {
