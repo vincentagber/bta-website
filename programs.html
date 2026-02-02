@@ -222,7 +222,7 @@
                             <a href="applicationform.html?course=Digital%20Video%20Editing"
                                 class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
                             <a href="#" class="btn btn-sm btn-link text-white-50 text-decoration-none"
-                                onclick="alert('Curriculum download coming soon!'); return false;"><i
+                                data-bs-toggle="modal" data-bs-target="#curriculumModal"><i
                                     class="fas fa-file-pdf me-1"></i> Download Curriculum</a>
                         </div>
                     </div>
@@ -248,7 +248,7 @@
                             <a href="applicationform.html?course=Presenting"
                                 class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
                             <a href="#" class="btn btn-sm btn-link text-white-50 text-decoration-none"
-                                onclick="alert('Curriculum download coming soon!'); return false;"><i
+                                data-bs-toggle="modal" data-bs-target="#curriculumModal"><i
                                     class="fas fa-file-pdf me-1"></i> Download Curriculum</a>
                         </div>
                     </div>
@@ -274,7 +274,7 @@
                             <a href="applicationform.html?course=Documentary%20Filmmaking"
                                 class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
                             <a href="#" class="btn btn-sm btn-link text-white-50 text-decoration-none"
-                                onclick="alert('Curriculum download coming soon!'); return false;"><i
+                                data-bs-toggle="modal" data-bs-target="#curriculumModal"><i
                                     class="fas fa-file-pdf me-1"></i> Download Curriculum</a>
                         </div>
                     </div>
@@ -300,7 +300,7 @@
                             <a href="applicationform.html?course=Presenting"
                                 class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
                             <a href="#" class="btn btn-sm btn-link text-white-50 text-decoration-none"
-                                onclick="alert('Curriculum download coming soon!'); return false;"><i
+                                data-bs-toggle="modal" data-bs-target="#curriculumModal"><i
                                     class="fas fa-file-pdf me-1"></i> Download Curriculum</a>
                         </div>
                     </div>
@@ -336,7 +336,7 @@
                             <a href="applicationform.html?course=Content%20Creation"
                                 class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
                             <a href="#" class="btn btn-sm btn-link text-white-50 text-decoration-none"
-                                onclick="alert('Curriculum download coming soon!'); return false;"><i
+                                data-bs-toggle="modal" data-bs-target="#curriculumModal"><i
                                     class="fas fa-file-pdf me-1"></i> Download Curriculum</a>
                         </div>
                     </div>
@@ -362,7 +362,7 @@
                             <a href="applicationform.html?course=TV%20Directing"
                                 class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
                             <a href="#" class="btn btn-sm btn-link text-white-50 text-decoration-none"
-                                onclick="alert('Curriculum download coming soon!'); return false;"><i
+                                data-bs-toggle="modal" data-bs-target="#curriculumModal"><i
                                     class="fas fa-file-pdf me-1"></i> Download Curriculum</a>
                         </div>
                     </div>
@@ -388,7 +388,7 @@
                             <a href="applicationform.html?course=Media%20Entrepreneurship"
                                 class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
                             <a href="#" class="btn btn-sm btn-link text-white-50 text-decoration-none"
-                                onclick="alert('Curriculum download coming soon!'); return false;"><i
+                                data-bs-toggle="modal" data-bs-target="#curriculumModal"><i
                                     class="fas fa-file-pdf me-1"></i> Download Curriculum</a>
                         </div>
                     </div>
@@ -414,7 +414,7 @@
                             <a href="applicationform.html?course=Media%2 Law"
                                 class="btn btn-outline-white btn-sm w-100">Enroll Now</a>
                             <a href="#" class="btn btn-sm btn-link text-white-50 text-decoration-none"
-                                onclick="alert('Curriculum download coming soon!'); return false;"><i
+                                data-bs-toggle="modal" data-bs-target="#curriculumModal"><i
                                     class="fas fa-file-pdf me-1"></i> Download Curriculum</a>
                         </div>
                     </div>
@@ -521,24 +521,61 @@
     <!-- Curriculum Modal -->
     <div class="modal fade" id="curriculumModal" tabindex="-1" aria-labelledby="curriculumModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-ink border border-secondary">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title text-white" id="curriculumModalLabel">Curriculum Download</h5>
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 bg-ink overflow-hidden"
+                style="border: 1px solid rgba(255, 215, 0, 0.2) !important; box-shadow: 0 0 40px rgba(0,0,0,0.8);">
+                <!-- Decorative background elements -->
+                <div class="position-absolute top-0 end-0 p-5 opacity-10">
+                    <i class="fas fa-broadcast-tower fa-10x text-white"></i>
+                </div>
+
+                <div class="modal-header border-0 pb-0 position-relative z-1">
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-                <div class="modal-body text-center py-5">
-                    <i class="fas fa-tools fa-3x text-gold mb-3"></i>
-                    <h4 class="text-white mb-3">Curriculum Under Review</h4>
-                    <p class="text-white-50">We are currently updating our course syllabus to match the latest industry
-                        standards for 2026. The new curriculum PDF will be available for download shortly.</p>
-                    <p class="text-white small">Please contact <a href="mailto:admissions@africabroadcastingacademy.com"
-                            class="text-gold">admissions@africabroadcastingacademy.com</a> for immediate inquiries.</p>
-                </div>
-                <div class="modal-footer border-secondary">
-                    <button type="button" class="btn btn-outline-light btn-sm" data-bs-dismiss="modal">Close</button>
-                    <a href="contact.html" class="btn btn-cta btn-sm">Contact Us</a>
+                <div class="modal-body text-center p-5 position-relative z-1">
+                    <div class="mb-4">
+                        <div class="d-inline-flex align-items-center justify-content-center border border-gold rounded-circle bg-black shadow-lg"
+                            style="width: 80px; height: 80px;">
+                            <i class="fas fa-book-reader fa-2x text-gold"></i>
+                        </div>
+                    </div>
+                    <h3 class="modal-title font-serif text-white mb-3 fw-bold" id="curriculumModalLabel">2026 Curriculum
+                        Update</h3>
+                    <div class="divider-gold mx-auto mb-4" style="width: 60px;"></div>
+                    <p class="text-white-50 lead mb-5 px-lg-5">
+                        We are currently refining our syllabus to ensure it meets the highest global broadcasting
+                        standards. The comprehensive 2026 curriculum will be released shortly.
+                    </p>
+
+                    <div class="p-4 rounded-4 mb-5 text-start border border-secondary"
+                        style="background: rgba(255, 255, 255, 0.03);">
+                        <h5 class="text-gold h6 text-uppercase letter-spacing-2 mb-4 text-center">In This Update</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6 d-flex align-items-center">
+                                <i class="fas fa-check-circle text-gold me-3"></i>
+                                <span class="text-white small">Extended Practical Modules</span>
+                            </div>
+                            <div class="col-md-6 d-flex align-items-center">
+                                <i class="fas fa-check-circle text-gold me-3"></i>
+                                <span class="text-white small">New Industry Partnerships</span>
+                            </div>
+                            <div class="col-md-6 d-flex align-items-center">
+                                <i class="fas fa-check-circle text-gold me-3"></i>
+                                <span class="text-white small">Advanced Digital Tools Training</span>
+                            </div>
+                            <div class="col-md-6 d-flex align-items-center">
+                                <i class="fas fa-check-circle text-gold me-3"></i>
+                                <span class="text-white small">Direct Career Placement Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-3 d-sm-flex justify-content-center">
+                        <a href="contact.html" class="btn btn-cta px-5 py-3 fw-bold">Contact For Early Access</a>
+                        <button type="button" class="btn btn-outline-light px-5 py-3" data-bs-dismiss="modal">Close
+                            Window</button>
+                    </div>
                 </div>
             </div>
         </div>
