@@ -225,8 +225,27 @@
     // Training Images (Generated 1-300 + specific named files if any)
     const trainingFiles = [];
     const trainingCount = 318; // Based on file list
+    const excludedTraining = [
+      'training-7.jpg', 'training-15.jpg', 'training-36.jpg', 'training-45.jpg', 'training-51.jpg',
+      'training-52.jpg', 'training-58.jpg', 'training-63.jpg', 'training-65.jpg', 'training-73.jpg',
+      'training-74.jpg', 'training-75.jpg', 'training-77.jpg', 'training-79.jpg', 'training-89.jpg',
+      'training-103.jpg', 'training-114.jpg', 'training-118.jpg', 'training-120.jpg', 'training-128.jpg',
+      'training-130.jpg', 'training-131.jpg', 'training-141.jpg', 'training-143.jpg', 'training-147.jpg',
+      'training-148.jpg', 'training-152.jpg', 'training-153.jpg', 'training-163.jpg', 'training-175.jpg',
+      'training-176.jpg', 'training-185.jpg', 'training-193.jpg', 'training-197.jpg', 'training-199.jpg',
+      'training-201.jpg', 'training-206.jpg', 'training-213.jpg', 'training-215.jpg', 'training-217.jpg',
+      'training-218.jpg', 'training-220.jpg', 'training-222.jpg', 'training-225.jpg', 'training-227.jpg',
+      'training-231.jpg', 'training-232.jpg', 'training-241.jpg', 'training-247.jpg', 'training-261.jpg',
+      'training-263.jpg', 'training-264.jpg', 'training-266.jpg', 'training-272.jpg', 'training-274.jpg',
+      'training-282.jpg', 'training-288.jpg', 'training-293.jpg', 'training-294.jpg', 'training-305.jpg',
+      'training-311.jpg'
+    ];
+
     for (let i = 1; i <= trainingCount; i++) {
-      trainingFiles.push(`training-${i}.jpg`);
+      const fname = `training-${i}.jpg`;
+      if (!excludedTraining.includes(fname)) {
+        trainingFiles.push(fname);
+      }
     }
 
     // --- DOM Elements ---
