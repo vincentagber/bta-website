@@ -432,5 +432,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- Magnetic Glow Effect for Nexus Cards ---
+  const nexusCards = document.querySelectorAll('.nexus-stat-card');
+  nexusCards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--x', `${x}%`);
+      card.style.setProperty('--y', `${y}%`);
+    });
+  });
 });
 

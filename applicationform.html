@@ -112,91 +112,99 @@
     </section>
 
     <!-- Application Form Section -->
-    <section class="section-padding bg-ink">
+    <section class="section-padding bg-white">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="bg-ink-light p-4 p-md-5 rounded-4 border border-secondary shadow-lg" data-aos="fade-up">
+                    <div class="bg-white p-4 p-md-5 rounded-4 border shadow-lg" data-aos="fade-up">
                         <form action="application.php" enctype="multipart/form-data" method="POST"
                             class="needs-validation" novalidate>
                             <!-- Security Honeypot (Hidden from users, visible to bots) -->
                             <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
 
                             <!-- Section 1 -->
-                            <h3 class="text-gold mb-4 border-bottom border-secondary pb-2">1. Personal Information</h3>
+                            <h3 class="text-gold mb-4 border-bottom border-secondary-subtle pb-2">1. Personal
+                                Information</h3>
                             <div class="row g-4 mb-5">
                                 <div class="col-md-6">
-                                    <label class="form-label text-white">Full Name</label>
-                                    <input type="text" class="form-control bg-transparent text-white border-secondary"
+                                    <label class="form-label text-dark-theme">Full Name</label>
+                                    <input type="text"
+                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
                                         name="fullName" required placeholder="John Doe">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-white">Date of Birth</label>
-                                    <input type="date" class="form-control bg-transparent text-white border-secondary"
-                                        name="dob" required>
+                                    <label class="form-label text-dark-theme">Date of Birth</label>
+                                    <input type="date"
+                                        class="form-control bg-light text-dark-theme border-secondary-subtle" name="dob"
+                                        required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-white">Gender</label>
-                                    <select class="form-select bg-transparent text-white border-secondary" name="gender"
-                                        required>
+                                    <label class="form-label text-dark-theme">Gender</label>
+                                    <select class="form-select bg-light text-dark-theme border-secondary-subtle"
+                                        name="gender" required>
                                         <option value="" class="text-black">Select...</option>
                                         <option value="Female" class="text-black">Female</option>
                                         <option value="Male" class="text-black">Male</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-white">Nationality</label>
-                                    <input type="text" class="form-control bg-transparent text-white border-secondary"
+                                    <label class="form-label text-dark-theme">Nationality</label>
+                                    <input type="text"
+                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
                                         name="nationality" required placeholder="Select Country">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-white">Phone Number</label>
-                                    <input type="tel" class="form-control bg-transparent text-white border-secondary"
+                                    <label class="form-label text-dark-theme">Phone Number</label>
+                                    <input type="tel"
+                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
                                         name="phone" required placeholder="+234...">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-white">Email Address</label>
-                                    <input type="email" class="form-control bg-transparent text-white border-secondary"
+                                    <label class="form-label text-dark-theme">Email Address</label>
+                                    <input type="email"
+                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
                                         name="email" required placeholder="name@example.com">
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label text-white">Residential Address</label>
-                                    <input type="text" class="form-control bg-transparent text-white border-secondary"
+                                    <label class="form-label text-dark-theme">Residential Address</label>
+                                    <input type="text"
+                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
                                         name="address" required placeholder="Full address">
                                 </div>
                             </div>
 
                             <!-- Section 2 -->
-                            <h3 class="text-gold mb-4 border-bottom border-secondary pb-2">2. Course Selection</h3>
+                            <h3 class="text-gold mb-4 border-bottom border-secondary-subtle pb-2">2. Course Selection
+                            </h3>
                             <div class="row g-3 mb-5">
                                 <div class="col-12">
-                                    <p class="text-muted mb-3">Please select the courses you are interested in:</p>
+                                    <p class="text-soft-theme mb-3">Please select the courses you are interested in:</p>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-check mb-2">
                                                 <input class="form-check-input bg-transparent border-gold"
                                                     type="checkbox" name="courses[]" value="Digital Video Editing"
                                                     id="c1">
-                                                <label class="form-check-label text-white" for="c1">Digital Video
+                                                <label class="form-check-label text-dark-theme" for="c1">Digital Video
                                                     Editing</label>
                                             </div>
                                             <div class="form-check mb-2">
                                                 <input class="form-check-input bg-transparent border-gold"
                                                     type="checkbox" name="courses[]" value="Visual Storytelling"
                                                     id="c2">
-                                                <label class="form-check-label text-white" for="c2">Visual
+                                                <label class="form-check-label text-dark-theme" for="c2">Visual
                                                     Storytelling</label>
                                             </div>
                                             <div class="form-check mb-2">
                                                 <input class="form-check-input bg-transparent border-gold"
                                                     type="checkbox" name="courses[]" value="Video Journalism" id="c3">
-                                                <label class="form-check-label text-white" for="c3">Video
+                                                <label class="form-check-label text-dark-theme" for="c3">Video
                                                     Journalism</label>
                                             </div>
                                             <div class="form-check mb-2">
                                                 <input class="form-check-input bg-transparent border-gold"
                                                     type="checkbox" name="courses[]" value="Cinematography" id="c4">
-                                                <label class="form-check-label text-white"
+                                                <label class="form-check-label text-dark-theme"
                                                     for="c4">Cinematography</label>
                                             </div>
                                         </div>
@@ -204,25 +212,26 @@
                                             <div class="form-check mb-2">
                                                 <input class="form-check-input bg-transparent border-gold"
                                                     type="checkbox" name="courses[]" value="Presenting" id="c5">
-                                                <label class="form-check-label text-white" for="c5">Presenting</label>
+                                                <label class="form-check-label text-dark-theme"
+                                                    for="c5">Presenting</label>
                                             </div>
                                             <div class="form-check mb-2">
                                                 <input class="form-check-input bg-transparent border-gold"
                                                     type="checkbox" name="courses[]" value="Script Writing" id="c6">
-                                                <label class="form-check-label text-white" for="c6">Script
+                                                <label class="form-check-label text-dark-theme" for="c6">Script
                                                     Writing</label>
                                             </div>
                                             <div class="form-check mb-2">
                                                 <input class="form-check-input bg-transparent border-gold"
                                                     type="checkbox" name="courses[]" value="Documentary Filmmaking"
                                                     id="c7">
-                                                <label class="form-check-label text-white" for="c7">Documentary
+                                                <label class="form-check-label text-dark-theme" for="c7">Documentary
                                                     Filmmaking</label>
                                             </div>
                                             <div class="form-check mb-2">
                                                 <input class="form-check-input bg-transparent border-gold"
                                                     type="checkbox" name="courses[]" value="Content Creation" id="c8">
-                                                <label class="form-check-label text-white" for="c8">Digital Content
+                                                <label class="form-check-label text-dark-theme" for="c8">Digital Content
                                                     Creation</label>
                                             </div>
                                         </div>
@@ -231,30 +240,33 @@
                             </div>
 
                             <!-- Section 3 -->
-                            <h3 class="text-gold mb-4 border-bottom border-secondary pb-2">3. About You</h3>
+                            <h3 class="text-gold mb-4 border-bottom border-secondary-subtle pb-2">3. About You</h3>
                             <div class="mb-5">
-                                <label class="form-label text-white">Tell us about yourself (max 150 words)</label>
-                                <textarea class="form-control bg-transparent text-white border-secondary"
+                                <label class="form-label text-dark-theme">Tell us about yourself (max 150 words)</label>
+                                <textarea class="form-control bg-light text-dark-theme border-secondary-subtle"
                                     name="aboutYou" rows="4" required></textarea>
                             </div>
 
                             <!-- Section 4 -->
-                            <h3 class="text-gold mb-4 border-bottom border-secondary pb-2">4. Experience & Education
+                            <h3 class="text-gold mb-4 border-bottom border-secondary-subtle pb-2">4. Experience &
+                                Education
                             </h3>
                             <div class="row g-4 mb-5">
                                 <div class="col-12">
-                                    <label class="form-label text-white">Media Experience (if any)</label>
-                                    <textarea class="form-control bg-transparent text-white border-secondary"
+                                    <label class="form-label text-dark-theme">Media Experience (if any)</label>
+                                    <textarea class="form-control bg-light text-dark-theme border-secondary-subtle"
                                         name="mediaExp" rows="3"></textarea>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-white">Highest Education Level</label>
-                                    <input type="text" class="form-control bg-transparent text-white border-secondary"
+                                    <label class="form-label text-dark-theme">Highest Education Level</label>
+                                    <input type="text"
+                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
                                         name="educationLevel" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-white">Field of Study</label>
-                                    <input type="text" class="form-control bg-transparent text-white border-secondary"
+                                    <label class="form-label text-dark-theme">Field of Study</label>
+                                    <input type="text"
+                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
                                         name="fieldOfStudy">
                                 </div>
                             </div>
@@ -262,7 +274,7 @@
                             <div class="form-check mb-5">
                                 <input class="form-check-input bg-transparent border-gold" type="checkbox" required
                                     id="declaration">
-                                <label class="form-check-label text-muted" for="declaration">
+                                <label class="form-check-label text-soft-theme" for="declaration">
                                     I hereby declare that the information provided is true and correct.
                                 </label>
                             </div>
@@ -297,7 +309,7 @@
                                 class="fa-brands fa-x-twitter"></i></a>
                         <a href="https://youtube.com/@AfricaBroadcastingAcademy" class="social-icon-wrapper youtube"
                             target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://linkedin.com/company/africabroadcastingacademy"
+                        <a href="https://www.linkedin.com/posts/africa-broadcasting-academy_visualstorytelling-camerawork-contentcreation-activity-7426521831530164225-wKxm?utm_source=chatgpt.com"
                             class="social-icon-wrapper linkedin" target="_blank"><i
                                 class="fa-brands fa-linkedin-in"></i></a>
                     </div>
@@ -324,7 +336,7 @@
                     <h5 class="text-white mb-4">Newsletter</h5>
                     <form class="mt-3">
                         <div class="input-group">
-                            <input type="email" class="form-control bg-transparent border-secondary text-white"
+                            <input type="email" class="form-control bg-white border-secondary text-dark-theme"
                                 placeholder="Email Address">
                             <button class="btn btn-cta" type="button">Subscribe</button>
                         </div>

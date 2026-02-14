@@ -109,25 +109,25 @@
   </section>
 
   <!-- Gallery Controls (training + bootcamp only) -->
-  <section class="bg-ink-light py-4 border-bottom border-secondary sticky-top" style="top: 76px; z-index: 900;">
+  <section class="bg-off-white py-4 border-bottom border-secondary-subtle sticky-top" style="top: 76px; z-index: 900;">
     <div class="container">
       <div class="d-flex justify-content-center flex-wrap gap-2">
-        <button class="btn btn-outline-white btn-sm active filter-btn" data-filter="all">All</button>
-        <button class="btn btn-outline-white btn-sm filter-btn" data-filter="bootcamp">Bootcamp</button>
-        <button class="btn btn-outline-white btn-sm filter-btn" data-filter="training">Previous Trainings</button>
+        <button class="btn btn-outline-dark btn-sm active filter-btn" data-filter="all">All</button>
+        <button class="btn btn-outline-dark btn-sm filter-btn" data-filter="bootcamp">Bootcamp</button>
+        <button class="btn btn-outline-dark btn-sm filter-btn" data-filter="training">Previous Trainings</button>
       </div>
     </div>
   </section>
 
   <!-- Gallery Grid -->
-  <section class="section-padding bg-ink">
+  <section class="section-padding bg-white">
     <div class="container">
       <div class="gallery-grid" id="galleryGrid">
         <!-- Dynamically populated: training + bootcamp images -->
       </div>
 
       <div class="text-center mt-5">
-        <p class="text-muted mb-4">Showing a selection of our 500+ training moments.</p>
+        <p class="text-soft-theme mb-4">Showing a selection of our 500+ training moments.</p>
         <a href="applicationform.html" class="btn btn-cta">Join Our Next Cohort</a>
       </div>
 
@@ -345,9 +345,9 @@
         // UI Updates
         filterButtons.forEach(btn => {
           btn.classList.remove('active', 'btn-cta');
-          btn.classList.add('btn-outline-white');
+          btn.classList.add('btn-outline-dark');
         });
-        button.classList.remove('btn-outline-white');
+        button.classList.remove('btn-outline-dark');
         button.classList.add('active', 'btn-cta');
 
         // Logic
