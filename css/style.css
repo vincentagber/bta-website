@@ -906,6 +906,17 @@ main,
   padding-bottom: 2rem;
 }
 
+.footer-logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
 .footer-bottom {
   text-align: center;
   margin-top: 3rem;
