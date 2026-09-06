@@ -7,10 +7,19 @@ require 'PHPMailer/src/SMTP.php';
 require 'PHPMailer/src/Exception.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name    = htmlspecialchars($_POST['name'] ?? $_POST['contact-name'] ?? 'No Name');
-    $email   = htmlspecialchars($_POST['email'] ?? $_POST['contact-email'] ?? 'No Email');
-    $phone   = htmlspecialchars($_POST['phone'] ?? $_POST['contact-phone'] ?? 'No Phone');
+    // Check honeypot
+    if (!empty($_POST['_honey'])) {
+        exit("Unauthorized Access");
+    }
+
+    $name    = htmlspecialchars($_POST['name'] ?? 'No Name');
+    $email   = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
     $message = htmlspecialchars($_POST['message'] ?? 'No Message');
+
+    if (empty($name) || empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid input.";
+        exit;
+    }
 
     $mail = new PHPMailer(true);
 
@@ -32,33 +41,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         );
 
         // Recipients
-        $mail->setFrom('noreply@africabroadcastingacademy.com', 'ABA Website Contact');
+        $mail->setFrom('noreply@africabroadcastingacademy.com', 'ABA Sponsorship Inquiry');
+        $mail->addAddress('sponsor@africabroadcastingacademy.com');
         $mail->addAddress('info@africabroadcastingacademy.com');
         $mail->addAddress('samson.a@africabroadcastingacademy.com');
         $mail->addReplyTo($email, $name);
 
         // Content
         $mail->isHTML(false);
-        $mail->Subject = "New Contact Form Submission from $name";
-        $mail->Body    = "Name: $name\nEmail: $email\nPhone: $phone\n\nMessage:\n$message";
+        $mail->Subject = "New Sponsorship Inquiry from $name";
+        $mail->Body    = "Organization/Name: $name\nEmail: $email\n\nMessage:\n$message";
 
         $mail->send();
-        if (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false) {
-            header('Content-Type: application/json');
-            echo json_encode(['status' => 'success']);
-            exit;
-        }
         header("Location: thank-you.html");
         exit;
     } catch (Exception $e) {
-        error_log("PHPMailer Error: " . $mail->ErrorInfo);
-        if (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false) {
-            http_response_code(500);
-            header('Content-Type: application/json');
-            echo json_encode(['status' => 'error', 'message' => 'Failed to send message']);
-            exit;
-        }
-        echo "error";
+        error_log("PHPMailer Error (Sponsor): " . $mail->ErrorInfo);
+        echo "An error occurred while sending your inquiry. Please try again later.";
     }
 }
 ?>

@@ -26,8 +26,14 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -102,11 +108,11 @@
 
         <div class="hero-content">
             <div class="hero-glass-card">
-                <div class="mb-4 text-gold d-flex justify-content-center gap-3" data-aos="fade-down"
+                <div class="mb-4 text-gold d-flex justify-content-center gap-4 fs-2" data-aos="fade-down"
                     data-aos-delay="200">
-                    <i data-lucide="camera" class="icon-lg"></i>
-                    <i data-lucide="mic" class="icon-lg"></i>
-                    <i data-lucide="clapperboard" class="icon-lg"></i>
+                    <i class="fas fa-camera"></i>
+                    <i class="fas fa-microphone"></i>
+                    <i class="fas fa-film"></i>
                 </div>
                 <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">
                     Reframing Africa, <br><span class="highlight">Empowering Storytellers</span>
@@ -129,11 +135,11 @@
         </div>
 
         <div class="hero-scroll-indicator">
-            <i data-lucide="chevron-down" class="text-white animate__animated animate__bounce animate__infinite"></i>
+            <i class="fas fa-chevron-down text-white fa-2x animate__animated animate__bounce animate__infinite"></i>
         </div>
     </section>
 
-    <!-- Upcoming Training Event Section (Kano 2026) -->
+    <!-- Waterfront Content Creators Bootcamp Section -->
     <!-- Programs & Events Section -->
     <section class="section-padding bg-light position-relative overflow-hidden" id="programs-overview">
         <!-- Subtle Decorative Background -->
@@ -153,83 +159,127 @@
                 </p>
             </div>
 
-            <!-- Kano (Main Highlight) -->
+            <!-- Waterfront Content Creators Bootcamp (Featured Bootcamp Ad) -->
             <div class="row g-4 align-items-stretch mb-5">
                 <!-- Text Content Card -->
-                <div class="col-lg-6" data-aos="fade-right">
+                <div class="col-lg-7" data-aos="fade-right">
                     <div
-                        class="premium-event-card h-100 bg-white shadow-xl rounded-5 p-5 border-0 position-relative overflow-hidden">
+                        class="premium-event-card h-100 bg-white shadow-xl rounded-5 p-4 p-md-5 border-0 position-relative overflow-hidden">
                         <!-- Decorative Accent -->
-                        <div class="position-absolute top-0 end-0 p-5 opacity-10">
-                            <i class="fas fa-landmark fa-8x text-gold"></i>
+                        <div class="position-absolute top-0 end-0 p-4 opacity-10">
+                            <i class="fas fa-campground fa-8x text-gold"></i>
                         </div>
 
                         <div class="position-relative z-1">
                             <div
-                                class="d-inline-flex align-items-center bg-gold-subtle text-gold px-3 py-1 rounded-pill small fw-bold mb-4 border border-gold-subtle">
-                                <span class="pulse-dot me-2"></span> Main Event 2026
+                                class="d-inline-flex align-items-center bg-gold-subtle text-gold px-3 py-1 rounded-pill small fw-bold mb-4 border border-gold-subtle flex-wrap gap-2">
+                                <span class="pulse-dot me-1"></span> WATERFRONT CONTENT CREATORS BOOTCAMP &bull; 12–23rd OCTOBER
                             </div>
 
-                            <h2 class="display-5 fw-bold text-dark-theme mb-3">The Ancient City <br><span
-                                    class="text-gold italic-title">Is Calling.</span></h2>
+                            <h2 class="display-5 fw-bold text-dark-theme mb-3">
+                                Travel, Explore, Create <br><span class="text-gold italic-title">Turn Experiences Into Stories.</span>
+                            </h2>
 
-                            <p class="text-soft-theme mb-4 fs-5 leading-relaxed">
-                                Africa Broadcasting Academy is heading to the historic city of <span
-                                    class="fw-bold text-dark-theme">Kano</span>. Prepare for an intensive bootcamp that
-                                blends centuries of culture with cutting-edge broadcast technology.
+                            <p class="text-soft-theme mb-3 fs-5 leading-relaxed">
+                                What if you could travel to Benin Republic, explore amazing places, learn content creation, and turn your experiences into stories?
                             </p>
 
-                            <div class="row g-3 mb-5">
-                                <div class="col-sm-6">
-                                    <div
-                                        class="info-pill d-flex align-items-center p-3 rounded-4 bg-light border border-secondary-subtle">
-                                        <div class="icon-circle bg-white shadow-sm me-3">
+                            <div class="p-3 rounded-4 mb-4 border border-gold-subtle" style="background: rgba(38, 198, 218, 0.05);">
+                                <p class="fw-bold text-dark-theme mb-1 fs-6">
+                                    <i class="fas fa-wand-magic-sparkles text-gold me-2"></i>13 days. Cotonou. Real experiences. Real stories.
+                                </p>
+                                <p class="text-gold fw-semibold mb-0 small">
+                                    Learn. Explore. Create. Connect.
+                                </p>
+                            </div>
+
+                            <p class="text-soft-theme mb-4 small leading-relaxed">
+                                <strong class="text-dark-theme">Our Lead Trainer <a href="https://instagram.com/jollystoryteller" target="_blank" rel="noopener" class="text-gold text-decoration-none fw-bold">@jollystoryteller</a></strong> brings years of real-world experience in journalism, content creation, shooting, editing, presenting and storytelling.
+                            </p>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-sm-4">
+                                    <div class="info-pill d-flex align-items-center p-3 rounded-4 bg-light border border-secondary-subtle h-100">
+                                        <div class="icon-circle bg-white shadow-sm me-3 flex-shrink-0">
                                             <i class="fas fa-map-marker-alt text-gold"></i>
                                         </div>
                                         <div>
                                             <span class="d-block small text-muted">Location</span>
-                                            <span class="fw-bold text-dark-theme">Kano, Nigeria</span>
+                                            <span class="fw-bold text-dark-theme small">Cotonou, Benin</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div
-                                        class="info-pill d-flex align-items-center p-3 rounded-4 bg-light border border-secondary-subtle">
-                                        <div class="icon-circle bg-white shadow-sm me-3">
+                                <div class="col-sm-4">
+                                    <div class="info-pill d-flex align-items-center p-3 rounded-4 bg-light border border-secondary-subtle h-100">
+                                        <div class="icon-circle bg-white shadow-sm me-3 flex-shrink-0">
                                             <i class="fas fa-calendar-alt text-gold"></i>
                                         </div>
                                         <div>
                                             <span class="d-block small text-muted">Timeline</span>
-                                            <span class="fw-bold text-dark-theme">Q1 2026</span>
+                                            <span class="fw-bold text-dark-theme small">12–23rd Oct</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="info-pill d-flex align-items-center p-3 rounded-4 bg-light border border-secondary-subtle h-100">
+                                        <div class="icon-circle bg-white shadow-sm me-3 flex-shrink-0">
+                                            <i class="fas fa-tag text-gold"></i>
+                                        </div>
+                                        <div>
+                                            <span class="d-block small text-muted">Price</span>
+                                            <span class="fw-bold text-dark-theme small">₦350,000</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <a href="applicationform.html"
-                                class="btn btn-cta btn-lg px-5 shadow-lg hover-lift-lg w-100 w-sm-auto">
-                                <i class="fas fa-paper-plane me-2"></i> Reserve Your Spot
-                            </a>
+                            <p class="text-soft-theme small mb-4">
+                                <i class="fas fa-check-circle text-gold me-2"></i>Price <strong>₦350,000</strong>. Registration covers camping tent accommodation and transportation to selected tourist locations.
+                            </p>
+
+                            <div class="d-flex align-items-center justify-content-between p-3 rounded-4 bg-white border border-secondary-subtle mb-4 shadow-sm flex-wrap gap-2">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-phone-alt text-gold me-2"></i>
+                                    <span class="small text-dark-theme fw-semibold">+234 812 842 2499 &bull; +229 51 287 838</span>
+                                </div>
+                                <span class="small text-muted"><i class="fab fa-instagram text-danger me-1"></i>@africabroadcastingacademy</span>
+                            </div>
+
+                            <p class="fst-italic text-dark-theme fw-semibold small mb-4">
+                                "This isn't just another bootcamp. Come with your curiosity. Leave with stories."
+                            </p>
+
+                            <div class="d-flex flex-wrap gap-3">
+                                <a href="applicationform.html?course=Waterfront%20Content%20Creators%20Bootcamp"
+                                    class="btn btn-cta btn-lg px-5 shadow-lg hover-lift-lg">
+                                    <i class="fas fa-paper-plane me-2"></i> Register Now
+                                </a>
+                                <a href="https://wa.me/2348128422499?text=Hello%20ABA,%20I%20am%20interested%20in%20the%20Waterfront%20Content%20Creators%20Bootcamp" target="_blank" rel="noopener"
+                                    class="btn btn-outline-dark btn-lg px-4 rounded-pill hover-lift">
+                                    <i class="fab fa-whatsapp text-success me-2"></i> Chat with Us
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Video Showcase -->
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="video-showcase-container h-100 position-relative rounded-5 overflow-hidden shadow-2xl">
-                        <div
-                            class="video-overlay-glass position-absolute top-0 start-0 m-4 z-3 px-3 py-1 rounded-pill blur-10 border border-white-20 shadow-lg">
-                            <span class="text-white small fw-bold text-uppercase ls-1"><i
-                                    class="fas fa-circle text-danger me-2 animate-pulse"></i> Live Advert</span>
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="video-showcase-container h-100 position-relative rounded-5 overflow-hidden shadow-2xl bg-black d-flex flex-column">
+                        <div class="video-overlay-glass position-absolute top-0 start-0 m-3 z-3 px-3 py-1 rounded-pill blur-10 border border-white-20 shadow-lg">
+                            <span class="text-white small fw-bold text-uppercase ls-1">
+                                <i class="fas fa-circle text-danger me-2 animate-pulse"></i> Bootcamp Video Ad
+                            </span>
                         </div>
-                        <video id="eventVideo" autoplay muted loop playsinline controls
-                            class="w-100 h-100 object-fit-cover d-block">
-                            <source src="assets/images/event.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
+                        <video id="waterfrontBootcampVideo" autoplay muted loop playsinline controls
+                            class="w-100 h-100 object-fit-cover d-block" style="min-height: 480px;">
+                            <source src="assets/video/bootcamp.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                         <!-- Dramatic Gradient Overlay -->
-                        <div
-                            class="position-absolute bottom-0 start-0 w-100 h-25 bg-gradient-to-t from-black-60 to-transparent">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4 z-2 bg-gradient-to-t from-black-80 to-transparent pointer-events-none">
+                            <h5 class="text-white fw-bold mb-1">Waterfront Creators Bootcamp</h5>
+                            <p class="text-white-50 small mb-0">12–23rd October &bull; Cotonou, Benin Republic</p>
                         </div>
                     </div>
                 </div>
@@ -308,7 +358,7 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="partnership-card h-100 text-center shadow-lg bg-white border">
                         <div class="partnership-icon-box">
-                            <i data-lucide="eye"></i>
+                            <i class="fas fa-eye"></i>
                         </div>
                         <h3 class="font-heading text-dark-theme">Visibility</h3>
                         <p class="text-soft-theme">Feature your brand in our training programs, media projects, and
@@ -322,7 +372,7 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="partnership-card h-100 text-center shadow-lg bg-white border">
                         <div class="partnership-icon-box">
-                            <i data-lucide="sparkles"></i>
+                            <i class="fas fa-wand-magic-sparkles"></i>
                         </div>
                         <h3 class="font-heading text-dark-theme">Impact</h3>
                         <p class="text-soft-theme">Directly transform the lives of young Africans, empowering the future
@@ -336,7 +386,7 @@
                 <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="300">
                     <div class="partnership-card h-100 text-center shadow-lg bg-white border">
                         <div class="partnership-icon-box">
-                            <i data-lucide="award"></i>
+                            <i class="fas fa-award"></i>
                         </div>
                         <h3 class="font-heading text-dark-theme">Legacy</h3>
                         <p class="text-soft-theme">Be part of a historic movement reclaiming Africa's narrative, leaving
@@ -414,15 +464,15 @@
                             <!-- Metric 1: Students -->
                             <div class="col-sm-6" data-aos="fade-up" data-aos-delay="100">
                                 <div class="nexus-stat-card premium-glass shadow-2xl h-100">
-                                    <div class="stat-inner p-5">
+                                    <div class="stat-inner p-4 p-md-5">
                                         <div class="stat-icon-wrap mb-4">
                                             <i class="fas fa-user-graduate"></i>
                                         </div>
                                         <div class="stat-info">
-                                            <div class="d-flex align-items-baseline">
-                                                <h3 class="display-3 fw-bold text-dark-theme mb-0 counter"
+                                            <div class="d-inline-flex align-items-baseline flex-nowrap">
+                                                <h3 class="display-4 fw-bold text-dark-theme mb-0 counter"
                                                     data-target="500">0</h3>
-                                                <span class="h2 text-gold fw-bold ms-1">+</span>
+                                                <span class="h3 text-gold fw-bold ms-1">+</span>
                                             </div>
                                             <p class="text-soft-theme small text-uppercase fw-black ls-2 mb-0 mt-2">
                                                 Visionaries Trained</p>
@@ -434,16 +484,16 @@
 
                             <!-- Metric 2: Countries -->
                             <div class="col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                                <div class="nexus-stat-card premium-glass shadow-2xl h-100 mt-lg-5">
-                                    <div class="stat-inner p-5">
+                                <div class="nexus-stat-card premium-glass shadow-2xl h-100">
+                                    <div class="stat-inner p-4 p-md-5">
                                         <div class="stat-icon-wrap mb-4">
                                             <i class="fas fa-globe-africa"></i>
                                         </div>
                                         <div class="stat-info">
-                                            <div class="d-flex align-items-baseline">
-                                                <h3 class="display-3 fw-bold text-dark-theme mb-0 counter"
+                                            <div class="d-inline-flex align-items-baseline flex-nowrap">
+                                                <h3 class="display-4 fw-bold text-dark-theme mb-0 counter"
                                                     data-target="20">0</h3>
-                                                <span class="h2 text-gold fw-bold ms-1">+</span>
+                                                <span class="h3 text-gold fw-bold ms-1">+</span>
                                             </div>
                                             <p class="text-soft-theme small text-uppercase fw-black ls-2 mb-0 mt-2">
                                                 Nations Reached</p>
@@ -456,18 +506,18 @@
                             <!-- Metric 3: Authenticity (Full Width) -->
                             <div class="col-12" data-aos="fade-up" data-aos-delay="300">
                                 <div
-                                    class="nexus-stat-card-wide premium-glass shadow-2xl p-5 d-flex align-items-center justify-content-between overflow-hidden position-relative">
+                                    class="nexus-stat-card-wide premium-glass shadow-2xl p-4 p-md-5 d-flex align-items-center justify-content-between overflow-hidden position-relative">
                                     <div class="position-relative z-1">
-                                        <div class="d-flex align-items-center mb-1">
-                                            <h3 class="display-1 fw-bold text-gold mb-0">100</h3>
-                                            <span class="display-4 fw-bold text-gold">%</span>
+                                        <div class="d-inline-flex align-items-baseline flex-nowrap mb-1">
+                                            <h3 class="display-2 fw-bold text-gold mb-0">100</h3>
+                                            <span class="display-5 fw-bold text-gold ms-1">%</span>
                                         </div>
                                         <p class="text-dark-theme fs-5 text-uppercase fw-black ls-3 mb-0">Authentic
                                             African Narrative</p>
                                     </div>
 
                                     <div class="nexus-wide-icon opacity-10">
-                                        <i class="fas fa-feather-alt fa-10x text-gold"></i>
+                                        <i class="fas fa-feather-alt fa-8x text-gold"></i>
                                     </div>
 
                                     <!-- Decorative Accent Line -->
@@ -556,6 +606,148 @@
         </div>
     </section>
 
+    <!-- Experience in Motion Section with Three.js Dynamic Motion Background (Light Luxury Editorial) -->
+    <section class="section-padding motion-experience-section position-relative overflow-hidden" id="video-showcase-gallery">
+        <!-- Three.js Motion Canvas -->
+        <canvas id="threeMotionCanvas" class="three-motion-canvas" aria-hidden="true"></canvas>
+
+        <!-- Ambient Contrast & Lighting Overlay -->
+        <div class="motion-ambient-overlay"></div>
+
+        <div class="container position-relative z-2">
+            <!-- Section Header -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div
+                    class="d-inline-flex align-items-center mb-3 ps-3 pe-4 py-2 motion-pill-badge rounded-pill border shadow-sm">
+                    <span class="pulse-dot me-3"></span>
+                    <span class="text-gold text-uppercase tracking-widest fw-bold small ls-2">Experience in Motion</span>
+                </div>
+
+                <h2 class="display-3 fw-bold text-dark-theme mb-3">Watch ABA in <span class="italic-title text-gold">Action</span></h2>
+                <div class="divider-gold mx-auto mb-4" style="width: 80px; height: 4px; border-radius: 2px;"></div>
+                
+                <p class="lead motion-lead-text mx-auto" style="max-width: 820px; font-weight: 300;">
+                    From fieldwork and mobile journalism to authentic student testimonies, experience the journey of empowering African storytellers.
+                </p>
+
+                <!-- Key Theme Pillars (Fieldwork, Journalism, Testimonies, Storytelling) -->
+                <div class="d-flex flex-wrap justify-content-center gap-3 motion-theme-pills">
+                    <div class="motion-theme-tag">
+                        <i class="fas fa-compass text-gold me-2"></i><span>Fieldwork</span>
+                    </div>
+                    <div class="motion-theme-tag">
+                        <i class="fas fa-video text-gold me-2"></i><span>Journalism</span>
+                    </div>
+                    <div class="motion-theme-tag">
+                        <i class="fas fa-quote-left text-gold me-2"></i><span>Testimonies</span>
+                    </div>
+                    <div class="motion-theme-tag">
+                        <i class="fas fa-feather-pointed text-gold me-2"></i><span>Storytelling</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Cards Grid -->
+            <div class="row g-4 justify-content-center">
+                <!-- Video 1: Fieldwork & Mobile Journalism -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="motion-video-card h-100 d-flex flex-column">
+                        <div class="motion-video-wrapper position-relative mb-3">
+                            <div class="motion-card-badge">
+                                <i class="fas fa-compass text-gold me-1"></i> Fieldwork
+                            </div>
+                            <video class="w-100 h-100 object-fit-cover" playsinline controls preload="metadata" muted>
+                                <source src="assets/video/1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="motion-card-content p-2 flex-grow-1 d-flex flex-column">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="motion-icon-bullet me-2">
+                                    <i class="fas fa-video text-gold"></i>
+                                </div>
+                                <h4 class="h5 fw-bold text-dark-theme mb-0">Mobile Journalism</h4>
+                            </div>
+                            <p class="text-soft-theme small mb-0">Hands-on capturing, framing, and interviewing techniques in real-world environments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2: Immersive Creative Bootcamp -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="motion-video-card h-100 d-flex flex-column">
+                        <div class="motion-video-wrapper position-relative mb-3">
+                            <div class="motion-card-badge">
+                                <i class="fas fa-campground text-gold me-1"></i> Storytelling
+                            </div>
+                            <video class="w-100 h-100 object-fit-cover" playsinline controls preload="metadata" muted>
+                                <source src="assets/video/2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="motion-card-content p-2 flex-grow-1 d-flex flex-column">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="motion-icon-bullet me-2">
+                                    <i class="fas fa-wand-magic-sparkles text-gold"></i>
+                                </div>
+                                <h4 class="h5 fw-bold text-dark-theme mb-0">Creative Bootcamp</h4>
+                            </div>
+                            <p class="text-soft-theme small mb-0">Immersive learning and creative collaboration across scenic Cotonou locations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3: On-Location Directing & Craft -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="motion-video-card h-100 d-flex flex-column">
+                        <div class="motion-video-wrapper position-relative mb-3">
+                            <div class="motion-card-badge">
+                                <i class="fas fa-clapperboard text-gold me-1"></i> Directing
+                            </div>
+                            <video class="w-100 h-100 object-fit-cover" playsinline controls preload="metadata" muted>
+                                <source src="assets/video/3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="motion-card-content p-2 flex-grow-1 d-flex flex-column">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="motion-icon-bullet me-2">
+                                    <i class="fas fa-film text-gold"></i>
+                                </div>
+                                <h4 class="h5 fw-bold text-dark-theme mb-0">On-Location Directing</h4>
+                            </div>
+                            <p class="text-soft-theme small mb-0">Mastering storytelling rhythm, cinematography, and high-impact visual cuts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 4: Student Testimonies & Transformation -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="motion-video-card h-100 d-flex flex-column">
+                        <div class="motion-video-wrapper position-relative mb-3">
+                            <div class="motion-card-badge">
+                                <i class="fas fa-quote-left text-gold me-1"></i> Testimonies
+                            </div>
+                            <video class="w-100 h-100 object-fit-cover" playsinline controls preload="metadata" muted>
+                                <source src="assets/video/testimony video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="motion-card-content p-2 flex-grow-1 d-flex flex-column">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="motion-icon-bullet me-2">
+                                    <i class="fas fa-users text-gold"></i>
+                                </div>
+                                <h4 class="h5 fw-bold text-dark-theme mb-0">Student Voices</h4>
+                            </div>
+                            <p class="text-soft-theme small mb-0">Hear first-hand how ABA's training empowered participants to own their voice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Gallery / Training Showcase Preview -->
     <section class="section-padding" style="background-color: transparent;">
         <div class="container">
@@ -610,7 +802,6 @@
                 </div>
             </div>
         </div>
-    </section>
     </section>
 
     <!-- Student Productions / Stories -->
@@ -820,17 +1011,39 @@
 
 
 
-    <!-- Call to Action -->
-    <section class="section-padding text-center bg-white shadow-lg border-top">
-        <div class="container" data-aos="zoom-in">
-            <h2 class="mb-4 text-dark-theme display-5 fw-bold">Ready to Tell Your Story?</h2>
+    <!-- Call to Action Section (Compact & Refined) -->
+    <section class="premium-cta-section text-center position-relative" style="background-color: transparent;">
+        <div class="container position-relative z-2">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7" data-aos="zoom-in">
+                    <div class="premium-cta-card text-center">
+                        <div class="mb-3">
+                            <span class="premium-cta-badge">
+                                <span class="pulse-dot me-2"></span> Begin Your Broadcasting Journey
+                            </span>
+                        </div>
 
-            <div class="divider-gold mx-auto my-4"></div>
-            <p class="mb-5 mx-auto lead text-soft-theme" style="max-width: 600px;">Join our intensive world-class
-                modules
-                designed to equip
-                you with the technical precision and cultural soul required for global broadcasting excellence.</p>
-            <a href="applicationform.html" class="btn btn-cta btn-lg px-5 py-3 rounded-pill shadow-lg">Apply Now</a>
+                        <h2 class="fw-bold mb-3 lh-tight" style="color: #0f172a; font-size: clamp(1.6rem, 2.5vw, 2.2rem);">
+                            Ready to Tell <span class="italic-title" style="color: #0097a7;">Your Story?</span>
+                        </h2>
+
+                        <div class="divider-gold mx-auto mb-3" style="width: 50px; height: 3px; border-radius: 2px;"></div>
+
+                        <p class="mb-4 mx-auto lead" style="max-width: 580px; font-weight: 400; color: #334155; font-size: 1.05rem; line-height: 1.65;">
+                            Join our intensive world-class modules designed to equip you with the technical precision and cultural soul required for global broadcasting excellence.
+                        </p>
+
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="applicationform.html" class="btn btn-cta px-4 py-2 rounded-pill shadow hover-lift" style="font-weight: 700; font-size: 0.95rem;">
+                                <i class="fas fa-paper-plane me-2"></i> Apply Now
+                            </a>
+                            <a href="programs.html" class="btn btn-outline-dark px-4 py-2 rounded-pill hover-lift" style="font-weight: 700; font-size: 0.95rem;">
+                                <i class="fas fa-graduation-cap me-2"></i> Explore Programs
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -914,8 +1127,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="js/script.js"></script>
+    <script src="js/experience-motion.js"></script>
     <script>
-        lucide.createIcons();
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     </script>
 </body>
 
