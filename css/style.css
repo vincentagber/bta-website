@@ -1371,15 +1371,49 @@ main,
   opacity: 1;
 }
 
-/* Fix Autocomplete/Autofill White Background */
+/* Fix Autocomplete/Autofill Background & Text Color */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px var(--ink-light) inset !important;
-  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+  -webkit-text-fill-color: #0f172a !important;
+  color: #0f172a !important;
+  box-shadow: 0 0 0 30px #ffffff inset !important;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+/* Global High-Visibility Form Controls & Placeholders */
+.form-control,
+.form-select,
+textarea.form-control {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  background-color: #ffffff !important;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea.form-control:focus {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+.form-control::placeholder,
+textarea.form-control::placeholder,
+.form-control::-webkit-input-placeholder,
+textarea.form-control::-webkit-input-placeholder {
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+  opacity: 1 !important;
+}
+
+.form-control::-moz-placeholder,
+textarea.form-control::-moz-placeholder {
+  color: #64748b !important;
+  opacity: 1 !important;
+}
+
 
 /* --- Live Page Styles --- */
 

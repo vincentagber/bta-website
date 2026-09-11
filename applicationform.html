@@ -72,6 +72,72 @@
             align-items: center;
             margin-bottom: 1rem !important;
         }
+
+        /* High-Visibility Form Inputs, Typing Text, and Placeholders */
+        .form-control,
+        .form-select,
+        textarea.form-control {
+            color: #0f172a !important;
+            -webkit-text-fill-color: #0f172a !important;
+            background-color: #ffffff !important;
+            border: 1.5px solid #cbd5e1 !important;
+            border-radius: 8px !important;
+            font-size: 1rem !important;
+            font-weight: 500 !important;
+            padding: 0.75rem 1rem !important;
+        }
+
+        .form-control:focus,
+        .form-select:focus,
+        textarea.form-control:focus {
+            color: #0f172a !important;
+            -webkit-text-fill-color: #0f172a !important;
+            background-color: #ffffff !important;
+            border-color: #26C6DA !important;
+            box-shadow: 0 0 0 0.25rem rgba(38, 198, 218, 0.25) !important;
+            outline: none !important;
+        }
+
+        /* Highly Visible, Legible Placeholder Styling */
+        .form-control::placeholder,
+        textarea.form-control::placeholder {
+            color: #64748b !important;
+            -webkit-text-fill-color: #64748b !important;
+            opacity: 1 !important;
+            font-size: 0.95rem !important;
+            font-weight: 400 !important;
+        }
+
+        .form-control::-webkit-input-placeholder,
+        textarea.form-control::-webkit-input-placeholder {
+            color: #64748b !important;
+            -webkit-text-fill-color: #64748b !important;
+            opacity: 1 !important;
+        }
+
+        .form-control::-moz-placeholder,
+        textarea.form-control::-moz-placeholder {
+            color: #64748b !important;
+            opacity: 1 !important;
+        }
+
+        .form-control:-ms-input-placeholder,
+        textarea.form-control:-ms-input-placeholder {
+            color: #64748b !important;
+            opacity: 1 !important;
+        }
+
+        /* Fix Autocomplete/Autofill Text Visibility on All Devices */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+            -webkit-text-fill-color: #0f172a !important;
+            color: #0f172a !important;
+            box-shadow: 0 0 0 30px #ffffff inset !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
     </style>
 </head>
 
@@ -161,57 +227,62 @@
                     <div class="bg-white p-4 p-md-5 rounded-4 border shadow-lg" data-aos="fade-up">
                         <form action="application.php" enctype="multipart/form-data" method="POST"
                             class="needs-validation" novalidate>
-                            <!-- Security Honeypot (Hidden from users, visible to bots) -->
-                            <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                            <!-- Anti-Spam Security Layer (Invisible to humans, traps automated spam bots) -->
+                            <div class="bta-security-layer" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; overflow: hidden;">
+                                <label for="bta_hp_company">Company / Organization</label>
+                                <input type="text" name="bta_hp_company" id="bta_hp_company" tabindex="-1" autocomplete="new-password">
+                                <input type="text" name="website" tabindex="-1" autocomplete="off">
+                                <input type="hidden" name="bta_form_time" id="bta_form_time" value="">
+                            </div>
 
                             <!-- Section 1 -->
                             <h3 class="text-gold mb-4 border-bottom border-secondary-subtle pb-2">1. Personal
                                 Information</h3>
                             <div class="row g-4 mb-5">
                                 <div class="col-md-6">
-                                    <label class="form-label text-dark-theme">Full Name</label>
+                                    <label class="form-label text-dark-theme fw-semibold">Full Name <span class="text-danger">*</span></label>
                                     <input type="text"
-                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
-                                        name="fullName" required placeholder="John Doe">
+                                        class="form-control"
+                                        name="fullName" id="fullName" required placeholder="John Doe">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-dark-theme">Date of Birth</label>
+                                    <label class="form-label text-dark-theme fw-semibold">Date of Birth</label>
                                     <input type="date"
-                                        class="form-control bg-light text-dark-theme border-secondary-subtle" name="dob"
-                                        required>
+                                        class="form-control" name="dob"
+                                        id="dob">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-dark-theme">Gender</label>
-                                    <select class="form-select bg-light text-dark-theme border-secondary-subtle"
-                                        name="gender" required>
-                                        <option value="" class="text-black">Select...</option>
+                                    <label class="form-label text-dark-theme fw-semibold">Gender</label>
+                                    <select class="form-select"
+                                        name="gender" id="gender">
+                                        <option value="" class="text-black">Select (Optional)...</option>
                                         <option value="Female" class="text-black">Female</option>
                                         <option value="Male" class="text-black">Male</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-dark-theme">Nationality</label>
+                                    <label class="form-label text-dark-theme fw-semibold">Nationality</label>
                                     <input type="text"
-                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
-                                        name="nationality" id="nationality" required placeholder="e.g. Nigerian">
+                                        class="form-control"
+                                        name="nationality" id="nationality" placeholder="e.g. Nigerian (Optional)">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-dark-theme">Phone Number</label>
+                                    <label class="form-label text-dark-theme fw-semibold">Phone Number <span class="text-danger">*</span></label>
                                     <input type="tel"
-                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
-                                        name="phone" required placeholder="+234...">
+                                        class="form-control"
+                                        name="phone" id="phone" required placeholder="+234... or 080...">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-dark-theme">Email Address</label>
+                                    <label class="form-label text-dark-theme fw-semibold">Email Address <span class="text-danger">*</span></label>
                                     <input type="email"
-                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
-                                        name="email" required placeholder="name@example.com">
+                                        class="form-control"
+                                        name="email" id="email" required placeholder="name@example.com">
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label text-dark-theme">Residential Address</label>
+                                    <label class="form-label text-dark-theme fw-semibold">Residential Address</label>
                                     <input type="text"
-                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
-                                        name="address" required placeholder="Full address">
+                                        class="form-control"
+                                        name="address" id="address" placeholder="City, Country (Optional)">
                                 </div>
                             </div>
 
@@ -220,7 +291,7 @@
                             </h3>
                             <div class="row g-3 mb-5">
                                 <div class="col-12">
-                                    <p class="text-soft-theme mb-3">Please select the courses you are interested in:</p>
+                                    <p class="text-soft-theme mb-3">Please select the courses you are interested in: <span class="text-danger">*</span></p>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-check">
@@ -284,9 +355,9 @@
                             <!-- Section 3 -->
                             <h3 class="text-gold mb-4 border-bottom border-secondary-subtle pb-2">3. About You</h3>
                             <div class="mb-5">
-                                <label class="form-label text-dark-theme">Tell us about yourself (max 150 words)</label>
-                                <textarea class="form-control bg-light text-dark-theme border-secondary-subtle"
-                                    name="aboutYou" rows="4" required></textarea>
+                                <label class="form-label text-dark-theme fw-semibold">Tell us about yourself & goals (Optional)</label>
+                                <textarea class="form-control"
+                                    name="aboutYou" id="aboutYou" rows="3" placeholder="Share your background, passions, or future ambitions in media..."></textarea>
                             </div>
 
                             <!-- Section 4 -->
@@ -295,27 +366,27 @@
                             </h3>
                             <div class="row g-4 mb-5">
                                 <div class="col-12">
-                                    <label class="form-label text-dark-theme">Media Experience (if any)</label>
-                                    <textarea class="form-control bg-light text-dark-theme border-secondary-subtle"
-                                        name="mediaExp" rows="3"></textarea>
+                                    <label class="form-label text-dark-theme fw-semibold">Media Experience (if any)</label>
+                                    <textarea class="form-control"
+                                        name="mediaExp" id="mediaExp" rows="2" placeholder="Briefly describe any relevant projects, hobbies, or media roles..."></textarea>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-dark-theme">Highest Education Level</label>
+                                    <label class="form-label text-dark-theme fw-semibold">Highest Education Level</label>
                                     <input type="text"
-                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
-                                        name="educationLevel" required>
+                                        class="form-control"
+                                        name="educationLevel" id="educationLevel" placeholder="e.g. High School, Bachelor's, Diploma (Optional)">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label text-dark-theme">Field of Study</label>
+                                    <label class="form-label text-dark-theme fw-semibold">Field of Study</label>
                                     <input type="text"
-                                        class="form-control bg-light text-dark-theme border-secondary-subtle"
-                                        name="fieldOfStudy">
+                                        class="form-control"
+                                        name="fieldOfStudy" id="fieldOfStudy" placeholder="e.g. Mass Communication, Arts, Science (Optional)">
                                 </div>
                             </div>
 
                             <div class="form-check mb-5">
                                 <input class="form-check-input bg-transparent border-gold" type="checkbox" name="declaration" required
-                                    id="declaration">
+                                    id="declaration" checked>
                                 <label class="form-check-label text-soft-theme" for="declaration">
                                     I hereby declare that the information provided is true and correct.
                                 </label>
@@ -362,14 +433,15 @@
                 <div class="col-lg-2 col-6">
                     <h5 class="text-white mb-4">Quick Links</h5>
                     <ul class="footer-nav">
-                        <li><a href="index.html"><i class="fas fa-home me-1"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fas fa-info-circle me-1"></i> About</a></li>
-                        <li><a href="gallery.html"><i class="fas fa-images me-1"></i> Gallery</a></li>
-                        <li><a href="programs.html"><i class="fas fa-graduation-cap me-1"></i> Programs</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right me-1"></i> About</a></li>
+                        <li><a href="programs.html"><i class="fas fa-chevron-right me-1"></i> Programs</a></li>
+                        <li><a href="stories.html"><i class="fas fa-chevron-right me-1"></i> Stories</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-chevron-right me-1"></i> Gallery</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right me-1"></i> Projects</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-6">
-                    <h5 class="text-white mb-4">Resources</h5>
+                    <h5 class="text-white mb-4">Engage</h5>
                     <ul class="footer-nav">
                         <li><a href="applicationform.html"><i class="fas fa-paper-plane me-1"></i> Apply</a></li>
                         <li><a href="sponsor.html"><i class="fas fa-hand-holding-heart me-1"></i> Sponsor</a></li>
@@ -389,9 +461,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Africa Broadcasting Academy. All rights reserved. | Developed by <a
-                        class="text-decoration-none fw-semibold" href="https://vincentagber.vercel.app/" target="_blank"
-                        rel="noopener" style="color: var(--gold);">Vincent Agber</a></p>
+                <p>&copy; 2026 Africa Broadcasting Academy. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -403,7 +473,7 @@
     <script>
         AOS.init({ once: true, duration: 1000 });
 
-        // Enhanced Form Submission Pipeline
+        // Bulletproof Form Submission Pipeline
         (() => {
             'use strict';
             const form = document.querySelector('.needs-validation');
@@ -412,19 +482,58 @@
             const submitBtn = document.getElementById('submitBtn');
             const btnText = submitBtn.querySelector('.btn-text');
             const btnSpinner = submitBtn.querySelector('.spinner-border');
+            const timingInput = document.getElementById('bta_form_time');
+
+            // Set client timestamp token for bot detection
+            if (timingInput) {
+                timingInput.value = Date.now();
+            }
 
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
                 event.stopPropagation();
 
-                // Check standard HTML5 validity
-                if (!form.checkValidity()) {
-                    form.classList.add('was-validated');
-                    const firstInvalid = form.querySelector(':invalid');
-                    if (firstInvalid) {
-                        firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        firstInvalid.focus();
-                    }
+                // 1. Minimum Viable Validation (Zero Friction, Maximum Data Quality)
+                const fullName = (form.querySelector('input[name="fullName"]')?.value || '').trim();
+                const email = (form.querySelector('input[name="email"]')?.value || '').trim();
+                const phone = (form.querySelector('input[name="phone"]')?.value || '').trim();
+                const declaration = form.querySelector('input[name="declaration"]');
+
+                if (!fullName || fullName.length < 2) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Full Name Required',
+                        text: 'Please enter your full name before submitting.',
+                        confirmButtonColor: '#26C6DA'
+                    }).then(() => {
+                        form.querySelector('input[name="fullName"]')?.focus();
+                    });
+                    return;
+                }
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email || !emailRegex.test(email)) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Valid Email Required',
+                        text: 'Please enter a valid email address (e.g. name@example.com).',
+                        confirmButtonColor: '#26C6DA'
+                    }).then(() => {
+                        form.querySelector('input[name="email"]')?.focus();
+                    });
+                    return;
+                }
+
+                const phoneDigits = phone.replace(/[^0-9]/g, '');
+                if (!phone || phoneDigits.length < 6) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Valid Phone Required',
+                        text: 'Please enter a valid phone number (including country code).',
+                        confirmButtonColor: '#26C6DA'
+                    }).then(() => {
+                        form.querySelector('input[name="phone"]')?.focus();
+                    });
                     return;
                 }
 
@@ -444,6 +553,16 @@
                     return;
                 }
 
+                if (declaration && !declaration.checked) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Declaration Required',
+                        text: 'Please confirm the declaration checkbox to continue.',
+                        confirmButtonColor: '#26C6DA'
+                    });
+                    return;
+                }
+
                 // Show processing UI state
                 submitBtn.disabled = true;
                 btnText.textContent = 'Submitting Application...';
@@ -452,18 +571,38 @@
                 const formData = new FormData(form);
 
                 try {
+                    // Set up resilient 15-second timeout controller
+                    let controller = null;
+                    let signal = undefined;
+                    if (typeof AbortController !== 'undefined') {
+                        controller = new AbortController();
+                        signal = controller.signal;
+                        setTimeout(() => controller.abort(), 15000);
+                    }
+
                     const response = await fetch('application.php', {
                         method: 'POST',
                         body: formData,
+                        signal: signal,
                         headers: {
                             'X-Requested-With': 'XMLHttpRequest',
                             'Accept': 'application/json'
                         }
                     });
 
-                    const data = await response.json();
+                    // Safely extract text before parsing JSON to prevent Safari DOMException SyntaxError
+                    const responseText = await response.text();
+                    let data = null;
+                    try {
+                        data = JSON.parse(responseText);
+                    } catch (jsonErr) {
+                        console.warn('Server response was not JSON, triggering direct POST fallback:', responseText);
+                        // Transparent fallback to direct browser POST
+                        form.submit();
+                        return;
+                    }
 
-                    if (response.ok && data.status === 'success') {
+                    if (response.ok && data && data.status === 'success') {
                         // Success Feedback
                         Swal.fire({
                             icon: 'success',
@@ -480,36 +619,28 @@
                             window.location.href = data.redirect || 'thank-you.html';
                         }, 2500);
                     } else {
-                        throw new Error(data.message || 'We encountered an error processing your application.');
+                        throw new Error((data && data.message) ? data.message : 'We encountered an error processing your application.');
                     }
                 } catch (error) {
-                    console.error('Submission error:', error);
-                    // Fallback to standard form POST if fetch/JSON failed unexpectedly
-                    if (error instanceof TypeError) {
-                        console.warn('Network issue with AJAX, falling back to direct POST...');
-                        form.submit();
+                    console.warn('AJAX pipeline exception, initiating foolproof direct submit fallback:', error);
+                    
+                    // If error was an intentional server validation message (e.g. data.message thrown)
+                    if (error.message && !error.message.includes('fetch') && !error.message.includes('pattern') && !error.message.includes('abort') && !error.message.includes('network')) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Submission Notice',
+                            text: error.message,
+                            confirmButtonColor: '#26C6DA'
+                        });
+                        submitBtn.disabled = false;
+                        btnText.textContent = 'Submit Application';
+                        btnSpinner.classList.add('d-none');
                         return;
                     }
 
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Submission Issue',
-                        text: error.message || 'Unable to complete submission. Please try again or chat with our admissions team on WhatsApp.',
-                        showCancelButton: true,
-                        confirmButtonText: 'Chat on WhatsApp',
-                        cancelButtonText: 'Try Again',
-                        confirmButtonColor: '#25D366',
-                        cancelButtonColor: '#26C6DA'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            window.open('https://wa.me/2348128422499?text=Hello%2C%20I%20had%20an%20issue%20submitting%20my%20ABA%20application.', '_blank');
-                        }
-                    });
-
-                    // Reset button state
-                    submitBtn.disabled = false;
-                    btnText.textContent = 'Submit Application';
-                    btnSpinner.classList.add('d-none');
+                    // For any network, timeout, or parsing glitch: transparently submit directly via native HTML POST
+                    console.log('Submitting via native POST fallback...');
+                    form.submit();
                 }
             }, false);
 
@@ -518,8 +649,8 @@
             if (urlParams.get('error') === 'failed') {
                 Swal.fire({
                     icon: 'error',
-                    title: 'Submission Failed',
-                    text: 'We encountered an error processing your application. Please try again or contact us directly on WhatsApp.',
+                    title: 'Submission Issue',
+                    text: 'We encountered an issue submitting your application. Please try again or chat with Admissions on WhatsApp.',
                     showCancelButton: true,
                     confirmButtonText: 'Chat on WhatsApp',
                     cancelButtonText: 'OK',
@@ -532,14 +663,19 @@
                 });
             }
 
-            // Pre-select course based on URL parameter
+            // Pre-select course based on URL parameter safely
             const courseParam = urlParams.get('course');
             if (courseParam) {
-                const courseValue = decodeURIComponent(courseParam);
-                const checkbox = document.querySelector(`input[name="courses[]"][value="${courseValue}"]`);
-                if (checkbox) {
-                    checkbox.checked = true;
-                    checkbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                try {
+                    const courseValue = decodeURIComponent(courseParam);
+                    const safeValue = (typeof CSS !== 'undefined' && CSS.escape) ? CSS.escape(courseValue) : courseValue.replace(/["\\]/g, '\\$&');
+                    const checkbox = document.querySelector(`input[name="courses[]"][value="${safeValue}"]`);
+                    if (checkbox) {
+                        checkbox.checked = true;
+                        checkbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                } catch (e) {
+                    console.warn('Could not parse course parameter:', e);
                 }
             }
         })();
